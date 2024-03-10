@@ -32,16 +32,17 @@ const TextColor = () => {
                     for hover effect.
                 </p>
                 <p>
-                    Texts are{' '}
-                    <span className='bg-indigo-300 text-indigo-700'>
-                        highlighted
-                    </span>{' '}
-                    with <span className='text-indigo-700'>indigo-700</span>{' '}
+                    <span className='text-indigo-700'>Indigo-700</span>{' '}
                     <span className='h-5 w-5 bg-indigo-700 inline-block mx-px'></span>{' '}
                     color along with{' '}
                     <span className='text-indigo-300'>indigo-300</span>{' '}
                     <span className='h-5 w-5 bg-indigo-300 inline-block mx-px'></span>{' '}
-                    background.
+                    background are used for{' '}
+                    <span className='bg-indigo-300 text-indigo-700'>
+                        {' '}
+                        highlighted texts
+                    </span>
+                    .
                 </p>
             </div>
         </>
