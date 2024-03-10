@@ -18,14 +18,30 @@ const TextColor = () => {
                     .
                 </p>
                 <p>
-                    <span className='text-neutral-100 underline hover:text-neutral-300'>Links</span>{' '}
-                    use <span className='text-neutral-100'>neutral-100</span>{' '}
+                    <span className='text-neutral-100 underline hover:text-neutral-300'>
+                        Links
+                    </span>{' '}
+                    also use{' '}
+                    <span className='text-neutral-100'>neutral-100</span>{' '}
                     <span className='h-5 w-5 bg-neutral-100 inline-block mx-px'></span>{' '}
                     color along with{' '}
-                    <span className='underline'>underline</span> decoration and
-                    use <span className='text-neutral-300'>neutral-300</span>{' '}
+                    <span className='underline'>underline</span> decoration as
+                    well as{' '}
+                    <span className='text-neutral-300'>neutral-300</span>{' '}
                     <span className='h-5 w-5 bg-neutral-300 inline-block mx-px'></span>{' '}
                     for hover effect.
+                </p>
+                <p>
+                    Texts are{' '}
+                    <span className='bg-indigo-300 text-indigo-700'>
+                        highlighted
+                    </span>{' '}
+                    with <span className='text-indigo-700'>indigo-700</span>{' '}
+                    <span className='h-5 w-5 bg-indigo-700 inline-block mx-px'></span>{' '}
+                    color along with{' '}
+                    <span className='text-indigo-300'>indigo-300</span>{' '}
+                    <span className='h-5 w-5 bg-indigo-300 inline-block mx-px'></span>{' '}
+                    background.
                 </p>
             </div>
         </>
