@@ -9,7 +9,7 @@ const FontFamily = () => {
             <DividerTitleLeft title='Font family' />
             <div className='mt-5 mb-10 *:mb-4'>
                 {fonts.map(font => (
-                    <Heading key={font} level='h3' className={font}>
+                    <Heading key={font} level='h4' className={font}>
                         <span className='capitalize'>{font}</span>: The quick
                         brown fox jumps over the lazy dog.
                     </Heading>

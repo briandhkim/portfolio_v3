@@ -5,10 +5,11 @@ import FontFamily from './FontFamily';
 import FontSize from './FontSize';
 import { faFont, faIcons } from '@fortawesome/free-solid-svg-icons';
 import TextColor from './TextColor';
+import Icons from './Icons';
 
 const Components = () => {
     return (
-        <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-10'>
+        <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-10 mb-28'>
             {/* We've used 3xl here, but feel free to try other max-widths based on your needs */}
             <div className='mx-auto max-w-5xl'>
                 <Heading level='h1' className='mb-14 text-neutral-100'>
@@ -26,7 +27,6 @@ const Components = () => {
 
                     <div className='col-span-2 mt-14 sm:mt-3'>
                         <FontSize />
-
                         <FontFamily />
                         <TextColor />
                     </div>
@@ -47,7 +47,7 @@ const Components = () => {
                         </Heading>
                     </div>
                     <div className='col-span-2  mt-14 sm:mt-3'>
-                        reserved for icons
+                        <Icons />
                     </div>
                     <div className='col-span-3'>
                         <DividerIcon

@@ -7,16 +7,25 @@ const TextColor = () => {
             <div className='mt-5 mb-10 *:mb-4'>
                 <p>
                     The base text color is neutral-400{' '}
-                    <div className='h-4 w-4 bg-neutral-400 inline-block mx-px'></div>
+                    <span className='h-5 w-5 bg-neutral-400 inline-block mx-px'></span>
                     .
                 </p>
                 <p>
-                    Here is a text with color{' '}
+                    Texts with{' '}
                     <span className='text-neutral-100'>color emphasis</span>,
-                    which uses{' '}
-                    <span className='text-neutral-200'>neutral-200</span> color{' '}
-                    <div className='h-4 w-4 bg-neutral-100 inline-block mx-px'></div>
+                    use <span className='text-neutral-100'>neutral-100</span>{' '}
+                    <span className='h-5 w-5 bg-neutral-100 inline-block mx-px'></span>
                     .
+                </p>
+                <p>
+                    <span className='text-neutral-100 underline hover:text-neutral-300'>Links</span>{' '}
+                    use <span className='text-neutral-100'>neutral-100</span>{' '}
+                    <span className='h-5 w-5 bg-neutral-100 inline-block mx-px'></span>{' '}
+                    color along with{' '}
+                    <span className='underline'>underline</span> decoration and
+                    use <span className='text-neutral-300'>neutral-300</span>{' '}
+                    <span className='h-5 w-5 bg-neutral-300 inline-block mx-px'></span>{' '}
+                    for hover effect.
                 </p>
             </div>
         </>
