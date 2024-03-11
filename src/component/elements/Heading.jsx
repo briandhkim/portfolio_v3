@@ -14,7 +14,7 @@ const Heading = props => {
                 </h2>
             )}
             {level === 'h3' && (
-                <h3 className={`${className} text2xl sm:text-3xl md:text-4xl`}>
+                <h3 className={`${className} text-2xl sm:text-3xl md:text-4xl`}>
                     {children}
                 </h3>
             )}

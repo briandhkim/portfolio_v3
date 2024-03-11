@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { RouterProvider, createHashRouter } from 'react-router-dom';
 import Components from './component/pages/components/Components';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
     {
         path: '/',
         element: <App />,
