@@ -11,10 +11,17 @@ const TextColor = () => {
                     .
                 </p>
                 <p>
-                    Texts with{' '}
-                    <span className='text-neutral-100'>color emphasis</span>,
-                    use <span className='text-neutral-100'>neutral-100</span>{' '}
+                    Text with{' '}
+                    <span className='text-neutral-100'>color emphasis</span> use{' '}
+                    <span className='text-neutral-100'>neutral-100</span>{' '}
                     <span className='h-5 w-5 bg-neutral-100 inline-block mx-px'></span>
+                    .
+                </p>
+                <p>
+                    Text with{' '}
+                    <span className='text-neutral-600'>muted emphasis</span> use{' '}
+                    <span className='text-neutral-600'>neutural-600</span>{' '}
+                    <span className='h-5 w-5 bg-neutral-600 inline-block mx-px'></span>
                     .
                 </p>
                 <p>

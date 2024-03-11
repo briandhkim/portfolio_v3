@@ -3,7 +3,11 @@ import Heading from '../../elements/Heading';
 import DividerIcon from '../../layout/DividerIcon';
 import FontFamily from './FontFamily';
 import FontSize from './FontSize';
-import { faFont, faIcons } from '@fortawesome/free-solid-svg-icons';
+import {
+    faCubesStacked,
+    faFont,
+    faIcons,
+} from '@fortawesome/free-solid-svg-icons';
 import TextColor from './TextColor';
 import Icons from './Icons';
 
@@ -55,6 +59,23 @@ const Components = () => {
                                 <FontAwesomeIcon
                                     className='h-5 w-5 text-neutral-200'
                                     icon={faIcons}
+                                />
+                            }
+                        />
+                    </div>
+
+                    <div>
+                        <Heading level='h2' className='text-neutral-300'>
+                            Elements
+                        </Heading>
+                    </div>
+                    <div className='col-span-2 mt-14 sm:mt-3'>tbd</div>
+                    <div className='col-span-3'>
+                        <DividerIcon
+                            icon={
+                                <FontAwesomeIcon
+                                    className='h-5 w-5 text-neutral-200'
+                                    icon={faCubesStacked}
                                 />
                             }
                         />

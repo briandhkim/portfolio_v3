@@ -34,7 +34,9 @@ const FontFamily = () => {
                             </span>
                             : {font.family}
                         </Heading>
-                        <p className='text-lg sm:text-xl'>
+                        <p
+                            className={`text-lg sm:text-xl font-${font.category}`}
+                        >
                             The quick brown fox jumps over the lazy dog.
                         </p>
                     </>
