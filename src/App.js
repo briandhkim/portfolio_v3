@@ -1,8 +1,8 @@
 import './App.css';
-import Test from './component/Test';
+import Construction from './component/Construction';
 
 function App() {
-    return <Test />;
+    return <Construction />;
 }
 
 export default App;
