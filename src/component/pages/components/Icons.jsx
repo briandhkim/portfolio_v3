@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { skillList } from '../../../util/constants';
 import DividerTitleLeft from '../../layout/DividerTitleLeft';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+import LinkBase from '../../elements/LinkBase';
 
 const Icons = () => {
     const skillIcons = skillList.sort((a, b) => a.name.localeCompare(b.name));
@@ -17,18 +18,13 @@ const Icons = () => {
         <>
             <p className='mb-8'>
                 Most of the icons were acquired from{' '}
-                <a
-                    className='underline text-neutral-100 hover:text-neutral-300'
-                    href='https://devicon.dev/'
-                    rel='noreferrer'
-                    target='_blank'
-                >
+                <LinkBase href='https://devicon.dev/'>
                     Devicon
                     <FontAwesomeIcon
-                        className='ml-1 fa-xs'
+                        className='ml-0.5 fa-xs'
                         icon={faArrowUpRightFromSquare}
                     />
-                </a>
+                </LinkBase>
                 .
             </p>
             <DividerTitleLeft title='Development icons' />

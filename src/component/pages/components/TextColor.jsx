@@ -1,47 +1,44 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import DividerTitleLeft from '../../layout/DividerTitleLeft';
+// import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
+import { faFilePdf } from '@fortawesome/free-regular-svg-icons';
 
 const TextColor = () => {
     return (
         <>
             <DividerTitleLeft title='Text color' />
-            <div className='mt-5 mb-10 *:mb-4'>
+            <div className='mt-5 mb-10 *:mb-4 *:font-serif *:text-sm'>
                 <p>
-                    The base text color is neutral-400{' '}
-                    <span className='h-5 w-5 bg-neutral-400 inline-block mx-px'></span>
+                    The base text color is neutral-200{' '}
+                    <span className='h-5 w-5 bg-neutral-200 inline-block mx-px'></span>
                     .
                 </p>
                 <p>
-                    Text with{' '}
-                    <span className='text-neutral-100'>color emphasis</span> use{' '}
-                    <span className='text-neutral-100'>neutral-100</span>{' '}
-                    <span className='h-5 w-5 bg-neutral-100 inline-block mx-px'></span>
-                    .
+                    <span className='text-neutral-400'>Neutural-400</span>{' '}
+                    <span className='h-5 w-5 bg-neutral-400 inline-block mx-px'></span>{' '}
+                    is used to{' '}
+                    <span className='text-neutral-400'>de-emphasize</span> items
+                    that should sit more in the background.
                 </p>
                 <p>
-                    Text with{' '}
-                    <span className='text-neutral-600'>muted emphasis</span> use{' '}
-                    <span className='text-neutral-600'>neutural-600</span>{' '}
-                    <span className='h-5 w-5 bg-neutral-600 inline-block mx-px'></span>
-                    .
-                </p>
-                <p>
-                    <span className='text-neutral-100 underline hover:text-neutral-300'>
-                        Links
+                    <span className='underline hover:text-blue-400 cursor-pointer'>
+                        Generic links
                     </span>{' '}
-                    also use{' '}
-                    <span className='text-neutral-100'>neutral-100</span>{' '}
-                    <span className='h-5 w-5 bg-neutral-100 inline-block mx-px'></span>{' '}
-                    color along with{' '}
-                    <span className='underline'>underline</span> decoration as
-                    well as{' '}
-                    <span className='text-neutral-300'>neutral-300</span>{' '}
-                    <span className='h-5 w-5 bg-neutral-300 inline-block mx-px'></span>{' '}
-                    for hover effect.
+                    have <span className='underline'>underline</span> decoration
+                    and use <span className='text-blue-400'>blue-400</span>{' '}
+                    <span className='h-5 w-5 bg-blue-500 inline-block mx-px'></span>{' '}
+                    for hover effect. Custom links that have branding
+                    association or have specific usage, such as{' '}
+                    <span className='underline hover:text-red-500 cursor-pointer'>
+                        PDF document{' '}
+                        <FontAwesomeIcon className='ml-px' icon={faFilePdf} />
+                    </span>
+                    , may use custom colors.
                 </p>
                 <p>
                     <span className='text-indigo-700'>Indigo-700</span>{' '}
                     <span className='h-5 w-5 bg-indigo-700 inline-block mx-px'></span>{' '}
-                    color along with{' '}
+                    text along with{' '}
                     <span className='text-indigo-300'>indigo-300</span>{' '}
                     <span className='h-5 w-5 bg-indigo-300 inline-block mx-px'></span>{' '}
                     background are used for{' '}

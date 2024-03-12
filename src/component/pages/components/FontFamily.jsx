@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import Heading from '../../elements/Heading';
 import DividerTitleLeft from '../../layout/DividerTitleLeft';
 
@@ -23,12 +24,8 @@ const FontFamily = () => {
             <DividerTitleLeft title='Font family' />
             <div className='mt-5 mb-10 *:mb-4'>
                 {fonts.map(font => (
-                    <>
-                        <Heading
-                            key={font.category}
-                            level='h4'
-                            className={`font-${font.category}`}
-                        >
+                    <Fragment key={font.family}>
+                        <Heading level='h4' className={`font-${font.category}`}>
                             <span className='capitalize underline'>
                                 {font.category}
                             </span>
@@ -39,7 +36,7 @@ const FontFamily = () => {
                         >
                             The quick brown fox jumps over the lazy dog.
                         </p>
-                    </>
+                    </Fragment>
                 ))}
             </div>
         </>

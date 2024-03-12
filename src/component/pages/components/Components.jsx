@@ -10,10 +10,12 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import TextColor from './TextColor';
 import Icons from './Icons';
+import FontWeight from './FontWeight';
+import Buttons from './Buttons';
 
 const Components = () => {
     return (
-        <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-10 mb-28'>
+        <div className='mx-auto max-w-7xl px-4 md:px-6 lg:px-8 pt-10 mb-28'>
             {/* We've used 3xl here, but feel free to try other max-widths based on your needs */}
             <div className='mx-auto max-w-5xl'>
                 <Heading level='h1' className='mb-14 text-neutral-100'>
@@ -22,17 +24,18 @@ const Components = () => {
 
                 {/* <DividerTitleLeft title='Typography' /> */}
 
-                <div className='grid grid-cols-1 sm:grid-cols-3 gap-4'>
+                <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
                     <div className=''>
                         <Heading level='h2' className='text-neutral-300'>
                             Typography
                         </Heading>
                     </div>
 
-                    <div className='col-span-2 mt-14 sm:mt-3'>
+                    <div className='col-span-2 mt-14 md:mt-3 md:pr-5 md:max-h-[55vh] overflow-y-auto'>
                         <FontSize />
                         <FontFamily />
                         <TextColor />
+                        <FontWeight />
                     </div>
                     <div className='col-span-3'>
                         <DividerIcon
@@ -50,7 +53,7 @@ const Components = () => {
                             Icons
                         </Heading>
                     </div>
-                    <div className='col-span-2  mt-14 sm:mt-3'>
+                    <div className='col-span-2  mt-14 md:mt-3 md:pr-5 md:max-h-[40vh] overflow-y-auto'>
                         <Icons />
                     </div>
                     <div className='col-span-3'>
@@ -69,7 +72,9 @@ const Components = () => {
                             Elements
                         </Heading>
                     </div>
-                    <div className='col-span-2 mt-14 sm:mt-3'>tbd</div>
+                    <div className='col-span-2 mt-14 md:mt-3'>
+                        <Buttons />
+                    </div>
                     <div className='col-span-3'>
                         <DividerIcon
                             icon={
