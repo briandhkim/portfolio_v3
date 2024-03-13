@@ -12,6 +12,7 @@ import TextColor from './TextColor';
 import Icons from './Icons';
 import FontWeight from './FontWeight';
 import Buttons from './Buttons';
+import MaskedText from './MaskedText';
 
 const Components = () => {
     return (
@@ -74,6 +75,7 @@ const Components = () => {
                     </div>
                     <div className='col-span-2 mt-14 md:mt-3'>
                         <Buttons />
+                        <MaskedText />
                     </div>
                     <div className='col-span-3'>
                         <DividerIcon

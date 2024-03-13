@@ -1,8 +1,8 @@
-const ButtonPrimary = props => {
+const OutlineButton = props => {
     const { children, className = '', id, clickHandler, size = 'base' } = props;
 
     let baseStyle =
-        'font-semibold bg-neutral-200 text-neutral-800 shadow-sm hover:bg-neutral-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-200 ';
+        'font-semibold bg-transparent text-neutral-200 shadow-sm hover:bg-neutral-300 hover:text-neutral-800 focus-visible:outline shadow-sm ring-2 ring-inset ring-neutral-400 ';
     switch (size) {
         case 'xs':
             baseStyle += ' px-2 py-1 text-xs';
@@ -32,4 +32,4 @@ const ButtonPrimary = props => {
     );
 };
 
-export default ButtonPrimary;
+export default OutlineButton;
