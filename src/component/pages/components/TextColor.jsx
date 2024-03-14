@@ -7,7 +7,7 @@ const TextColor = () => {
     return (
         <>
             <DividerTitleLeft title='Text color' />
-            <div className='mt-5 mb-10 *:mb-4 *:font-serif *:text-sm'>
+            <div className='mt-5 mb-10 *:mb-4 *:font-serif *:text-sm pl-5'>
                 <p>
                     The base text color is neutral-200{' '}
                     <span className='h-5 w-5 bg-neutral-200 inline-block mx-px'></span>

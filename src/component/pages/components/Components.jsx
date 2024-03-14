@@ -27,18 +27,20 @@ const Components = () => {
 
                 <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
                     <div className=''>
-                        <Heading level='h2' className='text-neutral-300'>
+                        <Heading
+                            level='h2'
+                            className='text-neutral-300 md:sticky md:top-0'
+                        >
                             Typography
                         </Heading>
                     </div>
-
-                    <div className='col-span-2 mt-14 md:mt-3 md:pr-5 md:max-h-[55vh] overflow-y-auto'>
+                    <div className='col-span-2 mt-14 md:mt-3 md:pr-5 '>
                         <FontSize />
                         <FontFamily />
                         <TextColor />
                         <FontWeight />
                     </div>
-                    <div className='col-span-3'>
+                    <div className='col-span-3 mb-12 md:mb-18'>
                         <DividerIcon
                             icon={
                                 <FontAwesomeIcon
@@ -48,28 +50,13 @@ const Components = () => {
                             }
                         />
                     </div>
+                    {/* end typography */}
 
                     <div>
-                        <Heading level='h2' className='text-neutral-300'>
-                            Icons
-                        </Heading>
-                    </div>
-                    <div className='col-span-2  mt-14 md:mt-3 md:pr-5 md:max-h-[40vh] overflow-y-auto'>
-                        <Icons />
-                    </div>
-                    <div className='col-span-3'>
-                        <DividerIcon
-                            icon={
-                                <FontAwesomeIcon
-                                    className='h-5 w-5 text-neutral-200'
-                                    icon={faIcons}
-                                />
-                            }
-                        />
-                    </div>
-
-                    <div>
-                        <Heading level='h2' className='text-neutral-300'>
+                        <Heading
+                            level='h2'
+                            className='text-neutral-300 md:sticky md:top-0'
+                        >
                             Elements
                         </Heading>
                     </div>
@@ -77,7 +64,7 @@ const Components = () => {
                         <Buttons />
                         <MaskedText />
                     </div>
-                    <div className='col-span-3'>
+                    <div className='col-span-3 mb-12 md:mb-18'>
                         <DividerIcon
                             icon={
                                 <FontAwesomeIcon
@@ -87,6 +74,30 @@ const Components = () => {
                             }
                         />
                     </div>
+                    {/* end elements */}
+
+                    <div className=''>
+                        <Heading
+                            level='h2'
+                            className='text-neutral-300 md:sticky md:top-0'
+                        >
+                            Icons
+                        </Heading>
+                    </div>
+                    <div className=' col-span-2 mt-14 md:mt-3 md:pr-5 '>
+                        <Icons />
+                    </div>
+                    <div className=' col-span-3 mb-12 md:mb-18'>
+                        <DividerIcon
+                            icon={
+                                <FontAwesomeIcon
+                                    className='h-5 w-5 text-neutral-200'
+                                    icon={faIcons}
+                                />
+                            }
+                        />
+                    </div>
+                    {/* end icons */}
                 </div>
             </div>
         </div>

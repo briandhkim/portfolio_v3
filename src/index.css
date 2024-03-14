@@ -14,3 +14,8 @@
 	/* border-radius: 20px; */
 	background-color: #334155; /* slate-700 */ 
 }
+
+.vertical-text-right {
+	writing-mode: vertical-rl;
+	transform: scale(-1);
+}

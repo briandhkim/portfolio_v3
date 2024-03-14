@@ -5,7 +5,7 @@ const MaskedText = () => {
     return (
         <>
             <DividerTitleLeft title='Masked text' />
-            <div className='mt-5 mb-10'>
+            <div className='mt-5 mb-10 pl-5'>
                 <Spoiler text='This is a hidden text.' />
             </div>
         </>

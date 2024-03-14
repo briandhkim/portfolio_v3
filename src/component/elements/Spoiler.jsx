@@ -13,7 +13,9 @@ const Spoiler = props => {
                 <span
                     className='bg-neutral-200 cursor-pointer'
                     onClick={() => setShowSpoiler(true)}
+                    title='Click to show text'
                 >
+                    <span className='sr-only'>Click to show text</span>
                     {placeholder}
                 </span>
             )}

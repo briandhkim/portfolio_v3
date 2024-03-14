@@ -22,7 +22,7 @@ const FontFamily = () => {
     return (
         <>
             <DividerTitleLeft title='Font family' />
-            <div className='mt-5 mb-10 *:mb-4'>
+            <div className='mt-5 mb-10 *:mb-4 pl-5'>
                 {fonts.map(font => (
                     <Fragment key={font.family}>
                         <Heading level='h4' className={`font-${font.category}`}>

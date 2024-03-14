@@ -28,7 +28,7 @@ const Icons = () => {
                 .
             </p>
             <DividerTitleLeft title='Development icons' />
-            <div className='grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4 mt-5 mb-8 sm:px-6'>
+            <div className='grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4 mt-5 mb-8 sm:px-6 justify-items-center md:justify-items-start'>
                 {developmentIcons.map((icon, idx) => (
                     <div key={icon.name} className='h-14 w-14 mb-14'>
                         <div id={`icon-${idx}`}>{icon.icon}</div>
@@ -43,7 +43,7 @@ const Icons = () => {
             </div>
 
             <DividerTitleLeft title='Software & Tools icons' />
-            <div className='grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-1 mt-5 mb-8 sm:px-6'>
+            <div className='grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-1 mt-5 mb-8 sm:px-6 justify-items-center md:justify-items-start'>
                 {toolIcons.map((icon, idx) => (
                     <div key={icon.name} className='h-14 w-14 mb-14'>
                         <div id={`icon-${idx}`}>{icon.icon}</div>

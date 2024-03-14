@@ -4,7 +4,7 @@ const FontWeight = () => {
     return (
         <>
             <DividerTitleLeft title='Font weight' />
-            <div className='mt-5 mb-10 *:mb-4 *:font-serif *:text-sm'>
+            <div className='mt-5 mb-10 *:mb-4 *:font-serif *:text-sm pl-5'>
                 <p>
                     <code>{'`<strong>`'}</code> tag is used to add{' '}
                     <strong className='font-extrabold text-neutral-50'>
