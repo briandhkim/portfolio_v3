@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { RouterProvider, createHashRouter } from 'react-router-dom';
 import Components from './component/pages/components/Components';
+import Portfolio from './component/pages/portfolio/Portfolio';
 
 const router = createHashRouter([
     {
@@ -14,6 +15,10 @@ const router = createHashRouter([
     {
         path: '/components',
         element: <Components />,
+    },
+    {
+        path: '/runway',
+        element: <Portfolio />,
     },
 ]);
 
