@@ -1,4 +1,4 @@
-import Heading from '../../elements/Heading';
+import Heading from '../../../elements/Heading';
 import FooterLarge from './FooterLarge';
 import SocialVertical from './SocialVertical';
 

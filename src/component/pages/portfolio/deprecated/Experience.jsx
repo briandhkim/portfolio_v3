@@ -1,4 +1,4 @@
-import Heading from '../../elements/Heading';
+import Heading from '../../../elements/Heading';
 
 const Experience = () => {
     return (

@@ -1,5 +1,5 @@
-import ReactIcon from '../../icons/ReactIcon';
-import TailwindIcon from '../../icons/TailwindIcon';
+import ReactIcon from '../../../icons/ReactIcon';
+import TailwindIcon from '../../../icons/TailwindIcon';
 
 const FooterLarge = () => {
     return (
