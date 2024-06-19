@@ -8,25 +8,25 @@ import Components from './component/pages/components/Components';
 import Portfolio from './component/pages/portfolio/Portfolio';
 
 const router = createHashRouter([
-    {
-        path: '/',
-        element: <App />,
-    },
-    {
-        path: '/components',
-        element: <Components />,
-    },
-    {
-        path: '/runway',
-        element: <Portfolio />,
-    },
+	{
+		path: '/',
+		element: <App />,
+	},
+	{
+		path: '/components',
+		element: <Components />,
+	},
+	{
+		path: '/runway',
+		element: <Portfolio />,
+	},
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <React.StrictMode>
-        <RouterProvider router={router} />
-    </React.StrictMode>
+	<React.StrictMode>
+		<RouterProvider router={router} />
+	</React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
