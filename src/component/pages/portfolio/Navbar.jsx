@@ -1,6 +1,7 @@
 import { Fragment } from 'react';
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
+import { classNames } from '../../../util/helpers';
 
 const navigation = [
 	{ name: 'Dashboard', href: '#', current: true },
@@ -9,15 +10,11 @@ const navigation = [
 	{ name: 'Calendar', href: '#', current: false },
 ];
 
-function classNames(...classes) {
-	return classes.filter(Boolean).join(' ');
-}
-
 const Navbar = () => {
 	return (
 		<Disclosure
 			as='nav'
-			className='bg-neutral-950 sticky top-0 w-full z-10 border-b border-neutral-200'
+			className='bg-neutral-950 sticky top-0 w-full z-10  border-neutral-200'
 		>
 			{({ open }) => (
 				<>

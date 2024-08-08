@@ -8,7 +8,7 @@ const Skills = () => {
 					level='h2'
 					className='hidden lg:block font-serif underline decoration-4 underline-offset-4 md:sticky md:top-24'
 				>
-					SKills
+					Skills
 				</Heading>
 				<Heading
 					level='h2'
@@ -18,7 +18,7 @@ const Skills = () => {
 					SKills
 				</Heading>
 			</div>
-			<div className='col-span-2'>skill seciton</div>
+			<div className='col-span-2'>skill section</div>
 		</>
 	);
 };

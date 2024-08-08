@@ -1,4 +1,7 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Heading from '../../../elements/Heading';
+import DividerIcon from '../../../layout/DividerIcon';
+import { faIdCard } from '@fortawesome/free-solid-svg-icons';
 
 const About = () => {
 	return (
@@ -18,7 +21,7 @@ const About = () => {
 					About
 				</Heading>
 			</div>
-			<div className='col-span-2'>
+			<div className='col-span-3 md:col-span-2'>
 				<p className='font-mono'>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 					Tincidunt nunc ipsum tempor purus vitae id. Morbi in
@@ -29,6 +32,16 @@ const About = () => {
 					Illum quaerat ab inventore, eveniet repudiandae saepe, iste
 					sed molestias laborum atque, quos reprehenderit fugit cumo!
 				</p>
+			</div>
+			<div className='col-span-3 mt-6 md:mt-8 lg:mt-10 mb-12 md:mb-14 lg:mb-16'>
+				<DividerIcon
+					icon={
+						<FontAwesomeIcon
+							icon={faIdCard}
+							className='h-6 w-6 text-neutral-200'
+						/>
+					}
+				/>
 			</div>
 		</>
 	);
