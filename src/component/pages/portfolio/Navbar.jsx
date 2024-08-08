@@ -14,7 +14,7 @@ const Navbar = () => {
 	return (
 		<Disclosure
 			as='nav'
-			className='bg-neutral-950 sticky top-0 w-full z-10  border-neutral-200'
+			className='bg-neutral-950 md:bg-neutral-950/[0.85] sticky top-0 w-full z-10  border-neutral-200 animate-fade_in_slow'
 		>
 			{({ open }) => (
 				<>

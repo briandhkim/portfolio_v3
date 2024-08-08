@@ -9,7 +9,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { classNames } from '../../../../util/helpers';
-import DividerIcon from '../../../layout/DividerIcon';
+import SectionLayout from '../../../layout/SectionLayout';
 
 const Experience = () => {
 	const timeline = [
@@ -117,22 +117,7 @@ const Experience = () => {
 
 	return (
 		<>
-			<div className=''>
-				<Heading
-					level='h2'
-					className='hidden lg:block font-serif underline decoration-4 underline-offset-4 md:sticky md:top-24'
-				>
-					Experience
-				</Heading>
-				<Heading
-					level='h2'
-					size='small'
-					className='lg:hidden font-serif underline decoration-2 underline-offset-4 md:sticky md:top-24'
-				>
-					Experience
-				</Heading>
-			</div>
-			<div className='col-span-3 md:col-span-2'>
+			<SectionLayout sectionTitle='Experience' dividerIcon={faTimeline}>
 				<div className='grid gap-4 mx-4 sm:grid-cols-12'>
 					<div className='col-span-12'>
 						<div className='text-center sm:text-left mb-4 '>
@@ -223,17 +208,7 @@ const Experience = () => {
 						</div>
 					</div>
 				</div>
-			</div>
-			<div className='col-span-3 mt-6 md:mt-8 lg:mt-10 mb-12 md:mb-14 lg:mb-16'>
-				<DividerIcon
-					icon={
-						<FontAwesomeIcon
-							icon={faTimeline}
-							className='h-6 w-6 text-neutral-200'
-						/>
-					}
-				/>
-			</div>
+			</SectionLayout>
 		</>
 	);
 };

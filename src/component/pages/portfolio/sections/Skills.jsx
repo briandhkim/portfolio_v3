@@ -1,24 +1,12 @@
-import Heading from '../../../elements/Heading';
+import { faToolbox } from '@fortawesome/free-solid-svg-icons';
+import SectionLayout from '../../../layout/SectionLayout';
 
 const Skills = () => {
 	return (
 		<>
-			<div>
-				<Heading
-					level='h2'
-					className='hidden lg:block font-serif underline decoration-4 underline-offset-4 md:sticky md:top-24'
-				>
-					Skills
-				</Heading>
-				<Heading
-					level='h2'
-					size='small'
-					className='lg:hidden font-serif underline decoration-2 underline-offset-4 md:sticky md:top-24'
-				>
-					SKills
-				</Heading>
-			</div>
-			<div className='col-span-2'>skill section</div>
+			<SectionLayout sectionTitle='Skills' dividerIcon={faToolbox}>
+				<p className='font-mono'>some skill section stuff here</p>
+			</SectionLayout>
 		</>
 	);
 };
