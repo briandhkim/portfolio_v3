@@ -23,8 +23,13 @@ import PhpStormIcon from '../component/icons/PhpStormIcon';
 import VsCodeIcon from '../component/icons/VsCodeIcon';
 import DockerIcon from '../component/icons/DockerIcon';
 import MaterializeCssIcon from '../component/icons/MaterializeCssIcon';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faFilePdf } from '@fortawesome/free-regular-svg-icons';
+import { faMapLocationDot } from '@fortawesome/free-solid-svg-icons';
+import PostgreSqlIcon from '../component/icons/PostgreSqlIcon';
 
 // todo: add typescript
+// todo: add postgresql
 export const skillList = [
 	{
 		name: 'JavaScript',
@@ -150,5 +155,39 @@ export const skillList = [
 		name: 'Materialize CSS',
 		icon: <MaterializeCssIcon />,
 		category: 'Development',
+	},
+	{
+		name: 'PostgreSQL',
+		icon: <PostgreSqlIcon />,
+		category: 'Development',
+	},
+];
+
+export const skillListMap = new Map();
+skillList.map(skill => {
+	skillListMap.set(skill.name, skill);
+});
+
+export const socialLinks = [
+	{
+		name: 'LinkedIn',
+		icon: faLinkedin,
+		href: 'https://www.linkedin.com/in/bdhk/',
+	},
+	{
+		name: 'GitHub',
+		icon: faGithub,
+		href: 'https://github.com/briandhkim',
+	},
+	{
+		name: 'Resume',
+		icon: faFilePdf,
+		// href: '/docs/bdhk_resume.pdf',
+		href: '#',
+	},
+	{
+		name: 'Current location',
+		icon: faMapLocationDot,
+		href: 'https://maps.app.goo.gl/HuXK2qSdAmySdZrb9',
 	},
 ];

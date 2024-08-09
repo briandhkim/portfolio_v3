@@ -24,7 +24,7 @@ const Portfolio = () => {
 
 	return (
 		<div className=''>
-			<div className='mx-auto max-w-5xl px-4 sm:px-6 lg:px-8'>
+			<div className='mx-auto max-w-5xl px-2 sm:px-6 lg:px-8'>
 				{showNavbar && <Navbar />}
 				<div className=''>
 					{/* We've used 3xl here, but feel free to try other max-widths based on your needs */}

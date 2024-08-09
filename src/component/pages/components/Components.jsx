@@ -15,6 +15,12 @@ import Buttons from './Buttons';
 import MaskedText from './MaskedText';
 
 const Components = () => {
+	/**
+	 * todos:
+	 * links - decoration color
+	 * https://tailwindcss.com/docs/text-decoration-color
+	 */
+
 	return (
 		<div className='mx-auto max-w-7xl px-4 md:px-6 lg:px-8 pt-10 mb-28'>
 			{/* We've used 3xl here, but feel free to try other max-widths based on your needs */}

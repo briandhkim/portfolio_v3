@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import DividerTitleLeft from '../../layout/DividerTitleLeft';
 // import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
 import { faFilePdf } from '@fortawesome/free-regular-svg-icons';
+import GenericLink from '../../elements/GenericLink';
 
 const TextColor = () => {
 	return (
@@ -21,12 +22,18 @@ const TextColor = () => {
 					that should sit more in the background.
 				</p>
 				<p>
-					<span className='underline hover:text-blue-400 cursor-pointer'>
-						Generic links
+					<span className='text-primary-400'>Blue-400</span>{' '}
+					<span className='h-5 w-5 bg-primary-400 inline-block mx-px'></span>{' '}
+					is used for text or decorations that use color emphasis.
+				</p>
+				<p>
+					<GenericLink>Generic links</GenericLink> have{' '}
+					<span className='underline decoration-primary-400 decoration-2'>
+						underline
 					</span>{' '}
-					have <span className='underline'>underline</span> decoration
-					and use <span className='text-blue-400'>blue-400</span>{' '}
-					<span className='h-5 w-5 bg-blue-500 inline-block mx-px'></span>{' '}
+					decoration and use{' '}
+					<span className='text-primary-400'>blue-400</span>{' '}
+					<span className='h-5 w-5 bg-primary-400 inline-block mx-px'></span>{' '}
 					for hover effect. Custom links that have branding
 					association or have specific usage, such as{' '}
 					<span className='underline hover:text-red-500 cursor-pointer'>
@@ -36,13 +43,13 @@ const TextColor = () => {
 					, may use custom colors.
 				</p>
 				<p>
-					<span className='text-indigo-700'>Indigo-700</span>{' '}
-					<span className='h-5 w-5 bg-indigo-700 inline-block mx-px'></span>{' '}
+					<span className='text-highlight-700'>Indigo-700</span>{' '}
+					<span className='h-5 w-5 bg-highlight-700 inline-block mx-px'></span>{' '}
 					text along with{' '}
-					<span className='text-indigo-300'>indigo-300</span>{' '}
-					<span className='h-5 w-5 bg-indigo-300 inline-block mx-px'></span>{' '}
+					<span className='text-highlight-300'>indigo-300</span>{' '}
+					<span className='h-5 w-5 bg-highlight-300 inline-block mx-px'></span>{' '}
 					background are used for{' '}
-					<span className='bg-indigo-300 text-indigo-700'>
+					<span className='bg-highlight-300 text-highlight-700'>
 						{' '}
 						highlighted texts
 					</span>

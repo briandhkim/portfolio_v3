@@ -1,33 +1,7 @@
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faFilePdf } from '@fortawesome/free-regular-svg-icons';
-import { faMapLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { socialLinks } from '../../../../util/constants';
 
 const SocialSticky = () => {
-	const socialLinks = [
-		{
-			name: 'LinkedIn',
-			icon: faLinkedin,
-			href: 'https://www.linkedin.com/in/bdhk/',
-		},
-		{
-			name: 'GitHub',
-			icon: faGithub,
-			href: 'https://github.com/briandhkim',
-		},
-		{
-			name: 'Resume',
-			icon: faFilePdf,
-			// href: '/docs/bdhk_resume.pdf',
-			href: '#',
-		},
-		{
-			name: 'Current location',
-			icon: faMapLocationDot,
-			href: 'https://maps.app.goo.gl/HuXK2qSdAmySdZrb9',
-		},
-	];
-
 	return (
 		<div className='flex justify-evenly min-h-56 px-8 bg-neutral-950'>
 			{socialLinks.map(link => (

@@ -8,14 +8,8 @@ const SectionLayout = ({ children, sectionTitle, dividerIcon }) => {
 			<div>
 				<Heading
 					level='h2'
-					className='hidden lg:block font-serif underline decoration-4 underline-offset-4 md:sticky md:top-24'
-				>
-					{sectionTitle}
-				</Heading>
-				<Heading
-					level='h2'
 					size='small'
-					className='lg:hidden font-serif underline decoration-2 underline-offset-4 md:sticky md:top-24'
+					className='font-serif underline decoration-4 underline-offset-4 md:sticky md:top-24'
 				>
 					{sectionTitle}
 				</Heading>

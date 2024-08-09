@@ -7,9 +7,9 @@ import {
 	faSitemap,
 	faTimeline,
 } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { classNames } from '../../../../util/helpers';
 import SectionLayout from '../../../layout/SectionLayout';
+import GenericLink from '../../../elements/GenericLink';
+import ExperienceItem from './partials/ExperienceItem';
 
 const Experience = () => {
 	const timeline = [
@@ -17,12 +17,24 @@ const Experience = () => {
 			id: 1,
 			type: 'current',
 			content: 'Engineering Team',
-			target: 'Front End Developer',
-			href: '#',
 			date: 'Feb. 2023',
 			datetime: '2023-02-01',
 			icon: faCodeBranch,
-			iconBackground: 'bg-blue-400',
+			iconBackground: 'bg-primary-400',
+			techList: [
+				'JavaScript',
+				'React',
+				'Next.js',
+				'PHP',
+				'Laravel',
+				'MySQL',
+				'PostgreSQL',
+				'jQuery',
+				'Tailwind CSS',
+				'Bootstrap',
+				'Docker',
+				'Bamboo',
+			],
 			descriptionItems: [
 				'Created proof of concept applications for the latest organization initiatives using React, Next.js, Laravel, and PostgreSQL',
 				'Built internal tools designed to enhance workflow efficiency across multiple departments',
@@ -36,12 +48,20 @@ const Experience = () => {
 			id: 2,
 			type: 'past',
 			content: 'Service Team',
-			target: 'Bethany Blake',
-			href: '#',
 			date: 'Jul. 2022',
 			datetime: '2022-07-01',
 			icon: faSitemap,
 			iconBackground: 'bg-neutral-400',
+			techList: [
+				'JavaScript',
+				'PHP',
+				'Laravel',
+				'MySQL',
+				'PostgreSQL',
+				'Tailwind CSS',
+				'Ruby on Rails',
+				'Docker',
+			],
 			descriptionItems: [
 				'Participated in planning, designing, and developing of new microservice applications',
 				'Rapidly learned to develop with new language and framework, Ruby on Rails',
@@ -51,12 +71,19 @@ const Experience = () => {
 			id: 3,
 			type: 'past',
 			content: 'PDT, Deployment Specialist',
-			target: 'Martha Gardner',
-			href: '#',
 			date: 'Jul. 2021',
 			datetime: '2021-07-01',
 			icon: faScrewdriverWrench,
 			iconBackground: 'bg-neutral-400',
+			techList: [
+				'JavaScript',
+				'jQuery',
+				'PHP',
+				'MySQL',
+				'Bootstrap',
+				'Docker',
+				'Bamboo',
+			],
 			descriptionItems: [
 				'Oversaw major version releases, assessing risks and potential point of failures to intercept issues before they affect production services',
 				'Managed resolution of critical error events requiring in-depth analysis of the core application service, providing prompt, effective solutions and root cause analysis (RCA) reports detailing long-term, preventative measures',
@@ -67,12 +94,18 @@ const Experience = () => {
 			id: 4,
 			type: 'past',
 			content: 'Production Defect Team (PDT)',
-			target: 'Bethany Blake',
-			href: '#',
 			date: 'Oct. 2020',
 			datetime: '2020-10-01',
 			icon: faScrewdriverWrench,
 			iconBackground: 'bg-neutral-400',
+			techList: [
+				'JavaScript',
+				'jQuery',
+				'PHP',
+				'MySQL',
+				'Bootstrap',
+				'Bamboo',
+			],
 			descriptionItems: [
 				'Provided rapid resolution to production-level defects to minimize disruption to business operations',
 				'Triaged a diverse set of problems raised by the clients and identified by the QA team to ensure efficient defect resolution',
@@ -84,12 +117,20 @@ const Experience = () => {
 			id: 5,
 			type: 'past',
 			content: 'Implementation Team',
-			target: 'Katherine Snyder',
-			href: '#',
 			date: 'Feb. 2019',
 			datetime: '2019-02-01',
 			icon: faDiagramProject,
 			iconBackground: 'bg-neutral-400',
+			techList: [
+				'JavaScript',
+				'jQuery',
+				'Vue.js',
+				'PHP',
+				'Laravel',
+				'MySQL',
+				'Tailwind CSS',
+				'Bootstrap',
+			],
 			descriptionItems: [
 				'Upgraded the encryption algorithm used by the core application to enforce secure data storage',
 				'Lead frontend development of a new, single-page application (SPA) using Vue.js focused on versatile user experience',
@@ -102,12 +143,11 @@ const Experience = () => {
 			id: 6,
 			type: 'past',
 			content: 'UX Team',
-			target: 'Katherine Snyder',
-			href: '#',
 			date: 'Jul. 2018',
 			datetime: '2018-07-01',
 			icon: faDesktop,
 			iconBackground: 'bg-neutral-400',
+			techList: ['JavaScript', 'jQuery', 'PHP', 'MySQL', 'Bootstrap'],
 			descriptionItems: [
 				'Enriched the consumer facing user interfaces with web accessibility improvements',
 				'Developed intuitive, responsive user interfaces to create effective and learnable user experience',
@@ -118,90 +158,33 @@ const Experience = () => {
 	return (
 		<>
 			<SectionLayout sectionTitle='Experience' dividerIcon={faTimeline}>
-				<div className='grid gap-4 mx-4 sm:grid-cols-12'>
+				<div className='grid gap-4 mx-0.5 sm:mx-4 sm:grid-cols-12'>
 					<div className='col-span-12'>
-						<div className='text-center sm:text-left mb-4 '>
-							<Heading level='h3' className='hidden lg:block'>
-								BeSmartee
-							</Heading>
-							<Heading
-								level='h3'
-								size='small'
-								className='lg:hidden'
-							>
-								BeSmartee
+						<div className='text-left mb-4 '>
+							<Heading level='h3' size='small'>
+								<GenericLink url='https://besmartee.com'>
+									BeSmartee
+								</GenericLink>
 							</Heading>
 							<span className='text-sm font-bold tracking-wider uppercase text-neutral-400'>
 								Full stack software engineer
 							</span>
+							<span className='block text-sm font-bold tracking-wider uppercase text-neutral-400'>
+								Jul. 2018 - Apr. 2024
+							</span>
 						</div>
 					</div>
-					<div className='relative col-span-12 px-4 space-y-6'>
+					<div className='relative col-span-12 space-y-6 px-0.5 sm:px-4'>
 						<div className='flow-root'>
 							<ul role='list' className='-mb-8'>
 								{timeline.map((event, eventIdx) => (
 									<li key={event.id}>
-										<div className='relative pb-8'>
-											{eventIdx !==
-											timeline.length - 1 ? (
-												<span
-													className='absolute left-4 top-4 -ml-px h-full w-0.5 bg-neutral-600'
-													aria-hidden='true'
-												/>
-											) : null}
-											<div className='relative flex space-x-3'>
-												<div>
-													<span
-														className={classNames(
-															event.iconBackground,
-															'h-8 w-8 rounded-full flex items-center justify-center ring-8 ring-neutral-950'
-														)}
-													>
-														<FontAwesomeIcon
-															className=''
-															icon={event.icon}
-														/>
-													</span>
-												</div>
-												<div className='flex min-w-0 flex-1 justify-between space-x-4 pt-1'>
-													<div>
-														<p className='text-base font-bold '>
-															{event.content}{' '}
-														</p>
-														<div className='pl-10'>
-															<ul className='list-[korean-hangul-formal]'>
-																{event.descriptionItems.map(
-																	(
-																		item,
-																		idx
-																	) => (
-																		<li
-																			key={
-																				idx
-																			}
-																			className='font-mono'
-																		>
-																			{
-																				item
-																			}
-																		</li>
-																	)
-																)}
-															</ul>
-														</div>
-													</div>
-													<div className='whitespace-nowrap text-right text-sm text-neutral-400'>
-														<time
-															dateTime={
-																event.datetime
-															}
-														>
-															{event.date}
-														</time>
-													</div>
-												</div>
-											</div>
-										</div>
+										<ExperienceItem
+											history={event}
+											showLeftBar={
+												eventIdx !== timeline.length - 1
+											}
+										/>
 									</li>
 								))}
 							</ul>
