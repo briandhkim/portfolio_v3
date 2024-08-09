@@ -3,6 +3,7 @@ import { classNames } from '../../../../../util/helpers';
 import { skillListMap } from '../../../../../util/constants';
 import { useState } from 'react';
 import SolidButton from '../../../../elements/buttons/SolidButton';
+import { CSSTransition } from 'react-transition-group';
 
 const ExperienceItem = ({ history, showLeftBar }) => {
 	const [showDescription, setShowDescription] = useState(false);
@@ -58,7 +59,12 @@ const ExperienceItem = ({ history, showLeftBar }) => {
 								{showDescription ? 'Hide' : 'Show'}
 							</SolidButton>
 						</div>
-						{showDescription && (
+						<CSSTransition
+							in={showDescription}
+							timeout={500}
+							classNames='slide-vertical'
+							unmountOnExit
+						>
 							<div className='pl-10 mt-1.5'>
 								<ul className='list-[korean-hangul-formal]'>
 									{history.descriptionItems.map(
@@ -70,7 +76,7 @@ const ExperienceItem = ({ history, showLeftBar }) => {
 									)}
 								</ul>
 							</div>
-						)}
+						</CSSTransition>
 					</div>
 					<div className='whitespace-nowrap text-right text-sm text-neutral-400'>
 						<time dateTime={history.datetime}>{history.date}</time>
