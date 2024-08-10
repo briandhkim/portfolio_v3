@@ -4,6 +4,8 @@ import { skillListMap } from '../../../../../util/constants';
 import { useState } from 'react';
 import SolidButton from '../../../../elements/buttons/SolidButton';
 import { CSSTransition } from 'react-transition-group';
+import DividerTitleLeft from '../../../../layout/DividerTitleLeft';
+import { faAward } from '@fortawesome/free-solid-svg-icons';
 
 const ExperienceItem = ({ history, showLeftBar }) => {
 	const [showDescription, setShowDescription] = useState(false);
@@ -65,21 +67,82 @@ const ExperienceItem = ({ history, showLeftBar }) => {
 							classNames='slide-vertical'
 							unmountOnExit
 						>
-							<div className='pl-10 mt-1.5'>
-								<ul className='list-[korean-hangul-formal]'>
-									{history.descriptionItems.map(
-										(item, idx) => (
-											<li key={idx} className='font-mono'>
-												{item}
-											</li>
-										)
-									)}
-								</ul>
+							<div className='mt-3'>
+								<div className='text-neutral-400 mb-2'>
+									<time
+										dateTime={history.dateStart.toISOString()}
+									>
+										{history.dateStart.toLocaleString(
+											'default',
+											{
+												year: 'numeric',
+												month: 'short',
+											}
+										)}
+									</time>{' '}
+									-{' '}
+									<time
+										dateTime={history.dateEnd.toISOString()}
+									>
+										{history.dateEnd.toLocaleString(
+											'default',
+											{
+												year: 'numeric',
+												month: 'short',
+											}
+										)}
+									</time>
+								</div>
+								{history.honors && (
+									<div className='mb-5 space-y-1'>
+										<DividerTitleLeft title='Honors' />
+										<div className=' text-sm'>
+											<ul className='fa-ul'>
+												{history.honors.map(honor => (
+													<>
+														<li className=''>
+															<span className='fa-li'>
+																<FontAwesomeIcon
+																	icon={
+																		faAward
+																	}
+																/>
+															</span>
+															{honor}
+														</li>
+													</>
+												))}
+											</ul>
+										</div>
+									</div>
+								)}
+								<div className='mb-1 sm:mb-3 space-y-1'>
+									<DividerTitleLeft title='Work' />
+									<div className='pl-10 text-sm'>
+										<ul className='list-[korean-hangul-formal] space-y-1.5'>
+											{history.descriptionItems.map(
+												(item, idx) => (
+													<li
+														key={idx}
+														className='font-mono'
+													>
+														{item}
+													</li>
+												)
+											)}
+										</ul>
+									</div>
+								</div>
 							</div>
 						</CSSTransition>
 					</div>
-					<div className='whitespace-nowrap text-right text-sm text-neutral-400'>
-						<time dateTime={history.datetime}>{history.date}</time>
+					<div className='whitespace-nowrap text-right text-xs md:text-sm text-neutral-400'>
+						<time dateTime={history.datetime}>
+							{history.dateStart.toLocaleString('default', {
+								year: 'numeric',
+								month: 'short',
+							})}
+						</time>
 					</div>
 				</div>
 			</div>

@@ -3,51 +3,34 @@ import SectionLayout from '../../../layout/SectionLayout';
 import GenericLink from '../../../elements/GenericLink';
 import { socialLinks } from '../../../../util/constants';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import TextEmphasized from '../../../elements/TextEmphasized';
 
 const About = () => {
 	return (
 		<>
 			<SectionLayout sectionTitle='About' dividerIcon={faIdCard}>
 				<div className='font-mono space-y-2 whitespace whitespace-break-spaces mb-8 sm:mb-10 md:mb-12'>
-					<p>Hi, my name is Brian, and I am a software engineer.</p>
+					<p>
+						Hi, my name is <TextEmphasized>Brian</TextEmphasized>,
+						and I am a software engineer.
+					</p>
 					<p>
 						I have worked as a{' '}
-						<strong className='font-extrabold text-neutral-50'>
+						<TextEmphasized>
 							full-stack software engineer
-						</strong>{' '}
+						</TextEmphasized>{' '}
 						for the past six years at{' '}
 						<GenericLink url='https://besmartee.com'>
 							BeSmartee
 						</GenericLink>{' '}
 						using technologies such as{' '}
-						<strong className='font-extrabold text-neutral-50'>
-							JavaScript
-						</strong>
-						,{' '}
-						<strong className='font-extrabold text-neutral-50'>
-							PHP
-						</strong>
-						,{' '}
-						<strong className='font-extrabold text-neutral-50'>
-							jQuery
-						</strong>
-						,{' '}
-						<strong className='font-extrabold text-neutral-50'>
-							Vue.js
-						</strong>
-						,{' '}
-						<strong className='font-extrabold text-neutral-50'>
-							React
-						</strong>
-						,{' '}
-						<strong className='font-extrabold text-neutral-50'>
-							Laravel
-						</strong>
-						,{' '}
-						<strong className='font-extrabold text-neutral-50'>
-							Ruby on Rails
-						</strong>
-						, and more.
+						<TextEmphasized>JavaScript</TextEmphasized>,{' '}
+						<TextEmphasized>PHP</TextEmphasized>,{' '}
+						<TextEmphasized>jQuery</TextEmphasized>,{' '}
+						<TextEmphasized>React</TextEmphasized>,{' '}
+						<TextEmphasized>Laravel</TextEmphasized>,{' '}
+						<TextEmphasized>Ruby on Rails</TextEmphasized>, and
+						more.
 					</p>
 					<p>
 						I am currently located in{' '}

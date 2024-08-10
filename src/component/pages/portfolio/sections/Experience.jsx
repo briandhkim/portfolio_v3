@@ -18,7 +18,9 @@ const Experience = () => {
 			type: 'current',
 			content: 'Engineering Team',
 			date: 'Feb. 2023',
-			datetime: '2023-02-01',
+			datetime: '2023-02',
+			dateStart: new Date('2023-02-02'),
+			dateEnd: new Date('2024-04-02'),
 			icon: faCodeBranch,
 			iconBackground: 'bg-primary-400',
 			techList: [
@@ -35,6 +37,7 @@ const Experience = () => {
 				'Docker',
 				'Bamboo',
 			],
+			honors: ['The 6th Person of the Year'],
 			descriptionItems: [
 				'Created proof of concept applications for the latest organization initiatives using React, Next.js, Laravel, and PostgreSQL',
 				'Built internal tools designed to enhance workflow efficiency across multiple departments',
@@ -49,7 +52,9 @@ const Experience = () => {
 			type: 'past',
 			content: 'Service Team',
 			date: 'Jul. 2022',
-			datetime: '2022-07-01',
+			datetime: '2022-07',
+			dateStart: new Date('2022-07-02'),
+			dateEnd: new Date('2023-02-02'),
 			icon: faSitemap,
 			iconBackground: 'bg-neutral-400',
 			techList: [
@@ -72,7 +77,9 @@ const Experience = () => {
 			type: 'past',
 			content: 'PDT, Deployment Specialist',
 			date: 'Jul. 2021',
-			datetime: '2021-07-01',
+			datetime: '2021-07',
+			dateStart: new Date('2021-07-02'),
+			dateEnd: new Date('2022-07-02'),
 			icon: faScrewdriverWrench,
 			iconBackground: 'bg-neutral-400',
 			techList: [
@@ -84,6 +91,7 @@ const Experience = () => {
 				'Docker',
 				'Bamboo',
 			],
+			honors: ['All Star Engineering'],
 			descriptionItems: [
 				'Oversaw major version releases, assessing risks and potential point of failures to intercept issues before they affect production services',
 				'Managed resolution of critical error events requiring in-depth analysis of the core application service, providing prompt, effective solutions and root cause analysis (RCA) reports detailing long-term, preventative measures',
@@ -95,7 +103,9 @@ const Experience = () => {
 			type: 'past',
 			content: 'Production Defect Team (PDT)',
 			date: 'Oct. 2020',
-			datetime: '2020-10-01',
+			datetime: '2020-10',
+			dateStart: new Date('2020-10-02'),
+			dateEnd: new Date('2021-07-02'),
 			icon: faScrewdriverWrench,
 			iconBackground: 'bg-neutral-400',
 			techList: [
@@ -118,7 +128,9 @@ const Experience = () => {
 			type: 'past',
 			content: 'Implementation Team',
 			date: 'Feb. 2019',
-			datetime: '2019-02-01',
+			datetime: '2019-02',
+			dateStart: new Date('2019-02-02'),
+			dateEnd: new Date('2020-10-02'),
 			icon: faDiagramProject,
 			iconBackground: 'bg-neutral-400',
 			techList: [
@@ -144,10 +156,13 @@ const Experience = () => {
 			type: 'past',
 			content: 'UX Team',
 			date: 'Jul. 2018',
-			datetime: '2018-07-01',
+			datetime: '2018-07',
+			dateStart: new Date('2018-07-02'),
+			dateEnd: new Date('2019-02-02'),
 			icon: faDesktop,
 			iconBackground: 'bg-neutral-400',
 			techList: ['JavaScript', 'jQuery', 'PHP', 'MySQL', 'Bootstrap'],
+			honors: ['Rookie of the Year'],
 			descriptionItems: [
 				'Enriched the consumer facing user interfaces with web accessibility improvements',
 				'Developed intuitive, responsive user interfaces to create effective and learnable user experience',
@@ -169,8 +184,9 @@ const Experience = () => {
 							<span className='text-sm font-bold tracking-wider uppercase text-neutral-400'>
 								Full stack software engineer
 							</span>
-							<span className='block text-sm font-bold tracking-wider uppercase text-neutral-400'>
-								Jul. 2018 - Apr. 2024
+							<span className='block text-sm font-medium tracking-wider uppercase text-neutral-400'>
+								<time dateTime='2018-07'>Jul. 2018</time> -{' '}
+								<time dateTime='2024-04'>Apr. 2024</time>
 							</span>
 						</div>
 					</div>
