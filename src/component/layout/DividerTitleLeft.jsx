@@ -1,6 +1,8 @@
 const DividerTitleLeft = ({
 	title = '',
 	borderColor = 'border-neutral-400',
+	borderStyle = '',
+	borderWidth = 'border-t',
 	textColor = 'text-neutral-200',
 }) => {
 	return (
@@ -9,7 +11,9 @@ const DividerTitleLeft = ({
 				className='absolute inset-0 flex items-center'
 				aria-hidden='true'
 			>
-				<div className={`w-full border-t ${borderColor}`} />
+				<div
+					className={`w-full  ${borderColor} ${borderStyle} ${borderWidth}`}
+				/>
 			</div>
 			<div className='relative flex justify-start'>
 				<span

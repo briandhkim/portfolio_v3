@@ -30,7 +30,10 @@ const ExperienceItem = ({ history, showLeftBar }) => {
 							'h-8 w-8 rounded-full flex items-center justify-center ring-8 ring-neutral-950'
 						)}
 					>
-						<FontAwesomeIcon className='' icon={history.icon} />
+						<FontAwesomeIcon
+							className='pl-0.5'
+							icon={history.icon}
+						/>
 					</span>
 				</div>
 				<div className='flex min-w-0 flex-1 justify-between space-x-4 pt-1'>
@@ -59,6 +62,7 @@ const ExperienceItem = ({ history, showLeftBar }) => {
 								clickHandler={showBtnHandler}
 							>
 								{showDescription ? 'Hide' : 'Show'}
+								{/* todo - details */}
 							</SolidButton>
 						</div>
 						<CSSTransition
@@ -68,7 +72,7 @@ const ExperienceItem = ({ history, showLeftBar }) => {
 							unmountOnExit
 						>
 							<div className='mt-3'>
-								<div className='text-sm text-neutral-400 mb-2'>
+								<div className='text-xs sm:text-sm text-neutral-400 mb-2'>
 									<time
 										dateTime={history.dateStart.toISOString()}
 									>
@@ -95,8 +99,12 @@ const ExperienceItem = ({ history, showLeftBar }) => {
 								</div>
 								{history.honors && (
 									<div className='mb-5 space-y-1'>
-										<DividerTitleLeft title='Honors' />
-										<div className=' text-sm'>
+										<DividerTitleLeft
+											title='Honors'
+											borderStyle='border-dotted'
+											borderWidth='border-t-[3px]'
+										/>
+										<div className='font-mono text-sm'>
 											<ul className='fa-ul'>
 												{history.honors.map(honor => (
 													<li
@@ -116,15 +124,16 @@ const ExperienceItem = ({ history, showLeftBar }) => {
 									</div>
 								)}
 								<div className='mb-1 sm:mb-3 space-y-1'>
-									<DividerTitleLeft title='Work' />
-									<div className=' text-sm'>
+									<DividerTitleLeft
+										title='Work'
+										borderStyle='border-dotted'
+										borderWidth='border-t-[3px]'
+									/>
+									<div className='font-mono text-sm'>
 										<ul className='fa-ul space-y-3'>
 											{history.descriptionItems.map(
 												(item, idx) => (
-													<li
-														key={idx}
-														className='font-mono'
-													>
+													<li key={idx} className=''>
 														<span className='fa-li text-neutral-400'>
 															<FontAwesomeIcon
 																icon={

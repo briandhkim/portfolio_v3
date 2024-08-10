@@ -27,6 +27,8 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faFilePdf } from '@fortawesome/free-regular-svg-icons';
 import { faMapLocationDot } from '@fortawesome/free-solid-svg-icons';
 import PostgreSqlIcon from '../component/icons/PostgreSqlIcon';
+import CssIcon from '../component/icons/CssIcon';
+import HtmlIcon from '../component/icons/HtmlIcon';
 
 // todo: add typescript
 // todo: add postgresql
@@ -35,131 +37,169 @@ export const skillList = [
 		name: 'JavaScript',
 		icon: <JavaScriptIcon />,
 		category: 'Development',
+		type: 'Language',
 	},
 	{
 		name: 'jQuery',
 		icon: <JQueryIcon />,
 		category: 'Development',
+		type: 'Framework',
 	},
 	{
 		name: 'Vue.js',
 		icon: <VueIcon />,
 		category: 'Development',
+		type: 'Framework',
 	},
 	{
 		name: 'React',
 		icon: <ReactIcon />,
 		category: 'Development',
+		type: 'Framework',
 	},
 	{
 		name: 'Next.js',
 		icon: <NextIcon />,
 		category: 'Development',
+		type: 'Framework',
 	},
 	{
 		name: 'PHP',
 		icon: <PhpIcon />,
 		category: 'Development',
+		type: 'Language',
 	},
 	{
 		name: 'Laravel',
 		icon: <LaravelIcon />,
 		category: 'Development',
+		type: 'Framework',
 	},
 	{
 		name: 'MySQL',
 		icon: <MySqlIcon />,
 		category: 'Development',
+		type: 'Database',
 	},
 	{
 		name: 'Tailwind CSS',
 		icon: <TailwindIcon />,
 		category: 'Development',
+		type: 'Framework',
 	},
 	{
 		name: 'Bootstrap',
 		icon: <BootstrapIcon />,
 		category: 'Development',
+		type: 'Framework',
 	},
 	{
 		name: 'Ruby',
 		icon: <RubyIcon />,
 		category: 'Development',
+		type: 'Language',
 	},
 	{
 		name: 'Ruby on Rails',
 		icon: <RailsIcon />,
 		category: 'Development',
+		type: 'Framework',
 	},
 	{
 		name: 'Git',
 		icon: <GitIcon />,
 		category: 'Software & Tools',
+		type: 'Tool',
 	},
 	{
 		name: 'GitHub',
 		icon: <GitHubIcon />,
 		category: 'Software & Tools',
+		type: 'Tool',
 	},
 	{
 		name: 'BitBucket',
 		icon: <BitBucketIcon />,
 		category: 'Software & Tools',
+		type: 'Tool',
 	},
 	{
 		name: 'Bamboo',
 		icon: <BambooIcon />,
 		category: 'Software & Tools',
+		type: 'Tool',
 	},
 	{
 		name: 'Jira',
 		icon: <JiraIcon />,
 		category: 'Software & Tools',
+		type: 'Tool',
 	},
 	{
 		name: 'Confluence',
 		icon: <ConfluenceIcon />,
 		category: 'Software & Tools',
+		type: 'Tool',
 	},
 	{
 		name: 'New Relic',
 		icon: <NewRelicIcon />,
 		category: 'Software & Tools',
+		type: 'Tool',
 	},
 	{
 		name: 'Postman',
 		icon: <PostmanIcon />,
 		category: 'Software & Tools',
+		type: 'Tool',
 	},
 	{
 		name: 'Chrome DevTools',
 		icon: <ChromeIcon />,
 		category: 'Software & Tools',
+		type: 'Tool',
 	},
 	{
 		name: 'PhpStorm',
 		icon: <PhpStormIcon />,
 		category: 'Software & Tools',
+		type: 'IDE',
 	},
 	{
 		name: 'VS Code',
 		icon: <VsCodeIcon />,
 		category: 'Software & Tools',
+		type: 'IDE',
 	},
 	{
 		name: 'Docker',
 		icon: <DockerIcon />,
 		category: 'Software & Tools',
+		type: 'Tool',
 	},
 	{
 		name: 'Materialize CSS',
 		icon: <MaterializeCssIcon />,
 		category: 'Development',
+		type: 'Framework',
 	},
 	{
 		name: 'PostgreSQL',
 		icon: <PostgreSqlIcon />,
 		category: 'Development',
+		type: 'Database',
+	},
+	{
+		name: 'CSS',
+		icon: <CssIcon />,
+		category: 'Development',
+		type: 'Language',
+	},
+	{
+		name: 'HTML',
+		icon: <HtmlIcon />,
+		category: 'Development',
+		type: 'Language',
 	},
 ];
 
