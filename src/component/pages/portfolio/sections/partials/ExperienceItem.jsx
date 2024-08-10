@@ -5,7 +5,7 @@ import { useState } from 'react';
 import SolidButton from '../../../../elements/buttons/SolidButton';
 import { CSSTransition } from 'react-transition-group';
 import DividerTitleLeft from '../../../../layout/DividerTitleLeft';
-import { faAward } from '@fortawesome/free-solid-svg-icons';
+import { faAward, faCodeMerge } from '@fortawesome/free-solid-svg-icons';
 
 const ExperienceItem = ({ history, showLeftBar }) => {
 	const [showDescription, setShowDescription] = useState(false);
@@ -99,18 +99,17 @@ const ExperienceItem = ({ history, showLeftBar }) => {
 										<div className=' text-sm'>
 											<ul className='fa-ul'>
 												{history.honors.map(honor => (
-													<>
-														<li className=''>
-															<span className='fa-li'>
-																<FontAwesomeIcon
-																	icon={
-																		faAward
-																	}
-																/>
-															</span>
-															{honor}
-														</li>
-													</>
+													<li
+														key={honor}
+														className=''
+													>
+														<span className='fa-li'>
+															<FontAwesomeIcon
+																icon={faAward}
+															/>
+														</span>
+														{honor}
+													</li>
 												))}
 											</ul>
 										</div>
@@ -118,14 +117,21 @@ const ExperienceItem = ({ history, showLeftBar }) => {
 								)}
 								<div className='mb-1 sm:mb-3 space-y-1'>
 									<DividerTitleLeft title='Work' />
-									<div className='pl-10 text-sm'>
-										<ul className='list-[korean-hangul-formal] space-y-1.5'>
+									<div className=' text-sm'>
+										<ul className='fa-ul space-y-3'>
 											{history.descriptionItems.map(
 												(item, idx) => (
 													<li
 														key={idx}
 														className='font-mono'
 													>
+														<span className='fa-li'>
+															<FontAwesomeIcon
+																icon={
+																	faCodeMerge
+																}
+															/>
+														</span>
 														{item}
 													</li>
 												)
