@@ -48,7 +48,7 @@ const ExperienceItem = ({ history, showLeftBar }) => {
 									<div
 										key={t.name}
 										title={t.name}
-										className='h-7 w-7 mb-2'
+										className='h-6 w-6 mb-2'
 									>
 										{t.icon}
 									</div>

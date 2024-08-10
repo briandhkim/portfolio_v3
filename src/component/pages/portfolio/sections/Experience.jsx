@@ -61,7 +61,8 @@ const Experience = () => {
 				'MySQL',
 				'PostgreSQL',
 				'Tailwind CSS',
-				'Ruby on Rails',
+				'Ruby',
+				'Rails',
 				'Docker',
 			],
 			descriptionItems: [

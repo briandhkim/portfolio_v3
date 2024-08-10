@@ -29,6 +29,7 @@ import { faMapLocationDot } from '@fortawesome/free-solid-svg-icons';
 import PostgreSqlIcon from '../component/icons/PostgreSqlIcon';
 import CssIcon from '../component/icons/CssIcon';
 import HtmlIcon from '../component/icons/HtmlIcon';
+import AxeIcon from '../component/icons/AxeIcon';
 
 // todo: add typescript
 // todo: add postgresql
@@ -100,7 +101,7 @@ export const skillList = [
 		type: 'Language',
 	},
 	{
-		name: 'Ruby on Rails',
+		name: 'Rails',
 		icon: <RailsIcon />,
 		category: 'Development',
 		type: 'Framework',
@@ -156,6 +157,12 @@ export const skillList = [
 	{
 		name: 'Chrome DevTools',
 		icon: <ChromeIcon />,
+		category: 'Software & Tools',
+		type: 'Tool',
+	},
+	{
+		name: 'axe DevTools',
+		icon: <AxeIcon />,
 		category: 'Software & Tools',
 		type: 'Tool',
 	},
