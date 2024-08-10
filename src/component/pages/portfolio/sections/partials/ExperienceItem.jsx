@@ -5,7 +5,7 @@ import { useState } from 'react';
 import SolidButton from '../../../../elements/buttons/SolidButton';
 import { CSSTransition } from 'react-transition-group';
 import DividerTitleLeft from '../../../../layout/DividerTitleLeft';
-import { faAward, faCodeMerge } from '@fortawesome/free-solid-svg-icons';
+import { faAward, faCodeCommit } from '@fortawesome/free-solid-svg-icons';
 
 const ExperienceItem = ({ history, showLeftBar }) => {
 	const [showDescription, setShowDescription] = useState(false);
@@ -68,7 +68,7 @@ const ExperienceItem = ({ history, showLeftBar }) => {
 							unmountOnExit
 						>
 							<div className='mt-3'>
-								<div className='text-neutral-400 mb-2'>
+								<div className='text-sm text-neutral-400 mb-2'>
 									<time
 										dateTime={history.dateStart.toISOString()}
 									>
@@ -103,7 +103,7 @@ const ExperienceItem = ({ history, showLeftBar }) => {
 														key={honor}
 														className=''
 													>
-														<span className='fa-li'>
+														<span className='fa-li text-neutral-400'>
 															<FontAwesomeIcon
 																icon={faAward}
 															/>
@@ -125,10 +125,10 @@ const ExperienceItem = ({ history, showLeftBar }) => {
 														key={idx}
 														className='font-mono'
 													>
-														<span className='fa-li'>
+														<span className='fa-li text-neutral-400'>
 															<FontAwesomeIcon
 																icon={
-																	faCodeMerge
+																	faCodeCommit
 																}
 															/>
 														</span>

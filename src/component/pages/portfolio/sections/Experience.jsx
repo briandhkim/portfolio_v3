@@ -1,10 +1,7 @@
 import Heading from '../../../elements/Heading';
 import {
 	faCodeBranch,
-	faDesktop,
-	faDiagramProject,
-	faScrewdriverWrench,
-	faSitemap,
+	faCodeMerge,
 	faTimeline,
 } from '@fortawesome/free-solid-svg-icons';
 import SectionLayout from '../../../layout/SectionLayout';
@@ -55,7 +52,7 @@ const Experience = () => {
 			datetime: '2022-07',
 			dateStart: new Date('2022-07-02'),
 			dateEnd: new Date('2023-02-02'),
-			icon: faSitemap,
+			icon: faCodeMerge,
 			iconBackground: 'bg-neutral-400',
 			techList: [
 				'JavaScript',
@@ -80,7 +77,7 @@ const Experience = () => {
 			datetime: '2021-07',
 			dateStart: new Date('2021-07-02'),
 			dateEnd: new Date('2022-07-02'),
-			icon: faScrewdriverWrench,
+			icon: faCodeMerge,
 			iconBackground: 'bg-neutral-400',
 			techList: [
 				'JavaScript',
@@ -106,7 +103,7 @@ const Experience = () => {
 			datetime: '2020-10',
 			dateStart: new Date('2020-10-02'),
 			dateEnd: new Date('2021-07-02'),
-			icon: faScrewdriverWrench,
+			icon: faCodeMerge,
 			iconBackground: 'bg-neutral-400',
 			techList: [
 				'JavaScript',
@@ -131,7 +128,7 @@ const Experience = () => {
 			datetime: '2019-02',
 			dateStart: new Date('2019-02-02'),
 			dateEnd: new Date('2020-10-02'),
-			icon: faDiagramProject,
+			icon: faCodeMerge,
 			iconBackground: 'bg-neutral-400',
 			techList: [
 				'JavaScript',
@@ -159,7 +156,7 @@ const Experience = () => {
 			datetime: '2018-07',
 			dateStart: new Date('2018-07-02'),
 			dateEnd: new Date('2019-02-02'),
-			icon: faDesktop,
+			icon: faCodeMerge,
 			iconBackground: 'bg-neutral-400',
 			techList: ['JavaScript', 'jQuery', 'PHP', 'MySQL', 'Bootstrap'],
 			honors: ['Rookie of the Year'],

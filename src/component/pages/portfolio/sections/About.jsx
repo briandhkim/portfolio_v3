@@ -16,9 +16,9 @@ const About = () => {
 					</p>
 					<p>
 						I have worked as a{' '}
-						<TextEmphasized>
+						<GenericLink url='https://www.linkedin.com/in/bdhk/'>
 							full-stack software engineer
-						</TextEmphasized>{' '}
+						</GenericLink>{' '}
 						for the past six years at{' '}
 						<GenericLink url='https://besmartee.com'>
 							BeSmartee
