@@ -169,44 +169,42 @@ const Experience = () => {
 	];
 
 	return (
-		<>
-			<SectionLayout sectionTitle='Experience' dividerIcon={faTimeline}>
-				<div className='grid gap-4 mx-0.5 sm:mx-4 sm:grid-cols-12'>
-					<div className='col-span-12'>
-						<div className='text-left mb-4 '>
-							<Heading level='h3' size='small'>
-								<GenericLink url='https://besmartee.com'>
-									BeSmartee
-								</GenericLink>
-							</Heading>
-							<span className='text-sm font-bold tracking-wider uppercase text-neutral-400'>
-								Full stack software engineer
-							</span>
-							<span className='block text-sm font-medium tracking-wider uppercase text-neutral-400'>
-								<time dateTime='2018-07'>Jul. 2018</time> -{' '}
-								<time dateTime='2024-04'>Apr. 2024</time>
-							</span>
-						</div>
-					</div>
-					<div className='relative col-span-12 space-y-6 px-0.5 sm:px-4'>
-						<div className='flow-root'>
-							<ul role='list' className='-mb-8'>
-								{timeline.map((event, eventIdx) => (
-									<li key={event.id}>
-										<ExperienceItem
-											history={event}
-											showLeftBar={
-												eventIdx !== timeline.length - 1
-											}
-										/>
-									</li>
-								))}
-							</ul>
-						</div>
+		<SectionLayout sectionTitle='Experience' dividerIcon={faTimeline}>
+			<div className='grid gap-4 mx-0.5 sm:mx-4 sm:grid-cols-12'>
+				<div className='col-span-12'>
+					<div className='text-left mb-4 '>
+						<Heading level='h3' size='small'>
+							<GenericLink url='https://besmartee.com'>
+								BeSmartee
+							</GenericLink>
+						</Heading>
+						<span className='text-sm font-bold tracking-wider uppercase text-neutral-400'>
+							Full stack software engineer
+						</span>
+						<span className='block text-sm font-medium tracking-wider uppercase text-neutral-400'>
+							<time dateTime='2018-07'>Jul. 2018</time> -{' '}
+							<time dateTime='2024-04'>Apr. 2024</time>
+						</span>
 					</div>
 				</div>
-			</SectionLayout>
-		</>
+				<div className='relative col-span-12 space-y-6 px-0.5 sm:px-4'>
+					<div className='flow-root'>
+						<ul role='list' className='-mb-8'>
+							{timeline.map((event, eventIdx) => (
+								<li key={event.id}>
+									<ExperienceItem
+										history={event}
+										showLeftBar={
+											eventIdx !== timeline.length - 1
+										}
+									/>
+								</li>
+							))}
+						</ul>
+					</div>
+				</div>
+			</div>
+		</SectionLayout>
 	);
 };
 

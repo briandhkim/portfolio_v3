@@ -6,6 +6,8 @@ import Landing from './sections/Landing';
 import Skills from './sections/Skills';
 import SocialSticky from './sections/SocialSticky';
 import { useOnScreen } from '../../../hooks/useOnScreen';
+import Contact from './sections/Contact';
+import Footer from './sections/Footer';
 
 const Portfolio = () => {
 	/**
@@ -34,18 +36,24 @@ const Portfolio = () => {
 							<SocialSticky />
 						</section> */}
 						<Landing />
-						<section
-							className='grid grid-cols-1 md:grid-cols-3 gap-4 pt-12 md:pt-32'
-							ref={aboutRef}
-						>
-							<About />
-						</section>
-						<section className='grid grid-cols-1 md:grid-cols-3 gap-4 '>
-							<Experience />
-						</section>
-						<section className='grid grid-cols-1 md:grid-cols-3 gap-4 '>
-							<Skills />
-						</section>
+						<div className='mb-8 sm:mb-10 md:mb-14'>
+							<section
+								className='grid grid-cols-1 md:grid-cols-3 gap-4 pt-12 md:pt-32'
+								ref={aboutRef}
+							>
+								<About />
+							</section>
+							<section className='grid grid-cols-1 md:grid-cols-3 gap-4 '>
+								<Experience />
+							</section>
+							<section className='grid grid-cols-1 md:grid-cols-3 gap-4 '>
+								<Skills />
+							</section>
+							<section className='grid grid-cols-1 md:grid-cols-3 gap-4'>
+								<Contact />
+							</section>
+						</div>
+						<Footer />
 					</div>
 				</div>
 			</div>
