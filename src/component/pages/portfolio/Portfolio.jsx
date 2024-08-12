@@ -4,7 +4,6 @@ import About from './sections/About';
 import Experience from './sections/Experience';
 import Landing from './sections/Landing';
 import Skills from './sections/Skills';
-import SocialSticky from './sections/SocialSticky';
 import { useOnScreen } from '../../../hooks/useOnScreen';
 import Contact from './sections/Contact';
 import Footer from './sections/Footer';
@@ -40,16 +39,26 @@ const Portfolio = () => {
 							<section
 								className='grid grid-cols-1 md:grid-cols-3 gap-4 pt-12 md:pt-32'
 								ref={aboutRef}
+								id='about'
 							>
 								<About />
 							</section>
-							<section className='grid grid-cols-1 md:grid-cols-3 gap-4 '>
+							<section
+								className='grid grid-cols-1 md:grid-cols-3 gap-4 '
+								id='experience'
+							>
 								<Experience />
 							</section>
-							<section className='grid grid-cols-1 md:grid-cols-3 gap-4 '>
+							<section
+								className='grid grid-cols-1 md:grid-cols-3 gap-4 '
+								id='skills'
+							>
 								<Skills />
 							</section>
-							<section className='grid grid-cols-1 md:grid-cols-3 gap-4'>
+							<section
+								className='grid grid-cols-1 md:grid-cols-3 gap-4'
+								id='contact'
+							>
 								<Contact />
 							</section>
 						</div>

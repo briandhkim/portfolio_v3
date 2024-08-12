@@ -91,19 +91,19 @@ const Footer = () => {
 				<div className='mt-8 md:order-1 md:mt-0'>
 					<p className='text-center text-xs sm:text-sm leading-5 text-neutral-400'>
 						Made with
-						<div
+						<span
 							className='h-4 w-4 inline-block mx-1.5'
 							title='React'
 						>
 							<ReactIcon />
-						</div>
+						</span>
 						<FontAwesomeIcon icon={faPlus} />
-						<div
+						<span
 							className='h-4 w-4 inline-block mx-1.5'
 							title='Tailwind'
 						>
 							<TailwindIcon />
-						</div>
+						</span>
 					</p>
 				</div>
 			</div>
