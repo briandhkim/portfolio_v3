@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { RouterProvider, createHashRouter } from 'react-router-dom';
 import Components from './component/pages/components/Components';
 import Portfolio from './component/pages/portfolio/Portfolio';
+import Construction from './component/Construction';
 
 const router = createHashRouter([
 	{
@@ -19,6 +20,10 @@ const router = createHashRouter([
 	{
 		path: '/runway',
 		element: <Portfolio />,
+	},
+	{
+		path: '/construction',
+		element: <Construction />,
 	},
 ]);
 
