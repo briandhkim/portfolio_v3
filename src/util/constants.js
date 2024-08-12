@@ -32,7 +32,6 @@ import HtmlIcon from '../component/icons/HtmlIcon';
 import AxeIcon from '../component/icons/AxeIcon';
 
 // todo: add typescript
-// todo: add postgresql
 export const skillList = [
 	{
 		name: 'JavaScript',
@@ -238,3 +237,8 @@ export const socialLinks = [
 		href: 'https://maps.app.goo.gl/HuXK2qSdAmySdZrb9',
 	},
 ];
+
+export const socialLinksMap = new Map();
+socialLinks.map(social => {
+	socialLinksMap.set(social.name, social);
+});
