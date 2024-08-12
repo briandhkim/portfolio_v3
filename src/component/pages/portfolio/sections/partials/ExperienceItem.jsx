@@ -5,7 +5,12 @@ import { useState } from 'react';
 import SolidButton from '../../../../elements/buttons/SolidButton';
 import { CSSTransition } from 'react-transition-group';
 import DividerTitleLeft from '../../../../layout/DividerTitleLeft';
-import { faAward, faCodeCommit } from '@fortawesome/free-solid-svg-icons';
+import {
+	faAward,
+	faCodeCommit,
+	faMinus,
+	faPlus,
+} from '@fortawesome/free-solid-svg-icons';
 
 const ExperienceItem = ({ history, showLeftBar }) => {
 	const [showDescription, setShowDescription] = useState(false);
@@ -61,8 +66,15 @@ const ExperienceItem = ({ history, showLeftBar }) => {
 								className='rounded'
 								clickHandler={showBtnHandler}
 							>
-								{showDescription ? 'Hide' : 'Show'}
-								{/* todo - details */}
+								{showDescription ? (
+									<>
+										Hide <FontAwesomeIcon icon={faMinus} />
+									</>
+								) : (
+									<>
+										Show <FontAwesomeIcon icon={faPlus} />
+									</>
+								)}
 							</SolidButton>
 						</div>
 						<CSSTransition

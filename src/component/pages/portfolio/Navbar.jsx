@@ -94,7 +94,7 @@ const Navbar = () => {
 					</div>
 
 					<DisclosurePanel className='sm:hidden'>
-						<div className='space-y-1 px-2 pb-3 pt-2'>
+						<div className='space-y-1 px-2 pb-3 pt-2 bg-neutral-900'>
 							{navSocials.map(navSocial => {
 								const social = socialLinksMap.get(navSocial);
 								return (

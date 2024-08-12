@@ -7,6 +7,7 @@ import {
 import SectionLayout from '../../../layout/SectionLayout';
 import GenericLink from '../../../elements/GenericLink';
 import ExperienceItem from './partials/ExperienceItem';
+import TextEmphasized from '../../../elements/TextEmphasized';
 
 const Experience = () => {
 	const timeline = [
@@ -22,13 +23,13 @@ const Experience = () => {
 			iconBackground: 'bg-primary-400',
 			techList: [
 				'JavaScript',
+				'jQuery',
 				'React',
 				'Next.js',
 				'PHP',
 				'Laravel',
 				'MySQL',
 				'PostgreSQL',
-				'jQuery',
 				'Tailwind CSS',
 				'Bootstrap',
 				'Docker',
@@ -36,12 +37,41 @@ const Experience = () => {
 			],
 			honors: ['The 6th Person of the Year'],
 			descriptionItems: [
-				'Created proof of concept applications for the latest organization initiatives using React, Next.js, Laravel, and PostgreSQL',
-				'Built internal tools designed to enhance workflow efficiency across multiple departments',
-				'Identified areas for optimization within the web application and successfully implemented solutions',
-				'Oversaw major version releases, identifying and resolving critical issues prior to the release and ensuring deployments without major outage',
-				'Collaborated with various departments including engineering, product, client success, and implementation to develop various quality-of-life solutions',
-				'Provided guidance for other developers and various groups outside of the engineering dept. on troubleshooting, project planning, feature development, and more',
+				<>
+					Created proof-of-concept applications for the company’s V2
+					initiatives using new technology stack:{' '}
+					<TextEmphasized>React</TextEmphasized>,{' '}
+					<TextEmphasized>Next.js</TextEmphasized>,{' '}
+					<TextEmphasized>Laravel</TextEmphasized>, and{' '}
+					<TextEmphasized>PostgreSQL</TextEmphasized>
+				</>,
+				<>
+					Spearheaded internal tools development reducing redundant
+					tasks for multiple stakeholders, increasing workflow
+					efficiency by 99%
+				</>,
+				<>
+					Diagnosed areas for optimization with the existing{' '}
+					<TextEmphasized>PHP</TextEmphasized> codebase and
+					implemented refactored solutions, decreasing runtime for
+					some of the long running scripts from minutes to
+					milliseconds
+				</>,
+				<>
+					Collaborated with diverse stakeholder groups including
+					engineering, product, client success, and more to adhere to
+					intricate laws and compliance requirements pertaining to
+					mortgage lending practice
+				</>,
+				<>
+					Mentored developers as well as members outside of
+					engineering department to strengthen interdepartmental
+					rapport
+				</>,
+				<>
+					Orchestrated resolutions of several critical incidents
+					thereby saving relationship with the company’s top clients
+				</>,
 			],
 		},
 		{
@@ -66,8 +96,28 @@ const Experience = () => {
 				'Docker',
 			],
 			descriptionItems: [
-				'Participated in planning, designing, and developing of new microservice applications',
-				'Rapidly learned to develop with new language and framework, Ruby on Rails',
+				<>
+					Engineered new microservices utilizing{' '}
+					<TextEmphasized>
+						test-driven development (<abbr>TDD</abbr>)
+					</TextEmphasized>{' '}
+					across two different technology stacks:
+					<TextEmphasized>Laravel</TextEmphasized> and{' '}
+					<TextEmphasized>Ruby on Rails</TextEmphasized>
+				</>,
+				<>
+					Reinforced development using{' '}
+					<TextEmphasized>
+						<abbr title='5 key principles of object-oriented-programming'>
+							SOLID
+						</abbr>
+					</TextEmphasized>{' '}
+					and{' '}
+					<TextEmphasized>
+						<abbr title="Don't repeat yourself">DRY</abbr>
+					</TextEmphasized>{' '}
+					principles
+				</>,
 			],
 		},
 		{
@@ -91,9 +141,21 @@ const Experience = () => {
 			],
 			honors: ['All Star Engineering'],
 			descriptionItems: [
-				'Oversaw major version releases, assessing risks and potential point of failures to intercept issues before they affect production services',
-				'Managed resolution of critical error events requiring in-depth analysis of the core application service, providing prompt, effective solutions and root cause analysis (RCA) reports detailing long-term, preventative measures',
-				'Identified common points of failure within the code and organizational workflow, proactively collaborating with various departments to address and improve identified deficiencies',
+				<>
+					Supervised major version releases, assessing risks and
+					potential points-of-failure to intercept issues before they
+					impact production services
+				</>,
+				<>
+					Introduced the deployment guideline with safeguards based on
+					analysis of common, recurring problems, eliminating 100% of
+					preventable defects and improving development standards
+					across the entire engineering department
+				</>,
+				<>
+					Facilitated onboarding of seven new developers for the
+					engineering department
+				</>,
 			],
 		},
 		{
@@ -115,10 +177,22 @@ const Experience = () => {
 				'Bamboo',
 			],
 			descriptionItems: [
-				'Provided rapid resolution to production-level defects to minimize disruption to business operations',
-				'Triaged a diverse set of problems raised by the clients and identified by the QA team to ensure efficient defect resolution',
-				'Guided new and junior developers in effectively navigating the codebase and presenting appropriate resolutions to new challenges',
-				'Offered short-term resolutions for urgent, critical defects while devising long-term solutions to minimize recurring issues',
+				<>
+					Triaged thousands of defect tickets to establish efficient
+					resolution for high volume of system defects
+				</>,
+				<>
+					Resolved hundreds of urgent, production-level defects
+					minimizing outage incidents for critical business operations
+				</>,
+				<>
+					Analyzed several critical, misguided issues and presented{' '}
+					<TextEmphasized>
+						root cause analysis (<abbr>RCA</abbr>)
+					</TextEmphasized>{' '}
+					to stakeholders, thereby averting lawsuits and saving
+					relationships with top clients
+				</>,
 			],
 		},
 		{
@@ -142,11 +216,31 @@ const Experience = () => {
 				'Bootstrap',
 			],
 			descriptionItems: [
-				'Upgraded the encryption algorithm used by the core application to enforce secure data storage',
-				'Lead frontend development of a new, single-page application (SPA) using Vue.js focused on versatile user experience',
-				'Developed applications with PHP Laravel framework, enforcing test-driven development (TDD) methodology',
-				'Quickly adapted to working with various frameworks/libraries including jQuery, Vue.js, Bootstrap, Tailwind, and Laravel',
-				'Created clean, reusable code for the frontend and the backend development projects',
+				<>
+					Orchestrated the encryption algorithm upgrade used by the
+					existing <TextEmphasized>PHP</TextEmphasized> application
+					and attained seamless transition to stronger security
+					standards
+				</>,
+				<>
+					Lead frontend development of a new,{' '}
+					<TextEmphasized>
+						single-page application (
+						<abbr title='single page application'>SPA</abbr>)
+					</TextEmphasized>{' '}
+					using <TextEmphasized>Vue.js</TextEmphasized> and{' '}
+					<TextEmphasized>Tailwind CSS</TextEmphasized> focused on
+					versatile user experience
+				</>,
+				<>
+					Developed applications with{' '}
+					<TextEmphasized>Laravel</TextEmphasized> framework,
+					enforcing{' '}
+					<TextEmphasized>
+						<abbr title='test driven development'>TDD</abbr>
+					</TextEmphasized>{' '}
+					to create scalable codebase with zero reported bugs
+				</>,
 			],
 		},
 		{
@@ -162,8 +256,18 @@ const Experience = () => {
 			techList: ['JavaScript', 'jQuery', 'PHP', 'MySQL', 'Bootstrap'],
 			honors: ['Rookie of the Year'],
 			descriptionItems: [
-				'Enriched the consumer facing user interfaces with web accessibility improvements',
-				'Developed intuitive, responsive user interfaces to create effective and learnable user experience',
+				<>
+					Enriched the existing{' '}
+					<TextEmphasized>jQuery</TextEmphasized> and{' '}
+					<TextEmphasized>PHP</TextEmphasized> application with{' '}
+					<TextEmphasized>
+						web accessibility improvements
+					</TextEmphasized>
+				</>,
+				<>
+					Developed intuitive, responsive user interfaces to create
+					effective and learnable user experience
+				</>,
 			],
 		},
 	];

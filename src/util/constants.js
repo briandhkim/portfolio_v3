@@ -229,7 +229,7 @@ export const socialLinks = [
 		name: 'Resume',
 		icon: faFilePdf,
 		// href: '/docs/bdhk_resume.pdf',
-		href: '#',
+		href: '/docs/brian_kim_resume.pdf',
 	},
 	{
 		name: 'Current location',
