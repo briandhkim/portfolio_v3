@@ -2,6 +2,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ReactIcon from '../../../icons/ReactIcon';
 import TailwindIcon from '../../../icons/TailwindIcon';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { socialLinksMap } from '../../../../util/constants';
+import GenericLink from '../../../elements/GenericLink';
 
 const navigation = [
 	{
@@ -68,20 +70,23 @@ const navigation = [
 ];
 
 const Footer = () => {
+	const footerSocials = ['LinkedIn', 'GitHub', 'Resume'];
+
 	return (
 		<footer className='mb-8'>
 			<div className='mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8'>
 				<div className='flex justify-center space-x-6 md:order-2'>
-					{navigation.map(item => (
-						<a
-							key={item.name}
-							href={item.href}
-							className='text-neutral-400 hover:text-gray-500'
-						>
-							<span className='sr-only'>{item.name}</span>
-							<item.icon className='h-6 w-6' aria-hidden='true' />
-						</a>
-					))}
+					{footerSocials.map(footerSocial => {
+						const social = socialLinksMap.get(footerSocial);
+						return (
+							<GenericLink key={social.name} url={social.href}>
+								<FontAwesomeIcon
+									icon={social.icon}
+									className='h-6 w-6'
+								/>
+							</GenericLink>
+						);
+					})}
 				</div>
 				<div className='mt-8 md:order-1 md:mt-0'>
 					<p className='text-center text-xs sm:text-sm leading-5 text-neutral-400'>

@@ -3,11 +3,12 @@ import GenericLink from '../../../elements/GenericLink';
 import Heading from '../../../elements/Heading';
 import TextEmphasized from '../../../elements/TextEmphasized';
 import SectionLayout from '../../../layout/SectionLayout';
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faAt } from '@fortawesome/free-solid-svg-icons';
-import { faFilePdf } from '@fortawesome/free-regular-svg-icons';
+import { socialLinksMap } from '../../../../util/constants';
 
 const Contact = () => {
+	const resume = socialLinksMap.get('Resume');
+	const linkedIn = socialLinksMap.get('LinkedIn');
+
 	return (
 		<SectionLayout sectionTitle='Contact'>
 			<div className=''>
@@ -41,11 +42,11 @@ const Contact = () => {
 						<span className='text-neutral-400 text-sm mr-3 font-sans'>
 							Resume
 						</span>
-						<GenericLink>
-							Resume link
+						<GenericLink url={resume.href}>
+							Open {resume.name}
 							<FontAwesomeIcon
-								icon={faFilePdf}
-								className='ml-1'
+								icon={resume.icon}
+								className='ml-1.5'
 							/>
 						</GenericLink>
 					</li>
@@ -53,11 +54,11 @@ const Contact = () => {
 						<span className='text-neutral-400 text-sm mr-3 font-sans'>
 							LinkedIn
 						</span>
-						<GenericLink url='https://www.linkedin.com/in/bdhk/'>
-							Open LinkedIn
+						<GenericLink url={linkedIn.href}>
+							Open {linkedIn.name}
 							<FontAwesomeIcon
-								icon={faLinkedin}
-								className='ml-1'
+								icon={linkedIn.icon}
+								className='ml-1.5'
 							/>
 						</GenericLink>
 					</li>

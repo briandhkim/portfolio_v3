@@ -178,10 +178,10 @@ const Experience = () => {
 								BeSmartee
 							</GenericLink>
 						</Heading>
-						<span className='text-sm font-bold tracking-wider uppercase text-neutral-400'>
+						<span className='text-xs sm:text-sm font-bold tracking-wider uppercase text-neutral-400'>
 							Full stack software engineer
 						</span>
-						<span className='block text-sm font-medium tracking-wider uppercase text-neutral-400'>
+						<span className='block text-xs sm:text-sm font-medium tracking-wider uppercase text-neutral-400'>
 							<time dateTime='2018-07'>Jul. 2018</time> -{' '}
 							<time dateTime='2024-04'>Apr. 2024</time>
 						</span>

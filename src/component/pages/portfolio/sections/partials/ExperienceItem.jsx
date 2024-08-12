@@ -104,7 +104,7 @@ const ExperienceItem = ({ history, showLeftBar }) => {
 											borderStyle='border-dotted'
 											borderWidth='border-t-[3px]'
 										/>
-										<div className='font-mono text-sm'>
+										<div className='font-mono text-xs sm:text-sm'>
 											<ul className='fa-ul'>
 												{history.honors.map(honor => (
 													<li
@@ -129,7 +129,7 @@ const ExperienceItem = ({ history, showLeftBar }) => {
 										borderStyle='border-dotted'
 										borderWidth='border-t-[3px]'
 									/>
-									<div className='font-mono text-sm'>
+									<div className='font-mono text-xs sm:text-sm'>
 										<ul className='fa-ul space-y-3'>
 											{history.descriptionItems.map(
 												(item, idx) => (

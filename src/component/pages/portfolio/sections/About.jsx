@@ -43,7 +43,7 @@ const About = () => {
 					learning to become a better engineer.
 				</p>
 			</div>
-			<div className='flex justify-evenly md:justify-start md:space-x-14 mb-6 md:mb-0'>
+			<div className='flex justify-evenly md:justify-start md:space-x-14'>
 				{socialLinks.map(link => (
 					<div key={link.name} className=''>
 						<a

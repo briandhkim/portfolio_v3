@@ -14,7 +14,9 @@ const SectionLayout = ({ children, sectionTitle, dividerIcon = null }) => {
 					{sectionTitle}
 				</Heading>
 			</div>
-			<div className='col-span-3 md:col-span-2'>{children}</div>
+			<div className='col-span-3 md:col-span-2 mb-6 sm:mb-0'>
+				{children}
+			</div>
 			{dividerIcon && (
 				<div className='col-span-3 md:mt-8 lg:mt-10 mb-12 md:mb-14 lg:mb-16'>
 					<DividerIcon

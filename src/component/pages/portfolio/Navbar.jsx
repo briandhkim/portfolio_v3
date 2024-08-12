@@ -70,7 +70,7 @@ const Navbar = () => {
                                 </div> */}
 							</div>
 							<div className='absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0'>
-								<div className='hidden sm:flex pt-2 space-x-3'>
+								<div className='hidden sm:flex pt-2 space-x-6'>
 									{navSocials.map(navSocial => {
 										const social =
 											socialLinksMap.get(navSocial);
@@ -102,6 +102,7 @@ const Navbar = () => {
 										key={social.name}
 										as='a'
 										href={social.href}
+										target='_blank'
 										className='block px-3 py-2 font-mono underline cursor-pointer hover:text-primary-400 decoration-2 decoration-primary-400'
 									>
 										<FontAwesomeIcon
