@@ -8,6 +8,7 @@ import { socialLinksMap } from '../../../../util/constants';
 const Contact = () => {
 	const resume = socialLinksMap.get('Resume');
 	const linkedIn = socialLinksMap.get('LinkedIn');
+	const calendly = socialLinksMap.get('Schedule a call');
 
 	return (
 		<SectionLayout sectionTitle='Contact'>
@@ -58,6 +59,18 @@ const Contact = () => {
 							Open {linkedIn.name}
 							<FontAwesomeIcon
 								icon={linkedIn.icon}
+								className='ml-1.5'
+							/>
+						</GenericLink>
+					</li>
+					<li>
+						<span className='text-neutral-400 text-sm mr-3 font-sans'>
+							Call
+						</span>
+						<GenericLink url={calendly.href}>
+							{calendly.name}
+							<FontAwesomeIcon
+								icon={calendly.icon}
 								className='ml-1.5'
 							/>
 						</GenericLink>

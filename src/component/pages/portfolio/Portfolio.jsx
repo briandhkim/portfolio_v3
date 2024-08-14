@@ -10,7 +10,7 @@ import Footer from './sections/Footer';
 
 const Portfolio = () => {
 	/**
-	 * TODO: fade in navbar when landing page is not in view
+	 * TODO: add calendly link to contacts
 	 */
 
 	const [showNavbar, setShowNavbar] = useState(false);

@@ -24,7 +24,7 @@ import VsCodeIcon from '../component/icons/VsCodeIcon';
 import DockerIcon from '../component/icons/DockerIcon';
 import MaterializeCssIcon from '../component/icons/MaterializeCssIcon';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faFilePdf } from '@fortawesome/free-regular-svg-icons';
+import { faComments, faFilePdf } from '@fortawesome/free-regular-svg-icons';
 import { faMapLocationDot } from '@fortawesome/free-solid-svg-icons';
 import PostgreSqlIcon from '../component/icons/PostgreSqlIcon';
 import CssIcon from '../component/icons/CssIcon';
@@ -228,8 +228,12 @@ export const socialLinks = [
 	{
 		name: 'Resume',
 		icon: faFilePdf,
-		// href: '/docs/bdhk_resume.pdf',
 		href: '/docs/brian_kim_resume.pdf',
+	},
+	{
+		name: 'Schedule a call',
+		icon: faComments,
+		href: 'https://calendly.com/briandhkim93/call-with-brian',
 	},
 	{
 		name: 'Current location',

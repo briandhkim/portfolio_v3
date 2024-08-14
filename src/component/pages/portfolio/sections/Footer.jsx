@@ -70,7 +70,7 @@ const navigation = [
 ];
 
 const Footer = () => {
-	const footerSocials = ['LinkedIn', 'GitHub', 'Resume'];
+	const footerSocials = ['LinkedIn', 'GitHub', 'Resume', 'Schedule a call'];
 
 	return (
 		<footer className='mb-8'>
@@ -79,7 +79,11 @@ const Footer = () => {
 					{footerSocials.map(footerSocial => {
 						const social = socialLinksMap.get(footerSocial);
 						return (
-							<GenericLink key={social.name} url={social.href}>
+							<GenericLink
+								key={social.name}
+								url={social.href}
+								title={social.name}
+							>
 								<FontAwesomeIcon
 									icon={social.icon}
 									className='h-6 w-6'
