@@ -65,7 +65,7 @@ const Contact = () => {
 					</li>
 					<li>
 						<span className='text-neutral-400 text-sm mr-3 font-sans'>
-							Call
+							Chat
 						</span>
 						<GenericLink url={calendly.href}>
 							{calendly.name}

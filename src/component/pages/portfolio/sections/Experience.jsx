@@ -46,31 +46,39 @@ const Experience = () => {
 					<TextEmphasized>PostgreSQL</TextEmphasized>
 				</>,
 				<>
-					Spearheaded internal tools development reducing redundant
-					tasks for multiple stakeholders, increasing workflow
+					Led the investigation and resolution of a critical data loss
+					incident, delivering a{' '}
+					<TextEmphasized>
+						root cause analysis (<abbr>RCA</abbr>)
+					</TextEmphasized>{' '}
+					and successfully recovering 100% of the missing documents
+					from the server backup
+				</>,
+				<>
+					Orchestrated the resolution of several critical incidents,
+					successfully preserving relationships with the company’s top
+					clients
+				</>,
+				<>
+					Spearheaded internal tools development, reducing redundant
+					tasks for multiple stakeholders and increasing workflow
 					efficiency by 99%
 				</>,
 				<>
-					Diagnosed areas for optimization with the existing{' '}
+					Diagnosed optimization opportunities in the{' '}
 					<TextEmphasized>PHP</TextEmphasized> codebase and
-					implemented refactored solutions, decreasing runtime for
-					some of the long running scripts from minutes to
-					milliseconds
+					implemented refactored solutions, reducing runtime for some
+					long-running scripts from minutes to milliseconds
 				</>,
 				<>
-					Collaborated with diverse stakeholder groups including
-					engineering, product, client success, and more to adhere to
-					intricate laws and compliance requirements pertaining to
-					mortgage lending practice
+					Collaborated with diverse stakeholder groups, including
+					engineering, product, and client success, to ensure
+					adherence to complex laws and compliance requirements
+					related to mortgage lending practices
 				</>,
 				<>
-					Mentored developers as well as members outside of
-					engineering department to strengthen interdepartmental
-					rapport
-				</>,
-				<>
-					Orchestrated resolutions of several critical incidents
-					thereby saving relationship with the company’s top clients
+					Mentored developers and non-engineering team members to
+					strengthen interdepartmental relationships
 				</>,
 			],
 		},
@@ -101,7 +109,7 @@ const Experience = () => {
 					<TextEmphasized>
 						test-driven development (<abbr>TDD</abbr>)
 					</TextEmphasized>{' '}
-					across two different technology stacks:
+					across two different technology stacks:{' '}
 					<TextEmphasized>Laravel</TextEmphasized> and{' '}
 					<TextEmphasized>Ruby on Rails</TextEmphasized>
 				</>,
@@ -142,14 +150,20 @@ const Experience = () => {
 			honors: ['All Star Engineering'],
 			descriptionItems: [
 				<>
-					Supervised major version releases, assessing risks and
-					potential points-of-failure to intercept issues before they
-					impact production services
+					Directed the resolution of highly urgent incidents, often
+					requiring close collaboration with a diverse range of
+					stakeholders
 				</>,
 				<>
-					Introduced the deployment guideline with safeguards based on
-					analysis of common, recurring problems, eliminating 100% of
-					preventable defects and improving development standards
+					Supervised major version releases by assessing risks and
+					identifying potential points of failure, effectively
+					intercepting issues before they could impact production
+					services
+				</>,
+				<>
+					Introduced deployment guidelines with safeguards based on an
+					analysis of common recurring problems, eliminating 100% of
+					preventable defects and elevating development standards
 					across the entire engineering department
 				</>,
 				<>
@@ -178,20 +192,22 @@ const Experience = () => {
 			],
 			descriptionItems: [
 				<>
-					Triaged thousands of defect tickets to establish efficient
-					resolution for high volume of system defects
+					Triaged thousands of defect tickets, streamlining the
+					resolution process for a high volume of system defects
 				</>,
 				<>
-					Resolved hundreds of urgent, production-level defects
-					minimizing outage incidents for critical business operations
+					Resolved hundreds of urgent, production-level defects,
+					minimizing outage incidents and ensuring continuity of
+					critical business operations
 				</>,
 				<>
-					Analyzed several critical, misguided issues and presented{' '}
+					Investigated a critical security breach incident, providing
+					a comprehensive{' '}
 					<TextEmphasized>
 						root cause analysis (<abbr>RCA</abbr>)
 					</TextEmphasized>{' '}
-					to stakeholders, thereby averting lawsuits and saving
-					relationships with top clients
+					to the stakeholders and successfully averting lawsuits while
+					preserving relationships with key clients
 				</>,
 			],
 		},
@@ -217,20 +233,21 @@ const Experience = () => {
 			],
 			descriptionItems: [
 				<>
-					Orchestrated the encryption algorithm upgrade used by the
-					existing <TextEmphasized>PHP</TextEmphasized> application
-					and attained seamless transition to stronger security
-					standards
+					Orchestrated the upgrade of the{' '}
+					<TextEmphasized>encryption</TextEmphasized> algorithm used
+					by the existing <TextEmphasized>PHP</TextEmphasized>{' '}
+					application, ensuring a seamless transition to stronger
+					security standards
 				</>,
 				<>
-					Lead frontend development of a new,{' '}
+					Led the frontend development of a new{' '}
 					<TextEmphasized>
 						single-page application (
 						<abbr title='single page application'>SPA</abbr>)
 					</TextEmphasized>{' '}
 					using <TextEmphasized>Vue.js</TextEmphasized> and{' '}
-					<TextEmphasized>Tailwind CSS</TextEmphasized> focused on
-					versatile user experience
+					<TextEmphasized>Tailwind CSS</TextEmphasized> with a focus
+					on delivering a versatile user experience
 				</>,
 				<>
 					Developed applications with{' '}
@@ -259,10 +276,10 @@ const Experience = () => {
 				<>
 					Enriched the existing{' '}
 					<TextEmphasized>jQuery</TextEmphasized> and{' '}
-					<TextEmphasized>PHP</TextEmphasized> application with{' '}
-					<TextEmphasized>
-						web accessibility improvements
-					</TextEmphasized>
+					<TextEmphasized>PHP</TextEmphasized> application,
+					implementing{' '}
+					<TextEmphasized>web accessibility</TextEmphasized>{' '}
+					improvements
 				</>,
 				<>
 					Developed intuitive, responsive user interfaces to create
