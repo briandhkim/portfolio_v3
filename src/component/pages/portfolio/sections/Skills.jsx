@@ -43,7 +43,7 @@ const Skills = () => {
 		<SectionLayout sectionTitle='Skills' dividerIcon={faToolbox}>
 			<>
 				<div
-					className={`space-y-10 mb-4 ${!showMore ? 'overflow-y-hidden max-h-[450px]' : ''} `}
+					className={`space-y-10 mb-4 ${!showMore ? 'overflow-y-hidden max-h-[410px] sm:max-h-[455px]' : ''} `}
 				>
 					{Object.keys(skills).map(skillSection => (
 						<div key={skillSection} className=''>

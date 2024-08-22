@@ -9,7 +9,7 @@ import GenericLink from '../../elements/GenericLink';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Navbar = () => {
-	const navSocials = ['LinkedIn', 'GitHub', 'Resume'];
+	const navSocials = ['LinkedIn', 'GitHub', 'Resume', 'Schedule a call'];
 
 	return (
 		<Disclosure
