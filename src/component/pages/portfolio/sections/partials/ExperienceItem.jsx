@@ -11,12 +11,28 @@ import {
 	faMinus,
 	faPlus,
 } from '@fortawesome/free-solid-svg-icons';
+import { motion } from 'framer-motion';
 
 const ExperienceItem = ({ history, showLeftBar }) => {
 	const [showDescription, setShowDescription] = useState(false);
 
 	const showBtnHandler = () => {
 		setShowDescription(prev => !prev);
+	};
+
+	const descContainer = {
+		hidden: { opacity: 0 },
+		show: {
+			opacity: 1,
+			transition: {
+				staggerChildren: 0.15,
+			},
+		},
+	};
+
+	const descItem = {
+		hidden: { opacity: 0 },
+		show: { opacity: 1, transition: { ease: 'easeIn' } },
 	};
 
 	return (
@@ -50,13 +66,20 @@ const ExperienceItem = ({ history, showLeftBar }) => {
 							{history.techList.map(tech => {
 								const t = skillListMap.get(tech);
 								return (
-									<div
+									<motion.div
 										key={t.name}
 										title={t.name}
-										className='h-6 w-6 mb-2 hover:h-11 hover:w-11'
+										className='h-6 w-6 mb-2'
+										whileHover={{
+											scale: 1.8,
+											transition: { ease: 'circInOut' },
+										}}
+										whileTap={{
+											scale: 2,
+										}}
 									>
 										{t.icon}
-									</div>
+									</motion.div>
 								);
 							})}
 						</div>
@@ -142,10 +165,19 @@ const ExperienceItem = ({ history, showLeftBar }) => {
 										borderWidth='border-t-[3px]'
 									/>
 									<div className='font-mono text-xs sm:text-sm'>
-										<ul className='fa-ul space-y-3'>
+										<motion.ul
+											variants={descContainer}
+											initial='hidden'
+											animate='show'
+											className='fa-ul space-y-3'
+										>
 											{history.descriptionItems.map(
 												(item, idx) => (
-													<li key={idx} className=''>
+													<motion.li
+														key={idx}
+														variants={descItem}
+														className=''
+													>
 														<span className='fa-li text-neutral-400'>
 															<FontAwesomeIcon
 																icon={
@@ -154,10 +186,10 @@ const ExperienceItem = ({ history, showLeftBar }) => {
 															/>
 														</span>
 														{item}
-													</li>
+													</motion.li>
 												)
 											)}
-										</ul>
+										</motion.ul>
 									</div>
 								</div>
 							</div>

@@ -4,7 +4,8 @@ import GenericLink from '../../../elements/GenericLink';
 import { socialLinks } from '../../../../util/constants';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import TextEmphasized from '../../../elements/TextEmphasized';
-import { motion } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
+import { useRef, useState } from 'react';
 
 const About = () => {
 	const fade = {
@@ -21,424 +22,155 @@ const About = () => {
 			duration: 2,
 		},
 		groupFour: {
-			delay: 4.5,
+			delay: 4.3,
 			duration: 2,
 		},
 	};
 
+	const ref = useRef(null);
+	const descInView = useInView(ref);
+	const [showAnimation, setShowAnimation] = useState(true);
+
+	const disableAnimation = () => {
+		if (showAnimation) {
+			const msForAnimationToComplete =
+				(fade.groupFour.delay +
+					fade.groupFour.duration -
+					fade.groupOne.duration) *
+				1000;
+
+			setTimeout(() => {
+				const e = document.getElementById('last-description');
+				const eOpacity = window
+					.getComputedStyle(e)
+					.getPropertyValue('opacity');
+				// console.log('opacity: ' + eOpacity);
+				if (eOpacity == 1) {
+					setShowAnimation(false);
+				}
+			}, msForAnimationToComplete);
+		}
+	};
+
+	const FadeInSpan = ({ time, children, id = null }) => {
+		const { duration, delay } = time;
+		return (
+			<motion.span
+				initial={{ opacity: showAnimation ? 0 : 1 }}
+				animate={
+					descInView && showAnimation
+						? { opacity: 1, transitionEnd: { opacity: 1 } }
+						: ''
+				}
+				onAnimationComplete={disableAnimation}
+				transition={{
+					repeat: 0,
+					ease: 'easeIn',
+					duration: duration,
+					delay: delay,
+				}}
+				viewport={{ once: true }}
+				id={id}
+			>
+				{children}
+			</motion.span>
+		);
+	};
+
 	return (
 		<SectionLayout sectionTitle='About' dividerIcon={faIdCard}>
-			<div className='font-mono space-y-2 whitespace whitespace-break-spaces mb-8 sm:mb-10 md:mb-12'>
+			<div
+				ref={ref}
+				className='font-mono space-y-2 whitespace whitespace-break-spaces mb-8 sm:mb-10 md:mb-12'
+			>
 				<p>
-					<motion.span
-						initial={{ opacity: 0 }}
-						whileInView={{ opacity: 1 }}
-						transition={{
-							ease: 'easeInOut',
-							duration: fade.groupThree.duration,
-							delay: fade.groupThree.delay,
-						}}
-						viewport={{ once: true }}
-					>
-						Hi,{' '}
-					</motion.span>
-					<motion.span
-						initial={{ opacity: 0 }}
-						whileInView={{ opacity: 1 }}
-						transition={{
-							ease: 'easeInOut',
-							duration: fade.groupTwo.duration,
-							delay: fade.groupTwo.delay,
-						}}
-						viewport={{ once: true }}
-					>
-						my name is
-					</motion.span>
-					<motion.span
-						initial={{ opacity: 0 }}
-						whileInView={{ opacity: 1 }}
-						transition={{
-							ease: 'easeInOut',
-							duration: fade.groupOne.duration,
-							delay: fade.groupOne.delay,
-						}}
-						viewport={{ once: true }}
-					>
+					<FadeInSpan time={fade.groupThree}>Hi, </FadeInSpan>
+					<FadeInSpan time={fade.groupTwo}>my name is</FadeInSpan>
+					<FadeInSpan time={fade.groupOne}>
 						{' '}
 						<TextEmphasized>Brian</TextEmphasized>{' '}
-					</motion.span>
-					<motion.span
-						initial={{ opacity: 0 }}
-						whileInView={{ opacity: 1 }}
-						transition={{
-							ease: 'easeInOut',
-							duration: fade.groupThree.duration,
-							delay: fade.groupThree.delay,
-						}}
-						viewport={{ once: true }}
-					>
+					</FadeInSpan>
+					<FadeInSpan time={fade.groupThree}>
 						<span title='legal name'>(Dong Hyun)</span>, and{' '}
-					</motion.span>
-					<motion.span
-						initial={{ opacity: 0 }}
-						whileInView={{ opacity: 1 }}
-						transition={{
-							ease: 'easeInOut',
-							duration: fade.groupTwo.duration,
-							delay: fade.groupTwo.delay,
-						}}
-						viewport={{ once: true }}
-					>
-						I am a{' '}
-					</motion.span>
-					<motion.span
-						initial={{ opacity: 0 }}
-						whileInView={{ opacity: 1 }}
-						transition={{
-							ease: 'easeInOut',
-							duration: fade.groupThree.duration,
-							delay: fade.groupThree.delay,
-						}}
-						viewport={{ once: true }}
-					>
+					</FadeInSpan>
+					<FadeInSpan time={fade.groupTwo}>I am a </FadeInSpan>
+					<FadeInSpan time={fade.groupThree}>
 						software engineer
-					</motion.span>
-					<motion.span
-						initial={{ opacity: 0 }}
-						whileInView={{ opacity: 1 }}
-						transition={{
-							ease: 'easeInOut',
-							duration: fade.groupFour.duration,
-							delay: fade.groupFour.delay,
-						}}
-						viewport={{ once: true }}
-					>
-						.
-					</motion.span>
+					</FadeInSpan>
+					<FadeInSpan time={fade.groupFour}>.</FadeInSpan>
 				</p>
 				<p>
-					<motion.span
-						initial={{ opacity: 0 }}
-						whileInView={{ opacity: 1 }}
-						transition={{
-							ease: 'easeInOut',
-							duration: fade.groupFour.duration,
-							delay: fade.groupFour.delay,
-						}}
-						viewport={{ once: true }}
-					>
+					<FadeInSpan time={fade.groupFour}>
 						I have worked as a{' '}
-					</motion.span>
-					<motion.span
-						initial={{ opacity: 0 }}
-						whileInView={{ opacity: 1 }}
-						transition={{
-							ease: 'easeInOut',
-							duration: fade.groupOne.duration,
-							delay: fade.groupOne.delay,
-						}}
-						viewport={{ once: true }}
-					>
+					</FadeInSpan>
+					<FadeInSpan time={fade.groupOne}>
 						<GenericLink url='https://www.linkedin.com/in/bdhk/'>
 							full-stack software engineer
 						</GenericLink>{' '}
-					</motion.span>
-					<motion.span
-						initial={{ opacity: 0 }}
-						whileInView={{ opacity: 1 }}
-						transition={{
-							ease: 'easeInOut',
-							duration: fade.groupFour.duration,
-							delay: fade.groupFour.delay,
-						}}
-						viewport={{ once: true }}
-					>
-						for the past{' '}
-					</motion.span>
-					<motion.span
-						initial={{ opacity: 0 }}
-						whileInView={{ opacity: 1 }}
-						transition={{
-							ease: 'easeInOut',
-							duration: fade.groupTwo.duration,
-							delay: fade.groupTwo.delay,
-						}}
-						viewport={{ once: true }}
-					>
-						six years{' '}
-					</motion.span>
-					<motion.span
-						initial={{ opacity: 0 }}
-						whileInView={{ opacity: 1 }}
-						transition={{
-							ease: 'easeInOut',
-							duration: fade.groupFour.duration,
-							delay: fade.groupFour.delay,
-						}}
-						viewport={{ once: true }}
-					>
-						at{' '}
-					</motion.span>
-					<motion.span
-						initial={{ opacity: 0 }}
-						whileInView={{ opacity: 1 }}
-						transition={{
-							ease: 'easeInOut',
-							duration: fade.groupThree.duration,
-							delay: fade.groupThree.delay,
-						}}
-						viewport={{ once: true }}
-					>
+					</FadeInSpan>
+					<FadeInSpan time={fade.groupFour}>for the past </FadeInSpan>
+					<FadeInSpan time={fade.groupTwo}>six years </FadeInSpan>
+					<FadeInSpan time={fade.groupFour}>at </FadeInSpan>
+					<FadeInSpan time={fade.groupThree}>
 						<GenericLink url='https://besmartee.com'>
 							BeSmartee
 						</GenericLink>{' '}
-					</motion.span>
-					<motion.span
-						initial={{ opacity: 0 }}
-						whileInView={{ opacity: 1 }}
-						transition={{
-							ease: 'easeInOut',
-							duration: fade.groupTwo.duration,
-							delay: fade.groupTwo.delay,
-						}}
-						viewport={{ once: true }}
-					>
-						using{' '}
-					</motion.span>
-					<motion.span
-						initial={{ opacity: 0 }}
-						whileInView={{ opacity: 1 }}
-						transition={{
-							ease: 'easeInOut',
-							duration: fade.groupFour.duration,
-							delay: fade.groupFour.delay,
-						}}
-						viewport={{ once: true }}
-					>
+					</FadeInSpan>
+					<FadeInSpan time={fade.groupTwo}>using </FadeInSpan>
+					<FadeInSpan time={fade.groupFour}>
 						technologies such as{' '}
-					</motion.span>
-					<motion.span
-						initial={{ opacity: 0 }}
-						whileInView={{ opacity: 1 }}
-						transition={{
-							ease: 'easeInOut',
-							duration: fade.groupOne.duration,
-							delay: fade.groupOne.delay,
-						}}
-						viewport={{ once: true }}
-					>
+					</FadeInSpan>
+					<FadeInSpan time={fade.groupOne}>
 						<TextEmphasized>JavaScript</TextEmphasized>,{' '}
-					</motion.span>
-					<motion.span
-						initial={{ opacity: 0 }}
-						whileInView={{ opacity: 1 }}
-						transition={{
-							ease: 'easeInOut',
-							duration: fade.groupOne.duration,
-							delay: fade.groupOne.delay,
-						}}
-						viewport={{ once: true }}
-					>
+					</FadeInSpan>
+					<FadeInSpan time={fade.groupOne}>
 						<TextEmphasized>PHP</TextEmphasized>,{' '}
-					</motion.span>
-					<motion.span
-						initial={{ opacity: 0 }}
-						whileInView={{ opacity: 1 }}
-						transition={{
-							ease: 'easeInOut',
-							duration: fade.groupThree.duration,
-							delay: fade.groupThree.delay,
-						}}
-						viewport={{ once: true }}
-					>
+					</FadeInSpan>
+					<FadeInSpan time={fade.groupThree}>
 						<TextEmphasized>jQuery</TextEmphasized>,{' '}
-					</motion.span>
-					<motion.span
-						initial={{ opacity: 0 }}
-						whileInView={{ opacity: 1 }}
-						transition={{
-							ease: 'easeInOut',
-							duration: fade.groupTwo.duration,
-							delay: fade.groupTwo.delay,
-						}}
-						viewport={{ once: true }}
-					>
+					</FadeInSpan>
+					<FadeInSpan time={fade.groupTwo}>
 						<TextEmphasized>React</TextEmphasized>,{' '}
-					</motion.span>
-					<motion.span
-						initial={{ opacity: 0 }}
-						whileInView={{ opacity: 1 }}
-						transition={{
-							ease: 'easeInOut',
-							duration: fade.groupTwo.duration,
-							delay: fade.groupTwo.delay,
-						}}
-						viewport={{ once: true }}
-					>
+					</FadeInSpan>
+					<FadeInSpan time={fade.groupTwo}>
 						<TextEmphasized>Laravel</TextEmphasized>,{' '}
-					</motion.span>
-					<motion.span
-						initial={{ opacity: 0 }}
-						whileInView={{ opacity: 1 }}
-						transition={{
-							ease: 'easeInOut',
-							duration: fade.groupThree.duration,
-							delay: fade.groupThree.delay,
-						}}
-						viewport={{ once: true }}
-					>
+					</FadeInSpan>
+					<FadeInSpan time={fade.groupThree}>
 						<TextEmphasized>Ruby on Rails</TextEmphasized>
-					</motion.span>
-					<motion.span
-						initial={{ opacity: 0 }}
-						whileInView={{ opacity: 1 }}
-						transition={{
-							ease: 'easeInOut',
-							duration: fade.groupFour.duration,
-							delay: fade.groupFour.delay,
-						}}
-						viewport={{ once: true }}
-					>
-						, and more.
-					</motion.span>
+					</FadeInSpan>
+					<FadeInSpan time={fade.groupFour}>, and more.</FadeInSpan>
 				</p>
 				<p>
-					<motion.span
-						initial={{ opacity: 0 }}
-						whileInView={{ opacity: 1 }}
-						transition={{
-							ease: 'easeInOut',
-							duration: fade.groupFour.duration,
-							delay: fade.groupFour.delay,
-						}}
-						viewport={{ once: true }}
-					>
+					<FadeInSpan time={fade.groupFour}>
 						I am currently located in{' '}
-					</motion.span>
-					<motion.span
-						initial={{ opacity: 0 }}
-						whileInView={{ opacity: 1 }}
-						transition={{
-							ease: 'easeInOut',
-							duration: fade.groupOne.duration,
-							delay: fade.groupOne.delay,
-						}}
-						viewport={{ once: true }}
-					>
+					</FadeInSpan>
+					<FadeInSpan time={fade.groupOne}>
 						<GenericLink url='https://maps.app.goo.gl/HuXK2qSdAmySdZrb9'>
 							Southern California
 						</GenericLink>{' '}
-					</motion.span>
-					<motion.span
-						initial={{ opacity: 0 }}
-						whileInView={{ opacity: 1 }}
-						transition={{
-							ease: 'easeInOut',
-							duration: fade.groupThree.duration,
-							delay: fade.groupThree.delay,
-						}}
-						viewport={{ once: true }}
-					>
+					</FadeInSpan>
+					<FadeInSpan time={fade.groupThree}>
 						and am actively{' '}
-					</motion.span>
-					<motion.span
-						initial={{ opacity: 0 }}
-						whileInView={{ opacity: 1 }}
-						transition={{
-							ease: 'easeInOut',
-							duration: fade.groupTwo.duration,
-							delay: fade.groupTwo.delay,
-						}}
-						viewport={{ once: true }}
-					>
+					</FadeInSpan>
+					<FadeInSpan time={fade.groupTwo}>
 						searching for work opportunities
-					</motion.span>
-					<motion.span
-						initial={{ opacity: 0 }}
-						whileInView={{ opacity: 1 }}
-						transition={{
-							ease: 'easeInOut',
-							duration: fade.groupFour.duration,
-							delay: fade.groupFour.delay,
-						}}
-						viewport={{ once: true }}
-					>
+					</FadeInSpan>
+
+					<FadeInSpan time={fade.groupFour}>
 						. I don't have a specific preference for a particular
 						technology stack.{' '}
-					</motion.span>
-					<motion.span
-						initial={{ opacity: 0 }}
-						whileInView={{ opacity: 1 }}
-						transition={{
-							ease: 'easeInOut',
-							duration: fade.groupOne.duration,
-							delay: fade.groupOne.delay,
-						}}
-						viewport={{ once: true }}
-					>
-						What matters{' '}
-					</motion.span>
-					<motion.span
-						initial={{ opacity: 0 }}
-						whileInView={{ opacity: 1 }}
-						transition={{
-							ease: 'easeInOut',
-							duration: fade.groupFour.duration,
-							delay: fade.groupFour.delay,
-						}}
-						viewport={{ once: true }}
-					>
-						more to me{' '}
-					</motion.span>
-					<motion.span
-						initial={{ opacity: 0 }}
-						whileInView={{ opacity: 1 }}
-						transition={{
-							ease: 'easeInOut',
-							duration: fade.groupOne.duration,
-							delay: fade.groupOne.delay,
-						}}
-						viewport={{ once: true }}
-					>
-						is{' '}
-					</motion.span>
-					<motion.span
-						initial={{ opacity: 0 }}
-						whileInView={{ opacity: 1 }}
-						transition={{
-							ease: 'easeInOut',
-							duration: fade.groupFour.duration,
-							delay: fade.groupFour.delay,
-						}}
-						viewport={{ once: true }}
-					>
+					</FadeInSpan>
+					<FadeInSpan time={fade.groupOne}>What matters </FadeInSpan>
+					<FadeInSpan time={fade.groupFour}>more to me </FadeInSpan>
+					<FadeInSpan time={fade.groupOne}>is </FadeInSpan>
+					<FadeInSpan time={fade.groupFour}>
 						being part of an organization where I can stay long-term
 						and continue{' '}
-					</motion.span>
-					<motion.span
-						initial={{ opacity: 0 }}
-						whileInView={{ opacity: 1 }}
-						transition={{
-							ease: 'easeInOut',
-							duration: fade.groupOne.duration,
-							delay: fade.groupOne.delay,
-						}}
-						viewport={{ once: true }}
-					>
-						learning{' '}
-					</motion.span>
-					<motion.span
-						initial={{ opacity: 0 }}
-						whileInView={{ opacity: 1 }}
-						transition={{
-							ease: 'easeInOut',
-							duration: fade.groupFour.duration,
-							delay: fade.groupFour.delay,
-						}}
-						viewport={{ once: true }}
-					>
+					</FadeInSpan>
+					<FadeInSpan time={fade.groupOne}>learning </FadeInSpan>
+					<FadeInSpan time={fade.groupFour} id='last-description'>
 						to become a better engineer.
-					</motion.span>
+					</FadeInSpan>
 				</p>
 			</div>
 			<div className='flex justify-evenly md:justify-start md:space-x-14'>
