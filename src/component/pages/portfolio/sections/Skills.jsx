@@ -43,7 +43,8 @@ const Skills = () => {
 		<SectionLayout sectionTitle='Skills' dividerIcon={faToolbox}>
 			<>
 				<div
-					className={`space-y-10 mb-4 ${!showMore ? 'overflow-y-hidden max-h-[410px] sm:max-h-[455px]' : ''} `}
+					// className={`space-y-10 mb-4 ${!showMore ? 'overflow-y-hidden max-h-[410px] sm:max-h-[455px]' : ''} `}
+					className={`space-y-10 mb-4 `}
 				>
 					{Object.keys(skills).map(skillSection => (
 						<div key={skillSection} className=''>
@@ -54,7 +55,7 @@ const Skills = () => {
 						</div>
 					))}
 				</div>
-				<div className='text-center md:text-left'>
+				{/* <div className='text-center md:text-left'>
 					<SolidButton
 						size='base'
 						className='rounded'
@@ -70,7 +71,7 @@ const Skills = () => {
 							</>
 						)}
 					</SolidButton>
-				</div>
+				</div> */}
 			</>
 		</SectionLayout>
 	);

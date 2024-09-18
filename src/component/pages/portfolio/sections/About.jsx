@@ -14,11 +14,11 @@ const About = () => {
 			duration: 1.5,
 		},
 		groupTwo: {
-			delay: 2,
-			duration: 2,
+			delay: 1.6,
+			duration: 1.8,
 		},
 		groupThree: {
-			delay: 3.5,
+			delay: 3.3,
 			duration: 2,
 		},
 		groupFour: {
