@@ -1,12 +1,28 @@
+import { useEffect, useRef, useState } from 'react';
+import { useOnScreen } from '../../../../../hooks/useOnScreen';
 import { skillListMap } from '../../../../../util/constants';
 import DividerTitleLeft from '../../../../layout/DividerTitleLeft';
 import SkillListItem from './SkillListItem';
 
 const SkillSection = ({ skills, skillSection }) => {
+	const [showSection, setShowSection] = useState(false);
+
+	const sectionRef = useRef(null);
+	const sectionIsOnScreen = useOnScreen(sectionRef, 0.55);
+
+	useEffect(() => {
+		if (sectionIsOnScreen && !showSection) {
+			setShowSection(true);
+		}
+	}, [sectionIsOnScreen]);
+
 	return (
 		<>
 			<DividerTitleLeft title={skillSection} />
-			<div className='mt-1 divide-y divide-dotted divide-neutral-400'>
+			<div
+				className={`${showSection ? 'animate-fade_in_slower' : 'opacity-0'} mt-1 divide-y divide-dotted divide-neutral-400`}
+				ref={sectionRef}
+			>
 				{Object.keys(skills[skillSection]).map(skill => {
 					const subSkills = skills[skillSection][skill];
 					const s = skillListMap.get(skill);
