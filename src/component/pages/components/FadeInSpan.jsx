@@ -21,7 +21,7 @@ const FadeInSpan = ({
 			}
 			onAnimationComplete={() => {
 				if (triggerAnimationEnd) {
-					animationEndCallback(false);
+					animationEndCallback();
 				}
 			}}
 			transition={{

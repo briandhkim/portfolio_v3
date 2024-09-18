@@ -39,6 +39,10 @@ const About = () => {
 		}
 	}, [descInView]);
 
+	const animationEndCallback = () => {
+		setShowAnimation(false);
+	};
+
 	const disableAnimation = () => {
 		if (showAnimation) {
 			const msForAnimationToComplete =
@@ -310,7 +314,7 @@ const About = () => {
 						showAnimation={showAnimation}
 						time={fade.groupFour}
 						triggerAnimationEnd={true}
-						animationEndCallback={setShowAnimation}
+						animationEndCallback={animationEndCallback}
 						id='last-description'
 					>
 						to become a better engineer.

@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { classNames } from '../../../../../util/helpers';
 import { skillListMap } from '../../../../../util/constants';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import SolidButton from '../../../../elements/buttons/SolidButton';
 import { CSSTransition } from 'react-transition-group';
 import DividerTitleLeft from '../../../../layout/DividerTitleLeft';
@@ -12,8 +12,19 @@ import {
 	faPlus,
 } from '@fortawesome/free-solid-svg-icons';
 import { motion } from 'framer-motion';
+import { useOnScreen } from '../../../../../hooks/useOnScreen';
 
 const ExperienceItem = ({ history, showLeftBar }) => {
+	const [showSection, setShowSection] = useState(false);
+	const sectionRef = useRef(null);
+	const sectionIsOnScreen = useOnScreen(sectionRef, 0.55);
+
+	useEffect(() => {
+		if (sectionIsOnScreen && !showSection) {
+			setShowSection(true);
+		}
+	}, [sectionIsOnScreen]);
+
 	const [showDescription, setShowDescription] = useState(false);
 
 	const showBtnHandler = () => {
@@ -36,7 +47,10 @@ const ExperienceItem = ({ history, showLeftBar }) => {
 	};
 
 	return (
-		<div className='relative pb-8'>
+		<div
+			className={`${showSection ? 'animate-fade_in' : 'opacity-0'} relative pb-8`}
+			ref={sectionRef}
+		>
 			{showLeftBar ? (
 				<span
 					className='absolute left-4 top-4 -ml-px h-full w-0.5 bg-neutral-600'
