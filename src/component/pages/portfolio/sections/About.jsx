@@ -23,7 +23,7 @@ const About = () => {
 		},
 		groupFour: {
 			delay: 4.3,
-			duration: 2,
+			duration: 1.9,
 		},
 	};
 
@@ -52,7 +52,12 @@ const About = () => {
 		}
 	};
 
-	const FadeInSpan = ({ time, children, id = null }) => {
+	const FadeInSpan = ({
+		time,
+		children,
+		triggerAnimationEnd = null,
+		id = null,
+	}) => {
 		const { duration, delay } = time;
 		return (
 			<motion.span
@@ -62,7 +67,11 @@ const About = () => {
 						? { opacity: 1, transitionEnd: { opacity: 1 } }
 						: ''
 				}
-				onAnimationComplete={disableAnimation}
+				onAnimationComplete={() => {
+					if (triggerAnimationEnd) {
+						setShowAnimation(false);
+					}
+				}}
 				transition={{
 					repeat: 0,
 					ease: 'easeIn',
@@ -168,7 +177,11 @@ const About = () => {
 						and continue{' '}
 					</FadeInSpan>
 					<FadeInSpan time={fade.groupOne}>learning </FadeInSpan>
-					<FadeInSpan time={fade.groupFour} id='last-description'>
+					<FadeInSpan
+						time={fade.groupFour}
+						triggerAnimationEnd={true}
+						id='last-description'
+					>
 						to become a better engineer.
 					</FadeInSpan>
 				</p>
