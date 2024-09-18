@@ -103,7 +103,7 @@ const Navbar = () => {
 										as='a'
 										href={social.href}
 										target='_blank'
-										className='block px-3 py-2 font-mono underline cursor-pointer hover:text-primary-400 decoration-2 decoration-primary-400'
+										className='block px-3 py-2 font-mono underline cursor-pointer transition ease-in-out duration-200 hover:text-primary-400 decoration-2 decoration-primary-400'
 									>
 										<FontAwesomeIcon
 											icon={social.icon}

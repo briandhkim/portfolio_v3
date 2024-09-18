@@ -4,8 +4,9 @@ import GenericLink from '../../../elements/GenericLink';
 import { socialLinks } from '../../../../util/constants';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import TextEmphasized from '../../../elements/TextEmphasized';
-import { motion, useInView } from 'framer-motion';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { useOnScreen } from '../../../../hooks/useOnScreen';
+import FadeInSpan from '../../components/FadeInSpan';
 
 const About = () => {
 	const fade = {
@@ -28,8 +29,15 @@ const About = () => {
 	};
 
 	const ref = useRef(null);
-	const descInView = useInView(ref);
+	const descInView = useOnScreen(ref);
+	const [startAnimation, setStartAnimation] = useState(false);
 	const [showAnimation, setShowAnimation] = useState(true);
+
+	useEffect(() => {
+		if (!startAnimation) {
+			setStartAnimation(true);
+		}
+	}, [descInView]);
 
 	const disableAnimation = () => {
 		if (showAnimation) {
@@ -52,40 +60,6 @@ const About = () => {
 		}
 	};
 
-	const FadeInSpan = ({
-		time,
-		children,
-		triggerAnimationEnd = null,
-		id = null,
-	}) => {
-		const { duration, delay } = time;
-		return (
-			<motion.span
-				initial={{ opacity: showAnimation ? 0 : 1 }}
-				animate={
-					descInView && showAnimation
-						? { opacity: 1, transitionEnd: { opacity: 1 } }
-						: ''
-				}
-				onAnimationComplete={() => {
-					if (triggerAnimationEnd) {
-						setShowAnimation(false);
-					}
-				}}
-				transition={{
-					repeat: 0,
-					ease: 'easeIn',
-					duration: duration,
-					delay: delay,
-				}}
-				viewport={{ once: true }}
-				id={id}
-			>
-				{children}
-			</motion.span>
-		);
-	};
-
 	return (
 		<SectionLayout sectionTitle='About' dividerIcon={faIdCard}>
 			<div
@@ -93,93 +67,250 @@ const About = () => {
 				className='font-mono space-y-2 whitespace whitespace-break-spaces mb-8 sm:mb-10 md:mb-12'
 			>
 				<p>
-					<FadeInSpan time={fade.groupThree}>Hi, </FadeInSpan>
-					<FadeInSpan time={fade.groupTwo}>my name is</FadeInSpan>
-					<FadeInSpan time={fade.groupOne}>
+					<FadeInSpan
+						startAnimation={startAnimation}
+						showAnimation={showAnimation}
+						time={fade.groupThree}
+					>
+						Hi,{' '}
+					</FadeInSpan>
+					<FadeInSpan
+						startAnimation={startAnimation}
+						showAnimation={showAnimation}
+						time={fade.groupTwo}
+					>
+						my name is
+					</FadeInSpan>
+					<FadeInSpan
+						startAnimation={startAnimation}
+						showAnimation={showAnimation}
+						time={fade.groupOne}
+					>
 						{' '}
 						<TextEmphasized>Brian</TextEmphasized>{' '}
 					</FadeInSpan>
-					<FadeInSpan time={fade.groupThree}>
+					<FadeInSpan
+						startAnimation={startAnimation}
+						showAnimation={showAnimation}
+						time={fade.groupThree}
+					>
 						<span title='legal name'>(Dong Hyun)</span>, and{' '}
 					</FadeInSpan>
-					<FadeInSpan time={fade.groupTwo}>I am a </FadeInSpan>
-					<FadeInSpan time={fade.groupThree}>
+					<FadeInSpan
+						startAnimation={startAnimation}
+						showAnimation={showAnimation}
+						time={fade.groupTwo}
+					>
+						I am a{' '}
+					</FadeInSpan>
+					<FadeInSpan
+						startAnimation={startAnimation}
+						showAnimation={showAnimation}
+						time={fade.groupThree}
+					>
 						software engineer
 					</FadeInSpan>
-					<FadeInSpan time={fade.groupFour}>.</FadeInSpan>
+					<FadeInSpan
+						startAnimation={startAnimation}
+						showAnimation={showAnimation}
+						time={fade.groupFour}
+					>
+						.
+					</FadeInSpan>
 				</p>
 				<p>
-					<FadeInSpan time={fade.groupFour}>
+					<FadeInSpan
+						startAnimation={startAnimation}
+						showAnimation={showAnimation}
+						time={fade.groupFour}
+					>
 						I have worked as a{' '}
 					</FadeInSpan>
-					<FadeInSpan time={fade.groupOne}>
+					<FadeInSpan
+						startAnimation={startAnimation}
+						showAnimation={showAnimation}
+						time={fade.groupOne}
+					>
 						<GenericLink url='https://www.linkedin.com/in/bdhk/'>
 							full-stack software engineer
 						</GenericLink>{' '}
 					</FadeInSpan>
-					<FadeInSpan time={fade.groupFour}>for the past </FadeInSpan>
-					<FadeInSpan time={fade.groupTwo}>six years </FadeInSpan>
-					<FadeInSpan time={fade.groupFour}>at </FadeInSpan>
-					<FadeInSpan time={fade.groupThree}>
+					<FadeInSpan
+						startAnimation={startAnimation}
+						showAnimation={showAnimation}
+						time={fade.groupFour}
+					>
+						for the past{' '}
+					</FadeInSpan>
+					<FadeInSpan
+						startAnimation={startAnimation}
+						showAnimation={showAnimation}
+						time={fade.groupTwo}
+					>
+						six years{' '}
+					</FadeInSpan>
+					<FadeInSpan
+						startAnimation={startAnimation}
+						showAnimation={showAnimation}
+						time={fade.groupFour}
+					>
+						at{' '}
+					</FadeInSpan>
+					<FadeInSpan
+						startAnimation={startAnimation}
+						showAnimation={showAnimation}
+						time={fade.groupThree}
+					>
 						<GenericLink url='https://besmartee.com'>
 							BeSmartee
 						</GenericLink>{' '}
 					</FadeInSpan>
-					<FadeInSpan time={fade.groupTwo}>using </FadeInSpan>
-					<FadeInSpan time={fade.groupFour}>
+					<FadeInSpan
+						startAnimation={startAnimation}
+						showAnimation={showAnimation}
+						time={fade.groupTwo}
+					>
+						using{' '}
+					</FadeInSpan>
+					<FadeInSpan
+						startAnimation={startAnimation}
+						showAnimation={showAnimation}
+						time={fade.groupFour}
+					>
 						technologies such as{' '}
 					</FadeInSpan>
-					<FadeInSpan time={fade.groupOne}>
+					<FadeInSpan
+						startAnimation={startAnimation}
+						showAnimation={showAnimation}
+						time={fade.groupOne}
+					>
 						<TextEmphasized>JavaScript</TextEmphasized>,{' '}
 					</FadeInSpan>
-					<FadeInSpan time={fade.groupOne}>
+					<FadeInSpan
+						startAnimation={startAnimation}
+						showAnimation={showAnimation}
+						time={fade.groupOne}
+					>
 						<TextEmphasized>PHP</TextEmphasized>,{' '}
 					</FadeInSpan>
-					<FadeInSpan time={fade.groupThree}>
+					<FadeInSpan
+						startAnimation={startAnimation}
+						showAnimation={showAnimation}
+						time={fade.groupThree}
+					>
 						<TextEmphasized>jQuery</TextEmphasized>,{' '}
 					</FadeInSpan>
-					<FadeInSpan time={fade.groupTwo}>
+					<FadeInSpan
+						startAnimation={startAnimation}
+						showAnimation={showAnimation}
+						time={fade.groupTwo}
+					>
 						<TextEmphasized>React</TextEmphasized>,{' '}
 					</FadeInSpan>
-					<FadeInSpan time={fade.groupTwo}>
+					<FadeInSpan
+						startAnimation={startAnimation}
+						showAnimation={showAnimation}
+						time={fade.groupTwo}
+					>
 						<TextEmphasized>Laravel</TextEmphasized>,{' '}
 					</FadeInSpan>
-					<FadeInSpan time={fade.groupThree}>
+					<FadeInSpan
+						startAnimation={startAnimation}
+						showAnimation={showAnimation}
+						time={fade.groupThree}
+					>
 						<TextEmphasized>Ruby on Rails</TextEmphasized>
 					</FadeInSpan>
-					<FadeInSpan time={fade.groupFour}>, and more.</FadeInSpan>
+					<FadeInSpan
+						startAnimation={startAnimation}
+						showAnimation={showAnimation}
+						time={fade.groupFour}
+					>
+						, and more.
+					</FadeInSpan>
 				</p>
 				<p>
-					<FadeInSpan time={fade.groupFour}>
+					<FadeInSpan
+						startAnimation={startAnimation}
+						showAnimation={showAnimation}
+						time={fade.groupFour}
+					>
 						I am currently located in{' '}
 					</FadeInSpan>
-					<FadeInSpan time={fade.groupOne}>
+					<FadeInSpan
+						startAnimation={startAnimation}
+						showAnimation={showAnimation}
+						time={fade.groupOne}
+					>
 						<GenericLink url='https://maps.app.goo.gl/HuXK2qSdAmySdZrb9'>
 							Southern California
 						</GenericLink>{' '}
 					</FadeInSpan>
-					<FadeInSpan time={fade.groupThree}>
+					<FadeInSpan
+						startAnimation={startAnimation}
+						showAnimation={showAnimation}
+						time={fade.groupThree}
+					>
 						and am actively{' '}
 					</FadeInSpan>
-					<FadeInSpan time={fade.groupTwo}>
+					<FadeInSpan
+						startAnimation={startAnimation}
+						showAnimation={showAnimation}
+						time={fade.groupTwo}
+					>
 						searching for work opportunities
 					</FadeInSpan>
 
-					<FadeInSpan time={fade.groupFour}>
+					<FadeInSpan
+						startAnimation={startAnimation}
+						showAnimation={showAnimation}
+						time={fade.groupFour}
+					>
 						. I don't have a specific preference for a particular
 						technology stack.{' '}
 					</FadeInSpan>
-					<FadeInSpan time={fade.groupOne}>What matters </FadeInSpan>
-					<FadeInSpan time={fade.groupFour}>more to me </FadeInSpan>
-					<FadeInSpan time={fade.groupOne}>is </FadeInSpan>
-					<FadeInSpan time={fade.groupFour}>
+					<FadeInSpan
+						startAnimation={startAnimation}
+						showAnimation={showAnimation}
+						time={fade.groupOne}
+					>
+						What matters{' '}
+					</FadeInSpan>
+					<FadeInSpan
+						startAnimation={startAnimation}
+						showAnimation={showAnimation}
+						time={fade.groupFour}
+					>
+						more to me{' '}
+					</FadeInSpan>
+					<FadeInSpan
+						startAnimation={startAnimation}
+						showAnimation={showAnimation}
+						time={fade.groupOne}
+					>
+						is{' '}
+					</FadeInSpan>
+					<FadeInSpan
+						startAnimation={startAnimation}
+						showAnimation={showAnimation}
+						time={fade.groupFour}
+					>
 						being part of an organization where I can stay long-term
 						and continue{' '}
 					</FadeInSpan>
-					<FadeInSpan time={fade.groupOne}>learning </FadeInSpan>
 					<FadeInSpan
+						startAnimation={startAnimation}
+						showAnimation={showAnimation}
+						time={fade.groupOne}
+					>
+						learning{' '}
+					</FadeInSpan>
+					<FadeInSpan
+						startAnimation={startAnimation}
+						showAnimation={showAnimation}
 						time={fade.groupFour}
 						triggerAnimationEnd={true}
+						animationEndCallback={setShowAnimation}
 						id='last-description'
 					>
 						to become a better engineer.
@@ -190,7 +321,7 @@ const About = () => {
 				{socialLinks.map(link => (
 					<div key={link.name} className=''>
 						<a
-							className='hover:text-primary-400 cursor-pointer'
+							className='transition ease-in-out duration-200 hover:text-primary-400 cursor-pointer'
 							target='_blank'
 							rel='noreferrer'
 							title={link.name}
