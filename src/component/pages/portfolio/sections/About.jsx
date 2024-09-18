@@ -34,7 +34,7 @@ const About = () => {
 	const [showAnimation, setShowAnimation] = useState(true);
 
 	useEffect(() => {
-		if (!startAnimation) {
+		if (descInView && !startAnimation) {
 			setStartAnimation(true);
 		}
 	}, [descInView]);
