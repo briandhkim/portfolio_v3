@@ -291,7 +291,7 @@ const Experience = () => {
 
 	return (
 		<SectionLayout sectionTitle='Experience' dividerIcon={faTimeline}>
-			<div className='grid gap-4 mx-0.5 sm:mx-4 sm:grid-cols-12'>
+			<div className='grid gap-4 mx-0.5 sm:mx-4 grid-cols-12'>
 				<div className='col-span-12'>
 					<div className='text-left mb-4 '>
 						<Heading level='h3' size='small'>

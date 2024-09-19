@@ -17,7 +17,7 @@ const Construction = () => {
       */}
 			<div className='grid min-h-screen grid-cols-1 grid-rows-[1fr,auto,1fr]  lg:grid-cols-[max(50%,36rem),1fr]'>
 				<header className='mx-auto w-full max-w-7xl px-6 pt-6 sm:pt-10 lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:px-8'>
-					<div className='select-none inline h-10 w-auto text-xl font-semibold px-1.5 py-0.5 border border-2 border-base-content text-base-content leading-6 cursor-default'>
+					<div className='select-none inline h-10 w-auto text-xl font-semibold px-1.5 py-0.5 border-2 border-base-content text-base-content leading-6 cursor-default'>
 						bdhk
 					</div>
 				</header>
