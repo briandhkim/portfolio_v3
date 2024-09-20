@@ -1,3 +1,4 @@
+import Achievements from './sections/Achievements';
 import Intro from './sections/Intro';
 import UiUpdate from './sections/UiUpdate';
 
@@ -13,6 +14,9 @@ const Presentation = () => {
 						<div className='mb-8 sm:mb-10 md:mb-14'>
 							<section className='grid grid-cols-1 md:grid-cols-3 gap-4 pt-12 md:pt-32'>
 								<UiUpdate />
+							</section>
+							<section className='grid grid-cols-1 md:grid-cols-3 gap-4'>
+								<Achievements />
 							</section>
 						</div>
 					</div>
