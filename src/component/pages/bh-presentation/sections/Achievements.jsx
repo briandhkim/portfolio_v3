@@ -3,6 +3,8 @@ import SectionLayout from '../../../layout/SectionLayout';
 import Heading from '../../../elements/Heading';
 import DividerTitleLeft from '../../../layout/DividerTitleLeft';
 import AchievementExamples from './partials/AchievementExamples';
+import AchievementFeatures from './partials/AchievementFeatures';
+import AchievementWhy from './partials/AchievementWhy';
 
 const Achievements = () => {
 	return (
@@ -27,6 +29,22 @@ const Achievements = () => {
 							borderWidth='border-t-[3px]'
 						/>
 						<AchievementExamples />
+					</div>
+					<div className='space-y-6'>
+						<DividerTitleLeft
+							title='Features'
+							borderStyle='border-dotted'
+							borderWidth='border-t-[3px]'
+						/>
+						<AchievementFeatures />
+					</div>
+					<div className='space-y-6'>
+						<DividerTitleLeft
+							title='Why'
+							borderStyle='border-dotted'
+							borderWidth='border-t-[3px]'
+						/>
+						<AchievementWhy />
 					</div>
 				</div>
 			</div>
