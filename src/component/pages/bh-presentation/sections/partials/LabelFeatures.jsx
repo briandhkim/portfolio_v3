@@ -1,5 +1,10 @@
 import { faPenToSquare } from '@fortawesome/free-regular-svg-icons';
-import { faTag, faTags } from '@fortawesome/free-solid-svg-icons';
+import {
+	faFilter,
+	faTag,
+	faTags,
+	faUserTag,
+} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { motion } from 'framer-motion';
 
@@ -62,6 +67,18 @@ const LabelFeatures = () => {
 						<FontAwesomeIcon icon={faPenToSquare} />
 					</span>
 					Custom tags created by the therapists
+				</motion.li>
+				<motion.li variants={descItem} className=''>
+					<span className='fa-li text-neutral-400'>
+						<FontAwesomeIcon icon={faUserTag} />
+					</span>
+					Attach tags to patients, notes, etc.
+				</motion.li>
+				<motion.li variants={descItem} className=''>
+					<span className='fa-li text-neutral-400'>
+						<FontAwesomeIcon icon={faFilter} />
+					</span>
+					Filter, sort, and organize patients based on the tags
 				</motion.li>
 			</motion.ul>
 		</div>

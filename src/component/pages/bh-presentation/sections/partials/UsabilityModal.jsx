@@ -38,11 +38,11 @@ const UsabilityModal = ({ isOpen, setIsOpen }) => {
 			onClose={() => setIsOpen(false)}
 			className='relative z-50 focus:outline-none'
 		>
-			<DialogBackdrop className='fixed inset-0 bg-black/85' />
+			<DialogBackdrop className='fixed inset-0 bg-[#325343]/85' />
 			<div className='fixed inset-0 flex w-screen items-center justify-center p-4'>
-				<DialogPanel className='max-w-2xl space-y-4 rounded-xl border border-neutral-800 bg-neutral-950 p-12'>
+				<DialogPanel className='max-w-2xl space-y-4 rounded-xl border border-neutral-800 bg-[#f7f0eb] text-neutral-700 p-12'>
 					<DialogTitle className='font-bold text-2xl font-sans'>
-						Don't make uses think!
+						Don't make users think!
 					</DialogTitle>
 					<Description></Description>
 					<div className='text-xs sm:text-sm mg:text-base font-mono'>
@@ -53,7 +53,7 @@ const UsabilityModal = ({ isOpen, setIsOpen }) => {
 							className='fa-ul space-y-5'
 						>
 							<motion.li variants={descItem} className=''>
-								<span className='fa-li text-neutral-400'>
+								<span className='fa-li text-neutral-500'>
 									<FontAwesomeIcon icon={faQuoteLeft} />
 								</span>
 								<i>
@@ -64,19 +64,19 @@ const UsabilityModal = ({ isOpen, setIsOpen }) => {
 									worth
 								</i>{' '}
 								<br />
-								<span className='text-neutral-400'>
+								<span className='text-neutral-600'>
 									from "Don't Make Me Think" by Steve Krug
 								</span>
 							</motion.li>
 							<motion.li variants={descItem} className=''>
-								<span className='fa-li text-neutral-400'>
+								<span className='fa-li text-neutral-500'>
 									<FontAwesomeIcon icon={faMapLocationDot} />
 								</span>
 								Poor UX will distract the user from being able
 								to accomplish the goals.
 							</motion.li>
 							<motion.li variants={descItem} className=''>
-								<span className='fa-li text-neutral-400'>
+								<span className='fa-li text-neutral-500'>
 									<FontAwesomeIcon icon={faUniversalAccess} />
 								</span>
 								The user's labor should be focused on achieving
@@ -84,7 +84,7 @@ const UsabilityModal = ({ isOpen, setIsOpen }) => {
 								achieve it.
 							</motion.li>
 							<motion.li variants={descItem} className=''>
-								<span className='fa-li text-neutral-400'>
+								<span className='fa-li text-neutral-500'>
 									<FontAwesomeIcon icon={faBattery3} />
 								</span>
 								There is a limit to people’s cognitive workload
@@ -94,7 +94,7 @@ const UsabilityModal = ({ isOpen, setIsOpen }) => {
 								the given task.
 							</motion.li>
 							<motion.li variants={descItem} className=''>
-								<span className='fa-li text-neutral-400'>
+								<span className='fa-li text-neutral-500'>
 									<FontAwesomeIcon
 										icon={faHandHoldingMedical}
 									/>

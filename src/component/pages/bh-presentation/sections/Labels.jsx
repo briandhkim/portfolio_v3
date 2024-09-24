@@ -24,15 +24,6 @@ const Labels = () => {
 					</div>
 				</div>
 				<div className='col-span-12 space-y-10 mb-4'>
-					<div className=''>
-						<DividerTitleLeft
-							title='Examples'
-							borderStyle='border-dotted'
-							borderWidth='border-t-[3px]'
-							bgColor='bg-[#325343]'
-						/>
-						<LabelExamples />
-					</div>
 					<div className='space-y-6'>
 						<DividerTitleLeft
 							title='User Story'
@@ -47,6 +38,15 @@ const Labels = () => {
 								efficiently manage my patients.
 							</p>
 						</div>
+					</div>
+					<div className=''>
+						<DividerTitleLeft
+							title='Examples'
+							borderStyle='border-dotted'
+							borderWidth='border-t-[3px]'
+							bgColor='bg-[#325343]'
+						/>
+						<LabelExamples />
 					</div>
 					<div className='space-y-6'>
 						<DividerTitleLeft
