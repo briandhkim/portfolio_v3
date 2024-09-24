@@ -2,7 +2,12 @@ import Heading from '../elements/Heading';
 import DividerIcon from './DividerIcon';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const SectionLayout = ({ children, sectionTitle, dividerIcon = null }) => {
+const SectionLayout = ({
+	children,
+	sectionTitle,
+	dividerIcon = null,
+	dividerBgColor = 'bg-neutral-950',
+}) => {
 	return (
 		<>
 			<div>
@@ -20,6 +25,7 @@ const SectionLayout = ({ children, sectionTitle, dividerIcon = null }) => {
 			{dividerIcon && (
 				<div className='col-span-3 md:mt-8 lg:mt-10 mb-12 md:mb-14 lg:mb-16'>
 					<DividerIcon
+						dividerBgColor={dividerBgColor}
 						icon={
 							<FontAwesomeIcon
 								icon={dividerIcon}

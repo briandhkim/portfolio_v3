@@ -1,4 +1,5 @@
 const DividerIcon = ({
+	dividerBgColor = 'bg-neutral-950',
 	borderColor = 'border-neutral-400',
 	textColor = 'text-neutral-200',
 	icon,
@@ -12,7 +13,7 @@ const DividerIcon = ({
 				<div className={`w-full border-t ${borderColor}`} />
 			</div>
 			<div className='relative flex justify-center'>
-				<span className={`bg-neutral-950 px-2 ${textColor}`}>
+				<span className={`${dividerBgColor} px-2 ${textColor}`}>
 					{icon}
 				</span>
 			</div>

@@ -1,9 +1,9 @@
 import { faPenToSquare } from '@fortawesome/free-regular-svg-icons';
-import { faAward, faListCheck } from '@fortawesome/free-solid-svg-icons';
+import { faTag, faTags } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { motion } from 'framer-motion';
 
-const AchievementFeatures = () => {
+const LabelFeatures = () => {
 	const descContainer = {
 		hidden: { opacity: 0 },
 		show: {
@@ -29,30 +29,30 @@ const AchievementFeatures = () => {
 			>
 				<motion.li variants={descItem} className=''>
 					<span className='fa-li text-neutral-400'>
-						<FontAwesomeIcon icon={faListCheck} />
+						<FontAwesomeIcon icon={faTags} />
 					</span>
-					"Default"/company-level(BetterHelp) set of achievements that
-					are based on common goals & tasks <br />
+					"Default"/company-level(BetterHelp) set of tags based on
+					common traits <br />
 					<span className='text-neutral-400 '>
 						e.g.
 						<ul className='fa-ul mt-2'>
 							<li className=''>
 								<span className='fa-li text-neutral-400'>
-									<FontAwesomeIcon icon={faAward} />
+									<FontAwesomeIcon icon={faTag} />
 								</span>
-								Started first therapy session
+								Active patient
 							</li>
 							<li className=''>
 								<span className='fa-li text-neutral-400'>
-									<FontAwesomeIcon icon={faAward} />
+									<FontAwesomeIcon icon={faTag} />
 								</span>
-								Joined a group session
+								High risk
 							</li>
 							<li className=''>
 								<span className='fa-li text-neutral-400'>
-									<FontAwesomeIcon icon={faAward} />
+									<FontAwesomeIcon icon={faTag} />
 								</span>
-								Goal achiever
+								Family conflicts
 							</li>
 						</ul>
 					</span>
@@ -61,11 +61,11 @@ const AchievementFeatures = () => {
 					<span className='fa-li text-neutral-400'>
 						<FontAwesomeIcon icon={faPenToSquare} />
 					</span>
-					Custom achievements created by the therapists
+					Custom tags created by the therapists
 				</motion.li>
 			</motion.ul>
 		</div>
 	);
 };
 
-export default AchievementFeatures;
+export default LabelFeatures;

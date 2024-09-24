@@ -7,7 +7,7 @@ import {
 } from '@headlessui/react';
 import SolidButton from '../../../../elements/buttons/SolidButton';
 
-const AchievementExampleModal = ({ isOpen, setIsOpen, feature }) => {
+const ImageExampleModal = ({ isOpen, setIsOpen, feature }) => {
 	const { name, description, imageSrc, imageAlt } = feature;
 
 	return (
@@ -42,4 +42,4 @@ const AchievementExampleModal = ({ isOpen, setIsOpen, feature }) => {
 	);
 };
 
-export default AchievementExampleModal;
+export default ImageExampleModal;

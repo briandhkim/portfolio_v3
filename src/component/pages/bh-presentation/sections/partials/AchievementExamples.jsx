@@ -4,7 +4,7 @@ import so_achievements from '../../../../../assets/images/so_achievements.png';
 import steam_achievements from '../../../../../assets/images/steam_achievements.png';
 import gh_achievements from '../../../../../assets/images/gh_achievements.png';
 import { useEffect, useRef, useState } from 'react';
-import AchievementExampleModal from './AchievementExampleModal';
+import ImageExampleModal from './ImageExampleModal';
 import { useOnScreen } from '../../../../../hooks/useOnScreen';
 import { motion } from 'framer-motion';
 
@@ -26,25 +26,25 @@ const AchievementExamples = () => {
 	const features = [
 		{
 			name: 'Laracast',
-			description: 'Achievements from Laracast',
+			description: 'Activity based achievements',
 			imageSrc: lc_achievements,
 			imageAlt: 'Laracast achievement system',
 		},
 		{
 			name: 'Steam',
-			description: 'Achievements from Steam',
+			description: 'in-game achievements',
 			imageSrc: steam_achievements,
 			imageAlt: 'Steam achievement system',
 		},
 		{
 			name: 'StackOverflow',
-			description: 'Badges from StackOverflow',
+			description: 'Badges based on user achievements',
 			imageSrc: so_achievements,
 			imageAlt: 'Steam badge system',
 		},
 		{
 			name: 'GitHub',
-			description: 'Achievements from StackOverflow',
+			description: 'Achievements defined by GitHub',
 			imageSrc: gh_achievements,
 			imageAlt: 'GitHub achievement system',
 		},
@@ -52,7 +52,7 @@ const AchievementExamples = () => {
 
 	const [showSection, setShowSection] = useState(false);
 	const sectionRef = useRef(null);
-	const sectionIsOnScreen = useOnScreen(sectionRef, 0.85);
+	const sectionIsOnScreen = useOnScreen(sectionRef, 0.55);
 	useEffect(() => {
 		if (sectionIsOnScreen && !showSection) {
 			setShowSection(true);
@@ -117,7 +117,7 @@ const AchievementExamples = () => {
 						))}
 					</motion.div>
 					{isOpenExampleModal && (
-						<AchievementExampleModal
+						<ImageExampleModal
 							isOpen={isOpenExampleModal}
 							setIsOpen={setIsOpenExampleModal}
 							feature={modalFeature}

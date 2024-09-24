@@ -34,7 +34,11 @@ const UiUpdate = () => {
 	const [isOpenUiModal, setIsOpenUiModal] = useState(false);
 
 	return (
-		<SectionLayout sectionTitle='UI Update' dividerIcon={faTable}>
+		<SectionLayout
+			sectionTitle='UI Update'
+			dividerIcon={faTable}
+			dividerBgColor='bg-[#325343]'
+		>
 			<div className='grid grid-cols-12 mx-0.5 sm:mx-4 space-y-8 sm:space-y-12'>
 				<div className='col-span-12'>
 					<div className='text-left mb-4'>
@@ -60,7 +64,7 @@ const UiUpdate = () => {
 								>
 									user page
 								</span>{' '}
-								feels outdated, especially when compared to the{' '}
+								feels dated, especially when compared to the{' '}
 								<GenericLink url='https://betterhelp.com'>
 									company website
 								</GenericLink>
