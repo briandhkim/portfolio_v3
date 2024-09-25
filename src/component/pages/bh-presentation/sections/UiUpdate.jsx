@@ -43,7 +43,7 @@ const UiUpdate = () => {
 				<div className='col-span-12'>
 					<div className='text-left mb-4'>
 						<Heading level='h3' size='small'>
-							Observation
+							Initial impression
 						</Heading>
 					</div>
 					<div className='font-mono text-sm sm:text-base md:text-lg'>
@@ -64,9 +64,9 @@ const UiUpdate = () => {
 								>
 									user page
 								</span>{' '}
-								feels dated, especially when compared to the{' '}
+								feels dated, particularly in contrast to the{' '}
 								<GenericLink url='https://betterhelp.com'>
-									company website
+									company's website
 								</GenericLink>
 								.
 							</motion.li>
