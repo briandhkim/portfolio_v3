@@ -11,7 +11,7 @@ import {
 	faMinus,
 	faPlus,
 } from '@fortawesome/free-solid-svg-icons';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { useOnScreen } from '../../../../../hooks/useOnScreen';
 
 const ExperienceItem = ({ history, showLeftBar }) => {
@@ -36,7 +36,7 @@ const ExperienceItem = ({ history, showLeftBar }) => {
 		show: {
 			opacity: 1,
 			transition: {
-				staggerChildren: 0.15,
+				staggerChildren: 0.2,
 			},
 		},
 	};
@@ -179,31 +179,34 @@ const ExperienceItem = ({ history, showLeftBar }) => {
 										borderWidth='border-t-[3px]'
 									/>
 									<div className='font-mono text-xs sm:text-sm'>
-										<motion.ul
-											variants={descContainer}
-											initial='hidden'
-											animate='show'
-											className='fa-ul space-y-3'
-										>
-											{history.descriptionItems.map(
-												(item, idx) => (
-													<motion.li
-														key={idx}
-														variants={descItem}
-														className=''
-													>
-														<span className='fa-li text-neutral-400'>
-															<FontAwesomeIcon
-																icon={
-																	faCodeCommit
-																}
-															/>
-														</span>
-														{item}
-													</motion.li>
-												)
-											)}
-										</motion.ul>
+										<AnimatePresence>
+											<motion.ul
+												key={history.content}
+												variants={descContainer}
+												initial='hidden'
+												animate='show'
+												className='fa-ul space-y-3'
+											>
+												{history.descriptionItems.map(
+													(item, idx) => (
+														<motion.li
+															key={idx}
+															variants={descItem}
+															className=''
+														>
+															<span className='fa-li text-neutral-400'>
+																<FontAwesomeIcon
+																	icon={
+																		faCodeCommit
+																	}
+																/>
+															</span>
+															{item}
+														</motion.li>
+													)
+												)}
+											</motion.ul>
+										</AnimatePresence>
 									</div>
 								</div>
 							</div>

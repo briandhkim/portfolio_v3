@@ -7,6 +7,7 @@ import { RouterProvider, createHashRouter } from 'react-router-dom';
 import Components from './component/pages/components/Components';
 import Portfolio from './component/pages/portfolio/Portfolio';
 import Construction from './component/Construction';
+import Presentation from './component/pages/bh-presentation/Presentation';
 
 const router = createHashRouter([
 	{
@@ -24,6 +25,10 @@ const router = createHashRouter([
 	{
 		path: '/construction',
 		element: <Construction />,
+	},
+	{
+		path: '/bh-p',
+		element: <Presentation />,
 	},
 ]);
 

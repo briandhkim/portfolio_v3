@@ -4,6 +4,7 @@ const DividerTitleLeft = ({
 	borderStyle = '',
 	borderWidth = 'border-t',
 	textColor = 'text-neutral-200',
+	bgColor = 'bg-neutral-950',
 }) => {
 	return (
 		<div className='relative'>
@@ -17,7 +18,7 @@ const DividerTitleLeft = ({
 			</div>
 			<div className='relative flex justify-start'>
 				<span
-					className={`bg-neutral-950 pr-3 text-base font-semibold leading-6 ${textColor}`}
+					className={`${bgColor} pr-3 text-base font-semibold leading-6 ${textColor}`}
 				>
 					{title}
 				</span>
