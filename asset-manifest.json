@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.8fbe5aed.css",
-    "main.js": "/static/js/main.e1917d56.js",
+    "main.css": "/static/css/main.763adb39.css",
+    "main.js": "/static/js/main.b633681c.js",
     "static/js/488.ef841162.chunk.js": "/static/js/488.ef841162.chunk.js",
     "static/media/i_tags.png": "/static/media/i_tags.be525ac460bc29290664.png",
     "static/media/homer.jpeg": "/static/media/homer.fa73b4786e89348e9a18.jpeg",
@@ -13,12 +13,12 @@
     "static/media/bh-client-page.png": "/static/media/bh-client-page.bb92b9262fa25cb91d69.png",
     "static/media/so_achievements.png": "/static/media/so_achievements.12ffbd0d2e4bf4447369.png",
     "index.html": "/index.html",
-    "main.8fbe5aed.css.map": "/static/css/main.8fbe5aed.css.map",
-    "main.e1917d56.js.map": "/static/js/main.e1917d56.js.map",
+    "main.763adb39.css.map": "/static/css/main.763adb39.css.map",
+    "main.b633681c.js.map": "/static/js/main.b633681c.js.map",
     "488.ef841162.chunk.js.map": "/static/js/488.ef841162.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8fbe5aed.css",
-    "static/js/main.e1917d56.js"
+    "static/css/main.763adb39.css",
+    "static/js/main.b633681c.js"
   ]
 }
