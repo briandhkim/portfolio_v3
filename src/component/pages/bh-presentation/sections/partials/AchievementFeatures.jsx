@@ -9,7 +9,8 @@ const AchievementFeatures = () => {
 		show: {
 			opacity: 1,
 			transition: {
-				staggerChildren: 0.15,
+				duration: 1.5,
+				staggerChildren: 0.2,
 			},
 		},
 	};

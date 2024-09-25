@@ -21,7 +21,8 @@ const AchievementWhy = () => {
 		show: {
 			opacity: 1,
 			transition: {
-				staggerChildren: 0.15,
+				duration: 1.8,
+				staggerChildren: 0.2,
 			},
 		},
 	};

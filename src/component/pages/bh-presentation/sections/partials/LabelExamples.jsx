@@ -12,7 +12,8 @@ const LabelExamples = () => {
 		show: {
 			opacity: 1,
 			transition: {
-				staggerChildren: 0.15,
+				duration: 1,
+				staggerChildren: 0.18,
 			},
 		},
 	};
