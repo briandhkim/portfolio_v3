@@ -23,8 +23,12 @@ const ImageExampleModal = ({ isOpen, setIsOpen, feature }) => {
 						{name}
 					</DialogTitle>
 					<Description></Description>
-					<div>
-						<img src={imageSrc} alt={imageAlt} className='' />
+					<div className='flex justify-center'>
+						<img
+							src={imageSrc}
+							alt={imageAlt}
+							className='size-11/12  object-center shadow-2xl'
+						/>
 					</div>
 
 					<div className='flex gap-4 pt-8 px-8 justify-end'>
