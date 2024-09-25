@@ -2,10 +2,10 @@ import so_tags from '../../../../../assets/images/so_tags.png';
 import lf_tags from '../../../../../assets/images/lf_tags.png';
 import i_tags from '../../../../../assets/images/i_tags.png';
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 import { classNames } from '../../../../../util/helpers';
-import { useEffect, useRef, useState } from 'react';
 import ImageExampleModal from './ImageExampleModal';
-import { useOnScreen } from '../../../../../hooks/useOnScreen';
+import useAnimateOnScreen from '../../../../../hooks/useAnimateOnScreen';
 
 const LabelExamples = () => {
 	const descContainer = {
@@ -44,14 +44,7 @@ const LabelExamples = () => {
 		},
 	];
 
-	const [showSection, setShowSection] = useState(false);
-	const sectionRef = useRef(null);
-	const sectionIsOnScreen = useOnScreen(sectionRef, 0.55);
-	useEffect(() => {
-		if (sectionIsOnScreen && !showSection) {
-			setShowSection(true);
-		}
-	}, [sectionIsOnScreen]);
+	const [showSection, sectionRef] = useAnimateOnScreen();
 
 	const [modalFeature, setModalFeature] = useState(null);
 	const [isOpenExampleModal, setIsOpenExampleModal] = useState(false);

@@ -1,12 +1,12 @@
-import { classNames } from '../../../../../util/helpers';
 import lc_achievements from '../../../../../assets/images/lc_achievements.png';
 import so_achievements from '../../../../../assets/images/so_achievements.png';
 import steam_achievements from '../../../../../assets/images/steam_achievements.png';
 import gh_achievements from '../../../../../assets/images/gh_achievements.png';
-import { useEffect, useRef, useState } from 'react';
-import ImageExampleModal from './ImageExampleModal';
-import { useOnScreen } from '../../../../../hooks/useOnScreen';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { classNames } from '../../../../../util/helpers';
+import useAnimateOnScreen from '../../../../../hooks/useAnimateOnScreen';
+import ImageExampleModal from './ImageExampleModal';
 
 const AchievementExamples = () => {
 	const descContainer = {
@@ -51,14 +51,7 @@ const AchievementExamples = () => {
 		},
 	];
 
-	const [showSection, setShowSection] = useState(false);
-	const sectionRef = useRef(null);
-	const sectionIsOnScreen = useOnScreen(sectionRef, 0.55);
-	useEffect(() => {
-		if (sectionIsOnScreen && !showSection) {
-			setShowSection(true);
-		}
-	}, [sectionIsOnScreen]);
+	const [showSection, sectionRef] = useAnimateOnScreen();
 
 	const [modalFeature, setModalFeature] = useState(null);
 	const [isOpenExampleModal, setIsOpenExampleModal] = useState(false);
