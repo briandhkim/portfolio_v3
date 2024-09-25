@@ -51,10 +51,11 @@ const Presentation = () => {
 						<AnimatePresence mode='wait'>
 							{currentPage === PAGE_INTRO && (
 								<motion.div
+									key={PAGE_INTRO}
 									initial={{ opacity: 0 }}
 									animate={{ opacity: 1 }}
 									exit={{ opacity: 0 }}
-									transition={{ duration: 1 }}
+									transition={{ duration: 0.7 }}
 								>
 									<Intro startHandler={startPresentation} />
 								</motion.div>
@@ -81,44 +82,64 @@ const Presentation = () => {
 											</button>
 										))}
 									</div>
-									{currentPage === PAGE_UI && (
-										<motion.section
-											initial={{
-												opacity: 0,
-											}}
-											animate={{ opacity: 1 }}
-											exit={{ opacity: 0 }}
-											transition={{ duration: 1.5 }}
-											id={PAGE_UI}
-											className={`${currentPage === PAGE_UI ? 'min-h-screen content-center' : ''} grid grid-cols-1 md:grid-cols-3 gap-4 pt-12 md:pt-32`}
-										>
-											<UiUpdate />
-										</motion.section>
-									)}
-									{currentPage === PAGE_ACHIEVEMENTS && (
-										<motion.section
-											initial={{ opacity: 0 }}
-											animate={{ opacity: 1 }}
-											exit={{ opacity: 0 }}
-											transition={{ duration: 2 }}
-											id={PAGE_ACHIEVEMENTS}
-											className='grid grid-cols-1 md:grid-cols-3 gap-4'
-										>
-											<Achievements />
-										</motion.section>
-									)}
-									{currentPage === PAGE_LABELS && (
-										<motion.section
-											initial={{ opacity: 0 }}
-											animate={{ opacity: 1 }}
-											exit={{ opacity: 0 }}
-											transition={{ duration: 2 }}
-											id={PAGE_LABELS}
-											className='grid grid-cols-1 md:grid-cols-3 gap-4'
-										>
-											<Labels />
-										</motion.section>
-									)}
+									<AnimatePresence>
+										{currentPage === PAGE_UI && (
+											<motion.section
+												key={PAGE_UI}
+												initial={{
+													opacity: 0,
+												}}
+												animate={{ opacity: 1 }}
+												exit={{
+													opacity: 0,
+													transition: {
+														duration: 0.75,
+													},
+												}}
+												transition={{ duration: 1.25 }}
+												id={PAGE_UI}
+												className={`${currentPage === PAGE_UI ? 'min-h-screen content-center' : ''} grid grid-cols-1 md:grid-cols-3 gap-4 pt-12 md:pt-32`}
+											>
+												<UiUpdate />
+											</motion.section>
+										)}
+										{currentPage === PAGE_ACHIEVEMENTS && (
+											<motion.section
+												key={PAGE_ACHIEVEMENTS}
+												initial={{ opacity: 0 }}
+												animate={{ opacity: 1 }}
+												exit={{
+													opacity: 0,
+													transition: {
+														duration: 0.75,
+													},
+												}}
+												transition={{ duration: 2 }}
+												id={PAGE_ACHIEVEMENTS}
+												className='grid grid-cols-1 md:grid-cols-3 gap-4'
+											>
+												<Achievements />
+											</motion.section>
+										)}
+										{currentPage === PAGE_LABELS && (
+											<motion.section
+												key={PAGE_LABELS}
+												initial={{ opacity: 0 }}
+												animate={{ opacity: 1 }}
+												exit={{
+													opacity: 0,
+													transition: {
+														duration: 0.75,
+													},
+												}}
+												transition={{ duration: 2 }}
+												id={PAGE_LABELS}
+												className='grid grid-cols-1 md:grid-cols-3 gap-4'
+											>
+												<Labels />
+											</motion.section>
+										)}
+									</AnimatePresence>
 								</div>
 							)}
 						</AnimatePresence>

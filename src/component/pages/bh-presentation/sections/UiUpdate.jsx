@@ -20,8 +20,8 @@ const UiUpdate = () => {
 		show: {
 			opacity: 1,
 			transition: {
-				duration: 1.25,
-				staggerChildren: 0.3,
+				duration: 1.5,
+				staggerChildren: 0.35,
 			},
 		},
 	};

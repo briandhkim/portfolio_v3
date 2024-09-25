@@ -36,7 +36,7 @@ const ExperienceItem = ({ history, showLeftBar }) => {
 		show: {
 			opacity: 1,
 			transition: {
-				staggerChildren: 0.15,
+				staggerChildren: 0.2,
 			},
 		},
 	};
@@ -114,77 +114,74 @@ const ExperienceItem = ({ history, showLeftBar }) => {
 								)}
 							</SolidButton>
 						</div>
-						<AnimatePresence>
-							<CSSTransition
-								in={showDescription}
-								timeout={500}
-								classNames='slide-vertical'
-								unmountOnExit
-							>
-								<div className='mt-3'>
-									<div className='text-xs sm:text-sm text-neutral-400 mb-2'>
-										<time
-											dateTime={history.dateStart.toISOString()}
-										>
-											{history.dateStart.toLocaleString(
-												'default',
-												{
-													year: 'numeric',
-													month: 'short',
-												}
-											)}
-										</time>{' '}
-										-{' '}
-										<time
-											dateTime={history.dateEnd.toISOString()}
-										>
-											{history.dateEnd.toLocaleString(
-												'default',
-												{
-													year: 'numeric',
-													month: 'short',
-												}
-											)}
-										</time>
-									</div>
-									{history.honors && (
-										<div className='mb-5 space-y-1'>
-											<DividerTitleLeft
-												title='Honors'
-												borderStyle='border-dotted'
-												borderWidth='border-t-[3px]'
-											/>
-											<div className='font-mono text-xs sm:text-sm'>
-												<ul className='fa-ul'>
-													{history.honors.map(
-														honor => (
-															<li
-																key={honor}
-																className=''
-															>
-																<span className='fa-li text-neutral-400'>
-																	<FontAwesomeIcon
-																		icon={
-																			faAward
-																		}
-																	/>
-																</span>
-																{honor}
-															</li>
-														)
-													)}
-												</ul>
-											</div>
-										</div>
-									)}
-									<div className='mb-1 sm:mb-3 space-y-1'>
+						<CSSTransition
+							in={showDescription}
+							timeout={500}
+							classNames='slide-vertical'
+							unmountOnExit
+						>
+							<div className='mt-3'>
+								<div className='text-xs sm:text-sm text-neutral-400 mb-2'>
+									<time
+										dateTime={history.dateStart.toISOString()}
+									>
+										{history.dateStart.toLocaleString(
+											'default',
+											{
+												year: 'numeric',
+												month: 'short',
+											}
+										)}
+									</time>{' '}
+									-{' '}
+									<time
+										dateTime={history.dateEnd.toISOString()}
+									>
+										{history.dateEnd.toLocaleString(
+											'default',
+											{
+												year: 'numeric',
+												month: 'short',
+											}
+										)}
+									</time>
+								</div>
+								{history.honors && (
+									<div className='mb-5 space-y-1'>
 										<DividerTitleLeft
-											title='Work'
+											title='Honors'
 											borderStyle='border-dotted'
 											borderWidth='border-t-[3px]'
 										/>
 										<div className='font-mono text-xs sm:text-sm'>
+											<ul className='fa-ul'>
+												{history.honors.map(honor => (
+													<li
+														key={honor}
+														className=''
+													>
+														<span className='fa-li text-neutral-400'>
+															<FontAwesomeIcon
+																icon={faAward}
+															/>
+														</span>
+														{honor}
+													</li>
+												))}
+											</ul>
+										</div>
+									</div>
+								)}
+								<div className='mb-1 sm:mb-3 space-y-1'>
+									<DividerTitleLeft
+										title='Work'
+										borderStyle='border-dotted'
+										borderWidth='border-t-[3px]'
+									/>
+									<div className='font-mono text-xs sm:text-sm'>
+										<AnimatePresence>
 											<motion.ul
+												key={history.content}
 												variants={descContainer}
 												initial='hidden'
 												animate='show'
@@ -209,11 +206,11 @@ const ExperienceItem = ({ history, showLeftBar }) => {
 													)
 												)}
 											</motion.ul>
-										</div>
+										</AnimatePresence>
 									</div>
 								</div>
-							</CSSTransition>
-						</AnimatePresence>
+							</div>
+						</CSSTransition>
 					</div>
 					<div className='whitespace-nowrap text-right text-xs md:text-sm text-neutral-400'>
 						<time dateTime={history.datetime}>
