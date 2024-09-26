@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.763adb39.css",
-    "main.js": "/static/js/main.b633681c.js",
+    "main.css": "/static/css/main.3f1d49e3.css",
+    "main.js": "/static/js/main.d30f13ec.js",
     "static/js/488.ef841162.chunk.js": "/static/js/488.ef841162.chunk.js",
     "static/media/i_tags.png": "/static/media/i_tags.be525ac460bc29290664.png",
     "static/media/homer.jpeg": "/static/media/homer.fa73b4786e89348e9a18.jpeg",
     "static/media/lf_tags.png": "/static/media/lf_tags.96eb9597c67e7a134e7e.png",
-    "static/media/gh_achievements.png": "/static/media/gh_achievements.761d2dc07771efb1323b.png",
+    "static/media/gh_achievements.png": "/static/media/gh_achievements.27cec36521bdb4d7577e.png",
     "static/media/so_tags.png": "/static/media/so_tags.71055820b346a438b023.png",
     "static/media/steam_achievements.png": "/static/media/steam_achievements.4d205c146fdfaf6d6012.png",
     "static/media/lc_achievements.png": "/static/media/lc_achievements.38761b23145c3666d1aa.png",
     "static/media/bh-client-page.png": "/static/media/bh-client-page.bb92b9262fa25cb91d69.png",
     "static/media/so_achievements.png": "/static/media/so_achievements.12ffbd0d2e4bf4447369.png",
     "index.html": "/index.html",
-    "main.763adb39.css.map": "/static/css/main.763adb39.css.map",
-    "main.b633681c.js.map": "/static/js/main.b633681c.js.map",
+    "main.3f1d49e3.css.map": "/static/css/main.3f1d49e3.css.map",
+    "main.d30f13ec.js.map": "/static/js/main.d30f13ec.js.map",
     "488.ef841162.chunk.js.map": "/static/js/488.ef841162.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.763adb39.css",
-    "static/js/main.b633681c.js"
+    "static/css/main.3f1d49e3.css",
+    "static/js/main.d30f13ec.js"
   ]
 }
