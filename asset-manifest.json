@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.3f1d49e3.css",
-    "main.js": "/static/js/main.1bff872e.js",
-    "static/js/488.ef841162.chunk.js": "/static/js/488.ef841162.chunk.js",
+    "main.css": "/static/css/main.930d1c09.css",
+    "main.js": "/static/js/main.92b4e156.js",
+    "static/js/685.0fe2ee62.chunk.js": "/static/js/685.0fe2ee62.chunk.js",
     "static/media/i_tags.png": "/static/media/i_tags.be525ac460bc29290664.png",
     "static/media/homer.jpeg": "/static/media/homer.fa73b4786e89348e9a18.jpeg",
     "static/media/lf_tags.png": "/static/media/lf_tags.96eb9597c67e7a134e7e.png",
@@ -12,13 +12,10 @@
     "static/media/lc_achievements.png": "/static/media/lc_achievements.38761b23145c3666d1aa.png",
     "static/media/bh-client-page.png": "/static/media/bh-client-page.bb92b9262fa25cb91d69.png",
     "static/media/so_achievements.png": "/static/media/so_achievements.12ffbd0d2e4bf4447369.png",
-    "index.html": "/index.html",
-    "main.3f1d49e3.css.map": "/static/css/main.3f1d49e3.css.map",
-    "main.1bff872e.js.map": "/static/js/main.1bff872e.js.map",
-    "488.ef841162.chunk.js.map": "/static/js/488.ef841162.chunk.js.map"
+    "index.html": "/index.html"
   },
   "entrypoints": [
-    "static/css/main.3f1d49e3.css",
-    "static/js/main.1bff872e.js"
+    "static/css/main.930d1c09.css",
+    "static/js/main.92b4e156.js"
   ]
 }
