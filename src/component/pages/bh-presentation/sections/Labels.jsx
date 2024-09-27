@@ -4,6 +4,7 @@ import Heading from '../../../elements/Heading';
 import DividerTitleLeft from '../../../layout/DividerTitleLeft';
 import LabelExamples from './partials/LabelExamples';
 import LabelFeatures from './partials/LabelFeatures';
+import LabelValues from './partials/LabelValues';
 
 const Labels = () => {
 	return (
@@ -56,6 +57,15 @@ const Labels = () => {
 							bgColor='bg-[#325343]'
 						/>
 						<LabelFeatures />
+					</div>
+					<div className='space-y-6'>
+						<DividerTitleLeft
+							title='Value'
+							borderStyle='border-dotted'
+							borderWidth='border-t-[3px]'
+							bgColor='bg-[#325343]'
+						/>
+						<LabelValues />
 					</div>
 				</div>
 			</div>
