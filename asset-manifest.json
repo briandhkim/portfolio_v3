@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.930d1c09.css",
-    "main.js": "/static/js/main.92b4e156.js",
+    "main.js": "/static/js/main.a2921f4e.js",
     "static/js/685.0fe2ee62.chunk.js": "/static/js/685.0fe2ee62.chunk.js",
     "static/media/i_tags.png": "/static/media/i_tags.be525ac460bc29290664.png",
     "static/media/homer.jpeg": "/static/media/homer.fa73b4786e89348e9a18.jpeg",
@@ -16,6 +16,6 @@
   },
   "entrypoints": [
     "static/css/main.930d1c09.css",
-    "static/js/main.92b4e156.js"
+    "static/js/main.a2921f4e.js"
   ]
 }
