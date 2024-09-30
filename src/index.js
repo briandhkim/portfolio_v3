@@ -26,10 +26,10 @@ const router = createHashRouter([
 		path: '/construction',
 		element: <Construction />,
 	},
-	{
-		path: '/bh-p',
-		element: <Presentation />,
-	},
+	// {
+	// 	path: '/bh-p',
+	// 	element: <Presentation />,
+	// },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
