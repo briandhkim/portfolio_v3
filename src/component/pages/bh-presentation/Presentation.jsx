@@ -47,7 +47,7 @@ const Presentation = () => {
 				<div className=''>
 					{/* We've used 3xl here, but feel free to try other max-widths based on your needs */}
 					{/* May need to remove max-h-svh here */}
-					<div className='mx-auto px-4 sm:px-6 lg:px-8 relative'>
+					<div className='relative mx-auto px-4 sm:px-6 lg:px-8'>
 						<AnimatePresence mode='wait'>
 							{currentPage === PAGE_INTRO && (
 								<motion.div
@@ -64,7 +64,7 @@ const Presentation = () => {
 								<div
 									className={`${currentPage === PAGE_ACHIEVEMENTS || currentPage === PAGE_LABELS ? 'py-8 sm:py-10 md:py-14' : ''}`}
 								>
-									<div className='fixed rounded-xl px-4 py-3 z-10 right-6 bottom-10 bg-neutral-800 space-x-4'>
+									<div className='fixed bottom-10 right-6 z-10 space-x-4 rounded-xl bg-neutral-800 px-4 py-3'>
 										{navButtons.map(nav => (
 											<button
 												key={nav.id}
@@ -98,7 +98,7 @@ const Presentation = () => {
 												}}
 												transition={{ duration: 1.25 }}
 												id={PAGE_UI}
-												className={`${currentPage === PAGE_UI ? 'min-h-screen content-center' : ''} grid grid-cols-1 md:grid-cols-3 gap-4 pt-12 md:pt-32`}
+												className={`${currentPage === PAGE_UI ? 'min-h-screen content-center' : ''} grid grid-cols-1 gap-4 pt-12 md:grid-cols-3 md:pt-32`}
 											>
 												<UiUpdate />
 											</motion.section>
@@ -116,7 +116,7 @@ const Presentation = () => {
 												}}
 												transition={{ duration: 2 }}
 												id={PAGE_ACHIEVEMENTS}
-												className='grid grid-cols-1 md:grid-cols-3 gap-4'
+												className='grid grid-cols-1 gap-4 md:grid-cols-3'
 											>
 												<Achievements />
 											</motion.section>
@@ -134,7 +134,7 @@ const Presentation = () => {
 												}}
 												transition={{ duration: 2 }}
 												id={PAGE_LABELS}
-												className='grid grid-cols-1 md:grid-cols-3 gap-4'
+												className='grid grid-cols-1 gap-4 md:grid-cols-3'
 											>
 												<Labels />
 											</motion.section>

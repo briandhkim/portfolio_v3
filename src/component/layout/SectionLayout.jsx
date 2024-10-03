@@ -19,11 +19,11 @@ const SectionLayout = ({
 					{sectionTitle}
 				</Heading>
 			</div>
-			<div className='col-span-3 md:col-span-2 mb-6 sm:mb-0'>
+			<div className='col-span-3 mb-6 sm:mb-0 md:col-span-2'>
 				{children}
 			</div>
 			{dividerIcon && (
-				<div className='col-span-3 md:mt-8 lg:mt-10 mb-12 md:mb-14 lg:mb-16'>
+				<div className='col-span-3 mb-12 md:mb-14 md:mt-8 lg:mb-16 lg:mt-10'>
 					<DividerIcon
 						dividerBgColor={dividerBgColor}
 						icon={

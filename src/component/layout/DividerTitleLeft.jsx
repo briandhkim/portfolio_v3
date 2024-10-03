@@ -13,7 +13,7 @@ const DividerTitleLeft = ({
 				aria-hidden='true'
 			>
 				<div
-					className={`w-full  ${borderColor} ${borderStyle} ${borderWidth}`}
+					className={`w-full ${borderColor} ${borderStyle} ${borderWidth}`}
 				/>
 			</div>
 			<div className='relative flex justify-start'>

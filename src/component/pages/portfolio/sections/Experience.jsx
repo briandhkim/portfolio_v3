@@ -291,18 +291,18 @@ const Experience = () => {
 
 	return (
 		<SectionLayout sectionTitle='Experience' dividerIcon={faTimeline}>
-			<div className='grid gap-4 mx-0.5 sm:mx-4 grid-cols-12'>
+			<div className='mx-0.5 grid grid-cols-12 gap-4 sm:mx-4'>
 				<div className='col-span-12'>
-					<div className='text-left mb-4 '>
+					<div className='mb-4 text-left'>
 						<Heading level='h3' size='small'>
 							<GenericLink url='https://besmartee.com'>
 								BeSmartee
 							</GenericLink>
 						</Heading>
-						<span className='text-xs sm:text-sm font-bold tracking-wider uppercase text-neutral-400'>
+						<span className='text-xs font-bold uppercase tracking-wider text-neutral-400 sm:text-sm'>
 							Full stack software engineer
 						</span>
-						<span className='block text-xs sm:text-sm font-medium tracking-wider uppercase text-neutral-400'>
+						<span className='block text-xs font-medium uppercase tracking-wider text-neutral-400 sm:text-sm'>
 							<time dateTime='2018-07'>Jul. 2018</time> -{' '}
 							<time dateTime='2024-04'>Apr. 2024</time>
 						</span>

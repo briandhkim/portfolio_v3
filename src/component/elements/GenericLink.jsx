@@ -9,7 +9,7 @@ const GenericLink = props => {
 	return (
 		<a
 			href={url}
-			className={`${className} underline cursor-pointer transition ease-in-out duration-200 hover:text-primary-400 decoration-2 decoration-primary-400`}
+			className={`${className} cursor-pointer underline decoration-primary-400 decoration-2 transition duration-200 ease-in-out hover:text-primary-400`}
 			target={target}
 			rel='noreferrer'
 			title={title}

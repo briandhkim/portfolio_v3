@@ -13,13 +13,13 @@ const Contact = () => {
 	return (
 		<SectionLayout sectionTitle='Contact'>
 			<div className=''>
-				<Heading level='h4' size='small' className='mb-6 '>
+				<Heading level='h4' size='small' className='mb-6'>
 					Let's make things happen!
 				</Heading>
 
 				<ul className='space-y-2 font-mono'>
 					<li>
-						<span className='text-neutral-400 text-sm mr-3 font-sans'>
+						<span className='mr-3 font-sans text-sm text-neutral-400'>
 							Email
 						</span>
 						<span className='space-x-0.5'>
@@ -40,7 +40,7 @@ const Contact = () => {
 						</span>
 					</li>
 					<li>
-						<span className='text-neutral-400 text-sm mr-3 font-sans'>
+						<span className='mr-3 font-sans text-sm text-neutral-400'>
 							Resume
 						</span>
 						<GenericLink url={resume.href}>
@@ -52,7 +52,7 @@ const Contact = () => {
 						</GenericLink>
 					</li>
 					<li>
-						<span className='text-neutral-400 text-sm mr-3 font-sans'>
+						<span className='mr-3 font-sans text-sm text-neutral-400'>
 							LinkedIn
 						</span>
 						<GenericLink url={linkedIn.href}>
@@ -64,7 +64,7 @@ const Contact = () => {
 						</GenericLink>
 					</li>
 					<li>
-						<span className='text-neutral-400 text-sm mr-3 font-sans'>
+						<span className='mr-3 font-sans text-sm text-neutral-400'>
 							Chat
 						</span>
 						<GenericLink url={calendly.href}>

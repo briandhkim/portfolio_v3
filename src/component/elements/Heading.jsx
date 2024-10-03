@@ -26,7 +26,7 @@ const Heading = props => {
 			)}
 			{level === 'h4' && (
 				<h4
-					className={`${className} ${size === 'small' ? 'text-lg sm:text-xl md:text-2xl' : 'text-xl sm:text2xl md:text-3xl'}`}
+					className={`${className} ${size === 'small' ? 'text-lg sm:text-xl md:text-2xl' : 'sm:text2xl text-xl md:text-3xl'}`}
 				>
 					{children}
 				</h4>

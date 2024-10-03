@@ -57,13 +57,13 @@ const Portfolio = () => {
 				<div className=''>
 					{/* We've used 3xl here, but feel free to try other max-widths based on your needs */}
 					{/* May need to remove max-h-svh here */}
-					<div className='mx-auto px-4 sm:px-6 lg:px-8 relative'>
+					<div className='relative mx-auto px-4 sm:px-6 lg:px-8'>
 						<Landing />
 						<div className='mb-8 sm:mb-10 md:mb-14'>
 							{sections.map(section => (
 								<section
 									key={section.id}
-									className={`grid grid-cols-1 md:grid-cols-3 gap-4 ${section.class}`}
+									className={`grid grid-cols-1 gap-4 md:grid-cols-3 ${section.class}`}
 									ref={section.ref}
 									id={section.id}
 								>

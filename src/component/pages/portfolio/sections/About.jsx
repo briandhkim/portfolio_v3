@@ -68,7 +68,7 @@ const About = () => {
 		<SectionLayout sectionTitle='About' dividerIcon={faIdCard}>
 			<div
 				ref={ref}
-				className='font-mono space-y-2 whitespace whitespace-break-spaces mb-8 sm:mb-10 md:mb-12'
+				className='whitespace mb-8 space-y-2 whitespace-break-spaces font-mono sm:mb-10 md:mb-12'
 			>
 				<p>
 					<FadeInSpan
@@ -325,7 +325,7 @@ const About = () => {
 				{socialLinks.map(link => (
 					<div key={link.name} className=''>
 						<a
-							className='transition ease-in-out duration-200 hover:text-primary-400 cursor-pointer'
+							className='cursor-pointer transition duration-200 ease-in-out hover:text-primary-400'
 							target='_blank'
 							rel='noreferrer'
 							title={link.name}

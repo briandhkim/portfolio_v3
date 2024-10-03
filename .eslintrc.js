@@ -36,11 +36,12 @@ module.exports = {
 		'react/jsx-uses-react': 'off',
 		'react/react-in-jsx-scope': 'off',
 		'react/no-unescaped-entities': 0,
-		indent: ['warn', 'tab'],
+		indent: ['warn', 'tab', { SwitchCase: 1 }],
 		'prettier/prettier': [
 			'warn',
 			{ endOfLine: 'auto' },
 			{ usePrettierrc: true },
 		],
+		'tailwindcss/classnames-order': 'off',
 	},
 };

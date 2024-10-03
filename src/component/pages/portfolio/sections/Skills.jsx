@@ -1,9 +1,7 @@
-import { faMinus, faPlus, faToolbox } from '@fortawesome/free-solid-svg-icons';
+import { faToolbox } from '@fortawesome/free-solid-svg-icons';
 import SectionLayout from '../../../layout/SectionLayout';
 import SkillSection from './partials/SkillSection';
 import { useState } from 'react';
-import SolidButton from '../../../elements/buttons/SolidButton';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Skills = () => {
 	const skills = {
@@ -44,7 +42,7 @@ const Skills = () => {
 			<>
 				<div
 					// className={`space-y-10 mb-4 ${!showMore ? 'overflow-y-hidden max-h-[410px] sm:max-h-[455px]' : ''} `}
-					className={`space-y-10 mb-4 `}
+					className={`mb-4 space-y-10`}
 				>
 					{Object.keys(skills).map(skillSection => (
 						<div key={skillSection} className=''>

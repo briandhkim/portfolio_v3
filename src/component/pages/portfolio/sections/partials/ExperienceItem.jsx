@@ -62,7 +62,7 @@ const ExperienceItem = ({ history, showLeftBar }) => {
 					<span
 						className={classNames(
 							history.iconBackground,
-							'h-8 w-8 rounded-full flex items-center justify-center ring-8 ring-neutral-950'
+							'flex h-8 w-8 items-center justify-center rounded-full ring-8 ring-neutral-950'
 						)}
 					>
 						<FontAwesomeIcon
@@ -73,7 +73,7 @@ const ExperienceItem = ({ history, showLeftBar }) => {
 				</div>
 				<div className='flex min-w-0 flex-1 justify-between space-x-4 pt-1'>
 					<div>
-						<p className='text-base font-bold mb-2'>
+						<p className='mb-2 text-base font-bold'>
 							{history.content}{' '}
 						</p>
 						<div className='flex flex-wrap space-x-1.5'>
@@ -83,7 +83,7 @@ const ExperienceItem = ({ history, showLeftBar }) => {
 									<motion.div
 										key={t.name}
 										title={t.name}
-										className='h-6 w-6 mb-2'
+										className='mb-2 h-6 w-6'
 										whileHover={{
 											scale: 1.8,
 											transition: { ease: 'circInOut' },
@@ -121,7 +121,7 @@ const ExperienceItem = ({ history, showLeftBar }) => {
 							unmountOnExit
 						>
 							<div className='mt-3'>
-								<div className='text-xs sm:text-sm text-neutral-400 mb-2'>
+								<div className='mb-2 text-xs text-neutral-400 sm:text-sm'>
 									<time
 										dateTime={history.dateStart.toISOString()}
 									>
@@ -172,7 +172,7 @@ const ExperienceItem = ({ history, showLeftBar }) => {
 										</div>
 									</div>
 								)}
-								<div className='mb-1 sm:mb-3 space-y-1'>
+								<div className='mb-1 space-y-1 sm:mb-3'>
 									<DividerTitleLeft
 										title='Work'
 										borderStyle='border-dotted'
@@ -212,7 +212,7 @@ const ExperienceItem = ({ history, showLeftBar }) => {
 							</div>
 						</CSSTransition>
 					</div>
-					<div className='whitespace-nowrap text-right text-xs md:text-sm text-neutral-400'>
+					<div className='whitespace-nowrap text-right text-xs text-neutral-400 md:text-sm'>
 						<time dateTime={history.datetime}>
 							{history.dateStart.toLocaleString('default', {
 								year: 'numeric',
