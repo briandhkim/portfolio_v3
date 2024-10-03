@@ -8,7 +8,7 @@ const Buttons = () => {
 	return (
 		<>
 			<DividerTitleLeft title='Buttons' />
-			<div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mt-4 mb-8 sm:px-6 '>
+			<div className='mb-8 mt-4 grid grid-cols-2 gap-4 sm:grid-cols-3 sm:px-6 md:grid-cols-4'>
 				{sizes.map(size => (
 					<div key={size}>
 						<SolidButton size={size} className='rounded'>

@@ -15,9 +15,9 @@ const Construction = () => {
         <body class="h-full">
         ```
       */}
-			<div className='grid min-h-screen grid-cols-1 grid-rows-[1fr,auto,1fr]  lg:grid-cols-[max(50%,36rem),1fr]'>
+			<div className='grid min-h-screen grid-cols-1 grid-rows-[1fr,auto,1fr] lg:grid-cols-[max(50%,36rem),1fr]'>
 				<header className='mx-auto w-full max-w-7xl px-6 pt-6 sm:pt-10 lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:px-8'>
-					<div className='select-none inline h-10 w-auto text-xl font-semibold px-1.5 py-0.5 border-2 border-base-content text-base-content leading-6 cursor-default'>
+					<div className='border-base-content text-base-content inline h-10 w-auto cursor-default select-none border-2 px-1.5 py-0.5 text-xl font-semibold leading-6'>
 						bdhk
 					</div>
 				</header>
@@ -31,18 +31,18 @@ const Construction = () => {
                         </h1> */}
 						<Heading
 							level='h1'
-							className='text-neutral-100 mt-4 tracking-tight font-bold'
+							className='mt-4 font-bold tracking-tight text-neutral-100'
 						>
 							Coming "soon"
 						</Heading>
-						<p className='mt-6 text-base leading-7 '>
+						<p className='mt-6 text-base leading-7'>
 							Area under construction
 						</p>
 						<div className='mt-10'>
 							<a
 								href='https://www.linkedin.com/in/bdhk/'
 								rel='noreferrer'
-								className='text-sm font-semibold leading-7 underline text-neutral-100 hover:text-neutral-300 '
+								className='text-sm font-semibold leading-7 text-neutral-100 underline hover:text-neutral-300'
 							>
 								Linked
 								<FontAwesomeIcon

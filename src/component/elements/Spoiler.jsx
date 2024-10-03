@@ -11,7 +11,7 @@ const Spoiler = props => {
 		<div className={` ${className}`}>
 			{!showSpoiler && (
 				<span
-					className='bg-neutral-200 cursor-pointer'
+					className='cursor-pointer bg-neutral-200'
 					onClick={() => setShowSpoiler(true)}
 					title='Click to show text'
 				>

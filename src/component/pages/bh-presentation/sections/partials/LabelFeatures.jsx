@@ -30,7 +30,7 @@ const LabelFeatures = () => {
 
 	return (
 		<div
-			className='text-xs sm:text-sm mg:text-base font-mono'
+			className='mg:text-base font-mono text-xs sm:text-sm'
 			ref={sectionRef}
 		>
 			{showSection && (
@@ -46,7 +46,7 @@ const LabelFeatures = () => {
 						</span>
 						"Default"/company-level(BetterHelp) set of tags based on
 						common traits <br />
-						<span className='text-neutral-400 '>
+						<span className='text-neutral-400'>
 							e.g.
 							<motion.ul
 								variants={descContainer}

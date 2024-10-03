@@ -21,20 +21,20 @@ const Icons = () => {
 				<LinkBase href='https://devicon.dev/'>
 					Devicon
 					<FontAwesomeIcon
-						className='ml-0.5 fa-xs'
+						className='fa-xs ml-0.5'
 						icon={faArrowUpRightFromSquare}
 					/>
 				</LinkBase>
 				.
 			</p>
 			<DividerTitleLeft title='Development icons' />
-			<div className='grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4 mt-5 mb-8 sm:px-6 justify-items-center md:justify-items-start'>
+			<div className='mb-8 mt-5 grid grid-cols-3 justify-items-center gap-4 sm:grid-cols-4 sm:px-6 md:grid-cols-5 md:justify-items-start'>
 				{developmentIcons.map((icon, idx) => (
-					<div key={icon.name} className='h-14 w-14 mb-14'>
+					<div key={icon.name} className='mb-14 h-14 w-14'>
 						<div id={`icon-${idx}`}>{icon.icon}</div>
 						<label
 							htmlFor={`icon-${idx}`}
-							className='text-xs sm:text-sm '
+							className='text-xs sm:text-sm'
 						>
 							{icon.name}
 						</label>
@@ -43,9 +43,9 @@ const Icons = () => {
 			</div>
 
 			<DividerTitleLeft title='Software & Tools icons' />
-			<div className='grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-1 mt-5 mb-8 sm:px-6 justify-items-center md:justify-items-start'>
+			<div className='mb-8 mt-5 grid grid-cols-3 justify-items-center gap-1 sm:grid-cols-4 sm:px-6 md:grid-cols-5 md:justify-items-start'>
 				{toolIcons.map((icon, idx) => (
-					<div key={icon.name} className='h-14 w-14 mb-14'>
+					<div key={icon.name} className='mb-14 h-14 w-14'>
 						<div id={`icon-${idx}`}>{icon.icon}</div>
 						<label
 							htmlFor={`icon-${idx}`}

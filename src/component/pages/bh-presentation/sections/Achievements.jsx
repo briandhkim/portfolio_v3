@@ -13,19 +13,19 @@ const Achievements = () => {
 			dividerIcon={faAward}
 			dividerBgColor='bg-[#325343]'
 		>
-			<div className='grid grid-cols-12 mx-0.5 sm:mx-4 space-y-8 sm:space-y-10'>
+			<div className='mx-0.5 grid grid-cols-12 space-y-8 sm:mx-4 sm:space-y-10'>
 				<div className='col-span-12'>
-					<div className='text-left '>
+					<div className='text-left'>
 						<Heading level='h3' size='small'>
 							Achievement / Badge
-							<small className='block text-base sm:text-lg md:text-xl text-neutral-400'>
+							<small className='block text-base text-neutral-400 sm:text-lg md:text-xl'>
 								Extension of "Goals"
 							</small>
 						</Heading>
 					</div>
 				</div>
 
-				<div className='col-span-12 space-y-10 mb-4'>
+				<div className='col-span-12 mb-4 space-y-10'>
 					<div className=''>
 						<DividerTitleLeft
 							title='Examples'

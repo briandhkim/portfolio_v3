@@ -44,13 +44,13 @@ const UiUpdate = () => {
 			dividerBgColor='bg-[#325343]'
 		>
 			<div
-				className='grid grid-cols-12 mx-0.5 sm:mx-4 space-y-8 sm:space-y-12'
+				className='mx-0.5 grid grid-cols-12 space-y-8 sm:mx-4 sm:space-y-12'
 				ref={sectionRef}
 			>
 				{showSection && (
 					<>
 						<div className='col-span-12'>
-							<div className='text-left mb-4'>
+							<div className='mb-4 text-left'>
 								<Heading level='h3' size='small'>
 									Initial impression
 								</Heading>
@@ -73,7 +73,7 @@ const UiUpdate = () => {
 											onClick={() =>
 												setIsOpenUiModal(true)
 											}
-											className='cursor-pointer underline decoration-2 decoration-primary-500 transition ease-in-out duration-200 hover:text-primary-500'
+											className='cursor-pointer underline decoration-primary-500 decoration-2 transition duration-200 ease-in-out hover:text-primary-500'
 										>
 											user page
 										</span>{' '}
@@ -97,7 +97,7 @@ const UiUpdate = () => {
 							</div>
 						</div>
 						<div className='col-span-12'>
-							<div className='text-left mb-4'>
+							<div className='mb-4 text-left'>
 								<Heading level='h3' size='small'>
 									Why
 								</Heading>
@@ -127,7 +127,7 @@ const UiUpdate = () => {
 											onClick={() =>
 												setIsOpenUsabilityModal(true)
 											}
-											className='cursor-pointer underline decoration-2 decoration-primary-500 transition ease-in-out duration-200 hover:text-primary-500'
+											className='cursor-pointer underline decoration-primary-500 decoration-2 transition duration-200 ease-in-out hover:text-primary-500'
 										>
 											Don't make users think!
 										</span>

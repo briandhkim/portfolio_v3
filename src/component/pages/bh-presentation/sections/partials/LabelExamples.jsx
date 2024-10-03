@@ -57,7 +57,7 @@ const LabelExamples = () => {
 						variants={descContainer}
 						initial='hidden'
 						animate='show'
-						className=' space-y-12'
+						className='space-y-12'
 					>
 						{features.map((feature, featureIdx) => (
 							<motion.div
@@ -76,7 +76,7 @@ const LabelExamples = () => {
 									<h3 className='text-lg font-medium text-neutral-400'>
 										{feature.name}
 									</h3>
-									<p className='mt-2 text-xs font-mono'>
+									<p className='mt-2 font-mono text-xs'>
 										{feature.description}
 									</p>
 								</div>
@@ -88,11 +88,11 @@ const LabelExamples = () => {
 										'flex-auto lg:col-span-7 lg:row-start-1 xl:col-span-8'
 									)}
 								>
-									<div className='aspect-h-2 aspect-w-5 overflow-hidden rounded-lg flex justify-center'>
+									<div className='aspect-h-2 aspect-w-5 flex justify-center overflow-hidden rounded-lg'>
 										<img
 											src={feature.imageSrc}
 											alt={feature.imageAlt}
-											className='object-fill object-center h-28 w-56 cursor-zoom-in'
+											className='h-28 w-56 cursor-zoom-in object-fill object-center'
 											onClick={() => {
 												setModalFeature(feature);
 												setIsOpenExampleModal(true);

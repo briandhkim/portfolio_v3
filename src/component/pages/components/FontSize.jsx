@@ -23,7 +23,7 @@ const FontSize = () => {
 	return (
 		<>
 			<DividerTitleLeft title='Font size' />
-			<div className='mt-5 mb-10 *:mb-4 pl-5'>
+			<div className='mb-10 mt-5 pl-5 *:mb-4'>
 				{headings.map(heading => (
 					<Heading key={heading.level} level={heading.level}>
 						{heading.text}

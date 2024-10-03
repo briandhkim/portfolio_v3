@@ -5,13 +5,13 @@ const FontWeight = () => {
 	return (
 		<>
 			<DividerTitleLeft title='Font weight' />
-			<div className='mt-5 mb-10 *:mb-4 *:font-serif *:text-sm pl-5'>
+			<div className='mb-10 mt-5 pl-5 *:mb-4 *:font-serif *:text-sm'>
 				<p>
 					<code>{'`<strong>`'}</code> tag is used to add{' '}
 					<TextEmphasized>emphasis</TextEmphasized> to specific words
 					within texts along with{' '}
 					<TextEmphasized>neutral-50</TextEmphasized> color{' '}
-					<span className='h-5 w-5 bg-neutral-50 inline-block mx-px'></span>
+					<span className='mx-px inline-block h-5 w-5 bg-neutral-50'></span>
 					.
 				</p>
 			</div>

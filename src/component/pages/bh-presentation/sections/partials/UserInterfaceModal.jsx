@@ -27,8 +27,8 @@ const UserInterfaceModal = ({ isOpen, setIsOpen }) => {
 						className='fixed inset-0 w-screen overflow-y-auto p-4'
 					>
 						<div className='flex min-h-full items-center justify-center p-4'>
-							<DialogPanel className='max-w-5xl space-y-4 rounded-xl border border-neutral-800 bg-[#f7f0eb] text-neutral-700 p-12'>
-								<DialogTitle className='font-bold text-2xl font-sans'>
+							<DialogPanel className='max-w-5xl space-y-4 rounded-xl border border-neutral-800 bg-[#f7f0eb] p-12 text-neutral-700'>
+								<DialogTitle className='font-sans text-2xl font-bold'>
 									Patient UI
 								</DialogTitle>
 								<Description></Description>
@@ -40,7 +40,7 @@ const UserInterfaceModal = ({ isOpen, setIsOpen }) => {
 									/>
 								</div>
 
-								<div className='flex gap-4 pt-8 px-8 justify-end'>
+								<div className='flex justify-end gap-4 px-8 pt-8'>
 									<SolidButton
 										clickHandler={() => setIsOpen(false)}
 										size='sm'

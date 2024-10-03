@@ -30,7 +30,7 @@ const SkillSection = ({ skills, skillSection }) => {
 					return (
 						<div
 							key={s.name}
-							className='py-2 grid grid-cols-2 font-mono'
+							className='grid grid-cols-2 py-2 font-mono'
 						>
 							<div className='content-center'>
 								<SkillListItem icon={s.icon} name={s.name} />

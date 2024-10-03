@@ -34,7 +34,7 @@ const AchievementWhy = () => {
 
 	return (
 		<div
-			className='text-xs sm:text-sm mg:text-base font-mono'
+			className='mg:text-base font-mono text-xs sm:text-sm'
 			ref={sectionRef}
 		>
 			{showSection && (

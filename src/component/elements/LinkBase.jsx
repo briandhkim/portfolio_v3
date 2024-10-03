@@ -10,7 +10,7 @@ const LinkBase = ({
 			href={href}
 			rel={rel}
 			target={target}
-			className={`underline hover:text-blue-400 cursor-pointer ${className}`}
+			className={`cursor-pointer underline hover:text-blue-400 ${className}`}
 		>
 			{children}
 		</a>

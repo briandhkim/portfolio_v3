@@ -25,7 +25,7 @@ const AchievementFeatures = () => {
 
 	return (
 		<div
-			className='text-xs sm:text-sm mg:text-base font-mono'
+			className='mg:text-base font-mono text-xs sm:text-sm'
 			ref={sectionRef}
 		>
 			{showSection && (
@@ -41,7 +41,7 @@ const AchievementFeatures = () => {
 						</span>
 						"Default"/company-level(BetterHelp) set of achievements
 						that are based on common goals & tasks <br />
-						<span className='text-neutral-400 '>
+						<span className='text-neutral-400'>
 							e.g.
 							<motion.ul
 								variants={descContainer}

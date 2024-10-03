@@ -14,7 +14,7 @@ const Navbar = () => {
 	return (
 		<Disclosure
 			as='nav'
-			className='bg-neutral-950 md:bg-neutral-950/[0.85] sticky top-0 w-full z-10  border-neutral-200 animate-fade_in_slow'
+			className='sticky top-0 z-10 w-full animate-fade_in_slow border-neutral-200 bg-neutral-950 md:bg-neutral-950/[0.85]'
 		>
 			{({ open }) => (
 				<>
@@ -41,7 +41,7 @@ const Navbar = () => {
 							</div>
 							<div className='flex flex-1 items-center justify-center sm:items-stretch sm:justify-start'>
 								<div className='flex flex-shrink-0 items-center'>
-									<div className=' h-8 w-auto text-xl font-semibold px-1.5 py-0.5 border-2 border-base-content text-base-content leading-6 cursor-default'>
+									<div className='border-base-content text-base-content h-8 w-auto cursor-default border-2 px-1.5 py-0.5 text-xl font-semibold leading-6'>
 										bdhk
 									</div>
 								</div>
@@ -70,7 +70,7 @@ const Navbar = () => {
                                 </div> */}
 							</div>
 							<div className='absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0'>
-								<div className='hidden sm:flex pt-2 space-x-6'>
+								<div className='hidden space-x-6 pt-2 sm:flex'>
 									{navSocials.map(navSocial => {
 										const social =
 											socialLinksMap.get(navSocial);
@@ -94,7 +94,7 @@ const Navbar = () => {
 					</div>
 
 					<DisclosurePanel className='sm:hidden'>
-						<div className='space-y-1 px-2 pb-3 pt-2 bg-neutral-900'>
+						<div className='space-y-1 bg-neutral-900 px-2 pb-3 pt-2'>
 							{navSocials.map(navSocial => {
 								const social = socialLinksMap.get(navSocial);
 								return (
@@ -103,7 +103,7 @@ const Navbar = () => {
 										as='a'
 										href={social.href}
 										target='_blank'
-										className='block px-3 py-2 font-mono underline cursor-pointer transition ease-in-out duration-200 hover:text-primary-400 decoration-2 decoration-primary-400'
+										className='block cursor-pointer px-3 py-2 font-mono underline decoration-primary-400 decoration-2 transition duration-200 ease-in-out hover:text-primary-400'
 									>
 										<FontAwesomeIcon
 											icon={social.icon}
