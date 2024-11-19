@@ -233,7 +233,7 @@ export const socialLinks = [
 	{
 		name: 'Schedule a call',
 		icon: faComments,
-		href: 'https://calendly.com/briandhkim93/call-with-brian',
+		href: 'https://calendly.com/brian-bdhk/call-with-brian',
 	},
 	{
 		name: 'Current location',
