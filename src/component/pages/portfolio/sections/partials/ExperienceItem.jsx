@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { classNames } from '../../../../../util/helpers';
 import { skillListMap } from '../../../../../util/constants';
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import SolidButton from '../../../../elements/buttons/SolidButton';
 import { CSSTransition } from 'react-transition-group';
 import DividerTitleLeft from '../../../../layout/DividerTitleLeft';
@@ -12,19 +12,10 @@ import {
 	faPlus,
 } from '@fortawesome/free-solid-svg-icons';
 import { AnimatePresence, motion } from 'framer-motion';
-import { useOnScreen } from '../../../../../hooks/useOnScreen';
+import useAnimateOnScreen from '../../../../../hooks/useAnimateOnScreen';
 
 const ExperienceItem = ({ history, showLeftBar }) => {
-	const [showSection, setShowSection] = useState(false);
-	const sectionRef = useRef(null);
-	const sectionIsOnScreen = useOnScreen(sectionRef, 0.55);
-
-	useEffect(() => {
-		if (sectionIsOnScreen && !showSection) {
-			setShowSection(true);
-		}
-	}, [sectionIsOnScreen]);
-
+	const [showSection, sectionRef] = useAnimateOnScreen();
 	const [showDescription, setShowDescription] = useState(false);
 
 	const showBtnHandler = () => {
