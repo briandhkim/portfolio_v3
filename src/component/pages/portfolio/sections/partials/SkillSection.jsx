@@ -21,7 +21,7 @@ const SkillSection = ({ skills, skillSection }) => {
 		show: {
 			opacity: 1,
 			transition: {
-				duration: 2.1,
+				duration: 1.5,
 				staggerChildren: 0.7,
 			},
 		},
@@ -43,7 +43,8 @@ const SkillSection = ({ skills, skillSection }) => {
 						variants={descContainer}
 						initial='hidden'
 						animate='show'
-						className={`${showSection ? 'animate-fade_in_slower' : 'opacity-0'} mt-1 divide-y divide-dotted divide-neutral-400`}
+						// className={`${showSection ? 'animate-fade_in_slower' : 'opacity-0'} mt-1 divide-y divide-dotted divide-neutral-400`}
+						className={`mt-1 divide-y divide-dotted divide-neutral-400`}
 					>
 						{Object.keys(skills[skillSection]).map(skill => {
 							const subSkills = skills[skillSection][skill];
