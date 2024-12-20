@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { classNames } from '../../../../../util/helpers';
 import { skillListMap } from '../../../../../util/constants';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import SolidButton from '../../../../elements/buttons/SolidButton';
 import { CSSTransition } from 'react-transition-group';
 import DividerTitleLeft from '../../../../layout/DividerTitleLeft';
@@ -36,6 +36,11 @@ const ExperienceItem = ({ history, showLeftBar }) => {
 		hidden: { opacity: 0 },
 		show: { opacity: 1, transition: { ease: 'easeIn' } },
 	};
+
+	/**
+	 * https://stackoverflow.com/questions/60946836/finddomnode-warnings-with-csstransition-components
+	 */
+	const nodeRef = useRef(null);
 
 	return (
 		<div
@@ -107,6 +112,7 @@ const ExperienceItem = ({ history, showLeftBar }) => {
 						</div>
 						<CSSTransition
 							in={showDescription}
+							nodeRef={nodeRef}
 							timeout={500}
 							classNames='slide-vertical'
 							unmountOnExit
