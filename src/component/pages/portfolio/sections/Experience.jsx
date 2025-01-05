@@ -34,12 +34,13 @@ const Experience = () => {
 				'Bootstrap',
 				'Docker',
 				'Bamboo',
+				'New Relic',
 			],
 			honors: ['The 6th Person of the Year'],
 			descriptionItems: [
 				<>
-					Created proof-of-concept applications for the company’s V2
-					initiatives using new technology stack:{' '}
+					Led the frontend development for the company’s initiative to
+					rebuild the legacy application using a modern tech stack:{' '}
 					<TextEmphasized>React</TextEmphasized>,{' '}
 					<TextEmphasized>Next.js</TextEmphasized>,{' '}
 					<TextEmphasized>Laravel</TextEmphasized>, and{' '}
@@ -49,7 +50,8 @@ const Experience = () => {
 					Led the investigation and resolution of a critical data loss
 					incident, delivering a{' '}
 					<TextEmphasized>
-						root cause analysis (<abbr>RCA</abbr>)
+						root cause analysis (
+						<abbr title='root cause analysis'>RCA</abbr>)
 					</TextEmphasized>{' '}
 					and successfully recovering 100% of the missing documents
 					from the server backup
@@ -60,15 +62,14 @@ const Experience = () => {
 					clients
 				</>,
 				<>
-					Spearheaded internal tools development, reducing redundant
-					tasks for multiple stakeholders and increasing workflow
-					efficiency by 99%
+					Spearheaded internal tools development, streamlining
+					processes and saving stakeholders weeks of redundant work
 				</>,
 				<>
 					Diagnosed optimization opportunities in the{' '}
-					<TextEmphasized>PHP</TextEmphasized> codebase and
-					implemented refactored solutions, reducing runtime for some
-					long-running scripts from minutes to milliseconds
+					<TextEmphasized>legacy PHP codebase</TextEmphasized> and
+					implemented refactors, reducing runtime for long-running
+					scripts from minutes to milliseconds
 				</>,
 				<>
 					Collaborated with diverse stakeholder groups, including
@@ -102,10 +103,13 @@ const Experience = () => {
 				'Ruby',
 				'Rails',
 				'Docker',
+				'New Relic',
 			],
 			descriptionItems: [
 				<>
-					Engineered new microservices utilizing{' '}
+					Developed new{' '}
+					<TextEmphasized>microservice REST APIs</TextEmphasized>{' '}
+					using{' '}
 					<TextEmphasized>
 						test-driven development (<abbr>TDD</abbr>)
 					</TextEmphasized>{' '}
@@ -146,6 +150,7 @@ const Experience = () => {
 				'Bootstrap',
 				'Docker',
 				'Bamboo',
+				'New Relic',
 			],
 			honors: ['All Star Engineering'],
 			descriptionItems: [
@@ -189,6 +194,7 @@ const Experience = () => {
 				'MySQL',
 				'Bootstrap',
 				'Bamboo',
+				'New Relic',
 			],
 			descriptionItems: [
 				<>
@@ -233,11 +239,11 @@ const Experience = () => {
 			],
 			descriptionItems: [
 				<>
-					Orchestrated the upgrade of the{' '}
-					<TextEmphasized>encryption</TextEmphasized> algorithm used
-					by the existing <TextEmphasized>PHP</TextEmphasized>{' '}
-					application, ensuring a seamless transition to stronger
-					security standards
+					Led the <TextEmphasized>encryption</TextEmphasized>{' '}
+					algorithm upgrade for the{' '}
+					<TextEmphasized>legacy PHP application</TextEmphasized>,
+					ensuring a seamless transition to stronger security
+					standards
 				</>,
 				<>
 					Led the frontend development of a new{' '}
@@ -270,16 +276,28 @@ const Experience = () => {
 			dateEnd: new Date('2019-02-02'),
 			icon: faCodeMerge,
 			iconBackground: 'bg-neutral-400',
-			techList: ['JavaScript', 'jQuery', 'PHP', 'MySQL', 'Bootstrap'],
+			techList: [
+				'JavaScript',
+				'jQuery',
+				'PHP',
+				'MySQL',
+				'Bootstrap',
+				'axe DevTools',
+			],
 			honors: ['Rookie of the Year'],
 			descriptionItems: [
 				<>
-					Enriched the existing{' '}
-					<TextEmphasized>jQuery</TextEmphasized> and{' '}
-					<TextEmphasized>PHP</TextEmphasized> application,
-					implementing{' '}
+					Implemented{' '}
 					<TextEmphasized>web accessibility</TextEmphasized>{' '}
-					improvements
+					remediations per the{' '}
+					<TextEmphasized>
+						Web Content Accessibility Guidelines (<abbr>WCAG</abbr>)
+					</TextEmphasized>{' '}
+					based on{' '}
+					<GenericLink url='https://www.deque.com/'>
+						Deque
+					</GenericLink>{' '}
+					audit
 				</>,
 				<>
 					Developed intuitive, responsive user interfaces to create

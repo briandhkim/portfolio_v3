@@ -72,14 +72,14 @@ const ExperienceItem = ({ history, showLeftBar }) => {
 						<p className='mb-2 text-base font-bold'>
 							{history.content}{' '}
 						</p>
-						<div className='flex flex-wrap space-x-1.5'>
+						<div className='flex flex-wrap'>
 							{history.techList.map(tech => {
 								const t = skillListMap.get(tech);
 								return (
 									<motion.div
 										key={t.name}
 										title={t.name}
-										className='mb-2 h-6 w-6'
+										className='mb-2 mr-1.5 h-6 w-6'
 										whileHover={{
 											scale: 1.8,
 											transition: { ease: 'circInOut' },
