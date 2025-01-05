@@ -1,6 +1,7 @@
 # personal website v3
 
-site link: [bdhk.dev](https://bdhk.dev)
+> [!NOTE]
+> site link: [bdhk.dev](https://bdhk.dev)
 
 # things used for this
 
@@ -39,3 +40,12 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run deploy`
+
+> [!NOTE]
+> refs:
+>
+> - https://www.npmjs.com/package/gh-pages
+> - https://dev.to/trentyang/how-to-setup-google-domain-for-github-pages-1p58
+> - https://create-react-app.dev/docs/deployment/#github-pages
