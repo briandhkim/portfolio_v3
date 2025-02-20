@@ -9,6 +9,7 @@ import Portfolio from './component/pages/portfolio/Portfolio';
 import Construction from './component/Construction';
 import Presentation from './component/pages/bh-presentation/Presentation';
 import * as amplitude from '@amplitude/analytics-browser';
+import { sessionReplayPlugin } from '@amplitude/plugin-session-replay-browser';
 
 const router = createHashRouter([
 	{
@@ -34,7 +35,10 @@ const router = createHashRouter([
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+amplitude.add(sessionReplayPlugin({ sampleRate: 1 }));
 amplitude.init('f0100010820127dc676e7d24b7f41f3d', { autocapture: true });
+
 root.render(
 	<React.StrictMode>
 		<RouterProvider router={router} />
